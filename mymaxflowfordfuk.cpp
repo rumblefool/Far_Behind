@@ -1,4 +1,4 @@
-
+    
 vpll v[MAX];vll cap(1,0),capI(1,0);ll vis[MAX];ll cue=0;
 ll prev1[MAX];ll psi[MAX];
 void dfs(ll x){

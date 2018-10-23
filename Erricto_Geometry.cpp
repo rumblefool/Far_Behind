@@ -61,6 +61,9 @@ template<class L, class R> ostream& operator<<(ostream& out, map<L, R> vec) { ou
 
 const LD kEps = 1e-9;
 const LD kPi = 2 * acos(0);
+
+// code credits - swistakk(submission from Geometry Special 2018(Codeforces Gym))
+
 LD Sq(LD x) {
   return x * x;
 }

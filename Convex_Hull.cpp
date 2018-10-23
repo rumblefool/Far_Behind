@@ -31,6 +31,7 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 double INF = 1e100;
 double EPS = 1e-6;
 
+// code credits(PT struct) -->> https://github.com/jaehyunp/stanfordacm/blob/master/code/Geometry.cc
 struct PT { 
   double x, y; 
   PT() {}
