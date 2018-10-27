@@ -1,0 +1,32 @@
+//look in 906D solutions to find better code
+void factor(ll x)
+{
+	ll i,j,k;
+	u.clear();
+	if(x<=1)return;
+	for(i=0;primes[i]*primes[i]<=x;i++)
+	{
+		if(x==1)break;
+		if(x%primes[i]==0)u.pb(primes[i]);
+		while(x%primes[i]==0){
+			x/=primes[i];
+		}
+	}
+	if(x!=1)u.pb(x);
+}
+ll phi(ll x)
+{
+	if(ph.find(x)!=ph.end())return ph[x];
+	
+	ll a,b,c,i,j,k;
+	a=x;
+	if(x==1||x==2)return 1;
+	factor(x);
+	for(i=0;i<u.size();i++)
+	{
+			a*=u[i]-1;
+			a/=u[i];
+	}
+	ph[x]=a;
+	return a;
+}
