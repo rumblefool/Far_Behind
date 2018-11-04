@@ -28,9 +28,10 @@ int powmod (int a, int b, int p) {
 
 // Finds "a" generator of U(p), 
 // multiplicative group of integers mod p.
+// here calc_phi returns the toitent function for p
 int generator (int p) {
     vector<int> fact;
-    int phi = p-1,  n = phi;
+    int phi = calc_phi(p),  n = phi;
     for (int i=2; i*i<=n; ++i)
         if (n % i == 0) {
             fact.push_back (i);
