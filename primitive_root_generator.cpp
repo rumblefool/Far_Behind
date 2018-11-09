@@ -29,6 +29,9 @@ int powmod (int a, int b, int p) {
 // Finds "a" generator of U(p), 
 // multiplicative group of integers mod p.
 // here calc_phi returns the toitent function for p
+// Complexity : O(Ans.log(phi(p)).log(p)) + time for factorizing phi(p).
+// By some theorem, Ans = O((log(p))^6). Should be fast generally.
+
 int generator (int p) {
     vector<int> fact;
     int phi = calc_phi(p),  n = phi;
@@ -42,6 +45,7 @@ int generator (int p) {
         fact.push_back (n);
 
     for (int res=2; res<=p; ++res) {
+        if(gcd(res,p)!=1)continue;   
         bool ok = true;
         for (size_t i=0; i<fact.size() && ok; ++i)
             ok &= powmod (res, phi / fact[i], p) != 1;

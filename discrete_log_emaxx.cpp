@@ -12,6 +12,7 @@
 // for given a,b,m . -1 if no. soln.
 // complexity : O(sqrt(m).log(m))
 // use unordered_map to remove log factor.
+// IMP : works only if a,m are co-prime. But can be modified.
 
 int solve (int a, int b, int m) {
     int n = (int) sqrt (m + .0) + 1;

@@ -1,0 +1,17 @@
+Suppose we have two sets of people of equal size A and B such that each person has an ordered list of the people in the other set. A matching between A and B is said to be stable if we cannot find 'a' in A and 'b' in B such that a prefers b to the person they are currently matched to and b prefers a to the person they are currently matched to.
+
+Algorithm :-
+Every vertex begins unmatched.
+While there is an unmatched vertex in the set A
+    each unmatched vertex in A proposes to match with its most preferred B vertex it has not already tried to match with
+        if the B vertex was unmatched then these vertices are now matched
+        if the B vertex was matched, it chooses its preferred vertex of the proposed one or the existing match, the other vertex remains or becomes unmatched
+
+// Note that a vertex in A which is matched may become unmatched sometime later, then it starts proposing from the next (in the order ) to the one which it has just brocken up with.
+To see that the algorithm terminates with a perfect matching, observe that once a vertex in B becomes matched, it never becomes unmatched. When the algorithm terminates, if there was an unmatched vertex in A then it would have proposed matching to an unmatched vertex in B and that proposal would have been accepted.
+
+To see that the matching is stable, suppose that there is a in A and b in B that are unmatched and each prefers the other. Since a prefers b to its current match, a must have proposed matching to b at some point. Since b is matched to someone other than a, b must have chosen this match over a and thus cannot prefer a to its current match.
+
+Note that many stable marraiges may be possible.This algo give "optimal" solution from the point of view of proposers in some sense.
+
+Also : Read stable marriage wikipedia and also related problems.
