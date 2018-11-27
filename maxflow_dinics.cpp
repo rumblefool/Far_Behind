@@ -1,3 +1,7 @@
+
+int main() {
+    n -> vertices
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -74,10 +78,6 @@ struct DinicFlow {
         return flow;
     }
 };
-
-int main() {
-    n -> vertices
-
     DinicFlow net(n);    
     for(z : edges)
         net.addEdge(z.F,z.S,cap);
