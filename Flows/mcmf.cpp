@@ -1,4 +1,17 @@
+
+MCMF Theory:
+1.  If a network with negative costs had no negative cycle it is possible to transform it into one with nonnegative 
+    costs. Using Cij_new(pi) = Cij_old + pi(i) - pi(j), where pi(x) is shortest path from s to x in network with an 
+    added vertex s. The objective value remains the same (z_new = z + constant). z(x) = sum(cij*xij) (x->flow, c->cost, u->cap).
+2.  Residual Network: cji = -cij, rij = uij-xij, rji = xij.
+3.  Note: If edge (i,j),(j,i) both are there then residual graph will have four edges b/w i,j (pairs of parellel edges).
+4.  let x* be a feasible soln, its optimal iff residual network Gx* contains no negative cost cycle.
+5.  Cycle Cancelling algo => Complexity O(n*m^2*U*C) (C->max abs value of cost, U->max cap) (m*U*C iterations).
+6.  Succesive shortest path algo => Complexity O(n^3 * B) / O(nmBlogn)(using heap in Dijkstra)(B -> largest supply node).
+
+
 // code credits -->> https://github.com/jaehyunp/stanfordacm/blob/master/code/MinCostMaxFlow.cc
+// Does not Work for negative costs
 
 // Implementation of min cost max flow algorithm using adjacency
 // matrix (Edmonds and Karp 1972).  This implementation keeps track of
@@ -10,10 +23,8 @@
 //     min cost max flow:  O(|V|^4 * MAX_EDGE_COST) augmentations
 //     
 // INPUT: 
-//     - graph, constructed using AddEdge()
-//     - source
-//     - sink
-//
+//     - graph, constructed using AddEdge(), source, sink (both edges (i,j),(j,i) can be added with different costs)
+//     - cost(**MUST BE NONNEGATIVE**)
 // OUTPUT:
 //     - (maximum flow value, minimum cost value)
 //     - To obtain the actual flow, look at positive values only.

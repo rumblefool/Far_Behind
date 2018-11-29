@@ -1,12 +1,13 @@
-
-int main() {
-    n -> vertices
-
-#include <bits/stdc++.h>
-using namespace std;
-
+// Running time: O(m * n^2) and for any unit capacity network O(m * n^1/2) (so for bipartite matching as well)
+// In practice it is pretty fast for any bipartite network
+// INPUT/OUTPUT:
+//     n -> vertice; DinicFlow net(n);
+//     for(z : edges)
+//         net.addEdge(z.F,z.S,cap);
+//     max flow = maxFlow(s,t);
+//     e = (u,v), e.flow represents the effective flow from u to v (i.e f(u->v) - f(v->u))
+//     vertices are 1-indexed
 // code credits - http://e-maxx.ru/algo/dinic
-
 struct edge {
     ll x, y, cap, flow;
 };
@@ -78,8 +79,3 @@ struct DinicFlow {
         return flow;
     }
 };
-    DinicFlow net(n);    
-    for(z : edges)
-        net.addEdge(z.F,z.S,cap);
-    max flow = maxFlow(s,t);
-}

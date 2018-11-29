@@ -1,4 +1,5 @@
 // code credits -->> https://cp-algorithms.com/graph/edmonds_karp.html
+// running time - O(n*m^2)
 
 // The matrix capacity stores the capacity for every pair of vertices. adj is the adjacency list of 
 // the undirected graph, since we have also to use the reversed of directed edges when we are 

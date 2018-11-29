@@ -1,5 +1,6 @@
+// Running Time => O(mn + (n^2 * m^1/2)) , which in the worst case is O(n^3).
 // code credits -->> https://cp-algorithms.com/graph/push-relabel-faster.html
-// mode code -->> https://github.com/jaehyunp/stanfordacm/blob/master/code/PushRelabel.cc
+// another code -->> https://github.com/jaehyunp/stanfordacm/blob/master/code/PushRelabel.cc
 const int inf = 1000000000;
 
 int n;
