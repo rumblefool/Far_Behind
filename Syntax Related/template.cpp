@@ -16,15 +16,17 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 #define trace(...)
 #endif
 
-
+#define endl "\n"
 #define ll long long
 #define ld long double
 #define vll vector<ll>
 #define pll pair<ll,ll>
+#define vpll vector<pll>
 #define pb push_back
+#define I insert
 #define F first
 #define S second
-#define endl "\n"
+
 
 int main(){
 	ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);cout<<setprecision(25);
