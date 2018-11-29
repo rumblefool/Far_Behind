@@ -30,7 +30,8 @@ inline void write(ll a)
         putchar_unlocked(snum[i--]);
     putchar_unlocked('\n');
 }
-
+// although getline(cin, string) with IOS is better than this
+// time taken => scanf("%[^\n]s",ch) < getline < reading char by char < char by char with getchar_unlocked
 inline void fastRead_string(char *str)
 {
     char c = 0;
