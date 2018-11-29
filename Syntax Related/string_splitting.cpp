@@ -1,3 +1,4 @@
+// this splitting is better than custom function(w.r.t time)
 string line = "GeeksForGeeks is a must try"; 
 // Vector of string to save tokens 
 vector <string> tokens; 
