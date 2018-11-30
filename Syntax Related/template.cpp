@@ -13,7 +13,7 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 	const char* comma = strchr(names + 1, ',');cout.write(names, comma - names) << " : " << arg1<<" | ";__f(comma+1, args...);
 }
 #else
-#define trace(...)
+#define trace(...) 1
 #endif
 
 #define endl "\n"
