@@ -28,7 +28,8 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 #define vpll vector< pll >
 
 
-
+// '{' comes after z in ACS II . So it can be used instead of dollar.
+// make alphasize 27 and use it
 const ll alphasize=26;
 string gl_s;
 struct node;
