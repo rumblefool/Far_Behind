@@ -27,9 +27,18 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 #define F first
 #define S second
 #define endl "\n"
+const ll MAX=1e6+5;
+
+// int mod=1e9+7;
+inline int mul(int a,int b){return (a*1ll*b)%mod;}
+inline int add(int a,int b){a+=b;if(a>=mod)a-=mod;return a;}
+inline int sub(int a,int b){a-=b;if(a<0)a+=mod;return a;}
+inline int power(int a,int b){int rt=1;while(b>0){if(b&1)rt=mul(rt,a);a=mul(a,a);b>>=1;}return rt;}
+inline int inv(int a){return power(a,mod-2);}
+inline void modadd(int &a,int &b){a+=b;if(a>=mod)a-=mod;} 
+
 
 int main(){
 	ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);cout<<setprecision(25);
 	
-	return 0;
 }
