@@ -1,6 +1,6 @@
 // code credits -->> https://www.codechef.com/viewsolution/13525207 (jtnydv25)
 
-//Works for negative costs, but does not work for negative cycles
+//Works for negative costs(added a new line for it, but not confirm about that), but does not work for negative cycles
 //Complexity: O(min(E^2 *V log V, E logV * flow)) 
 
 // to use -> graph G(n), G.add_edge(u,v,cap,cost), G.min_cost_max_flow(s,t)
@@ -55,6 +55,7 @@ struct graph {
             }
           }
         }
+        for(int i=0;i<n;i++) p[i] = dist[i]; // added it, so not confirm about it(but worked for a problem with -ve edges)
       } else { // use Dijkstra 
         typedef pair<cost_type, int> node;
         priority_queue<node, vector<node>, greater<node>> que;

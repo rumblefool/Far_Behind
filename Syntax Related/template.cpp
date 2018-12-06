@@ -1,5 +1,15 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace __gnu_pbds;
 using namespace std;
+typedef tree<pair<ll,ll> ,null_type,less<pair<ll, ll> >,rb_tree_tag,tree_order_statistics_node_update> ordered_set;
+
+template<class T> ostream& operator<<(ostream &os, vector<T> V) {
+ os << "[ "; for(auto v : V) os << v << " "; return os << "]";
+}
+template<class L, class R> ostream& operator<<(ostream &os, pair<L,R> P) {
+	return os << "(" << P.first << "," << P.second << ")";
+}
 
 #define TRACE
 #ifdef TRACE
@@ -13,19 +23,29 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 	const char* comma = strchr(names + 1, ',');cout.write(names, comma - names) << " : " << arg1<<" | ";__f(comma+1, args...);
 }
 #else
-#define trace(...) 1
+#define trace(...)
 #endif
 
-#define endl "\n"
+
 #define ll long long
 #define ld long double
 #define vll vector<ll>
 #define pll pair<ll,ll>
 #define vpll vector<pll>
+#define I insert 
 #define pb push_back
-#define I insert
 #define F first
 #define S second
+#define endl "\n"
+const ll MAX=1e6+5;
+
+// int mod=1e9+7;
+inline int mul(int a,int b){return (a*1ll*b)%mod;}
+inline int add(int a,int b){a+=b;if(a>=mod)a-=mod;return a;}
+inline int sub(int a,int b){a-=b;if(a<0)a+=mod;return a;}
+inline int power(int a,int b){int rt=1;while(b>0){if(b&1)rt=mul(rt,a);a=mul(a,a);b>>=1;}return rt;}
+inline int inv(int a){return power(a,mod-2);}
+inline void modadd(int &a,int &b){a+=b;if(a>=mod)a-=mod;} 
 
 
 int main(){
