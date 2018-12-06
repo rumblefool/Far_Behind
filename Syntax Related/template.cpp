@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+using namespace __gnu_pbds;
 using namespace std;
 
 template<class T> ostream& operator<<(ostream &os, vector<T> V) {
