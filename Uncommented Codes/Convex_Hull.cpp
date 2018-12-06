@@ -51,11 +51,6 @@ ostream &operator<<(ostream &os, const PT &p) {
   return os << "(" << p.x << "," << p.y << ")"; 
 }
 
-
-
-
-
-
 PT firstpoint;
 ll orient(PT x,PT y,PT z){
 	PT p,q;
@@ -78,14 +73,11 @@ void make_hull(vector<PT>& poi,vector<PT>& hull){
 		}
 	}
 	swap(bl.F,bl.S);firstpoint=PT(bl.F,bl.S);
-	// trace(firstpoint);
-	// cout<<compare(PT(2,5),PT(3,1));
 	vector<PT> cons;
 	for(ll i=0;i<n;i++){
 		if(i==ind)continue;cons.pb(poi[i]);
 	}
 	sort(cons.begin(),cons.end(),compare);
-	// for(auto z:cons)cout<<z<<" ";
 	hull.pb(firstpoint);ll m;
 	for(auto z:cons){
 		if(hull.size()<=1){hull.pb(z);continue;}
@@ -119,7 +111,6 @@ int main() {
 		make_hull(poi,hull);
 		ld ans=0;
 		for(i=0;i<hull.size();i++){
-			// cout<<hull[i]<<" ";
 			ans+=dist(hull[i],hull[(i+1)%hull.size()]);
 		}
 		cout<<ans<<"\n";

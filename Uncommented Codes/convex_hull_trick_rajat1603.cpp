@@ -106,7 +106,8 @@ struct cht{
     }
 };
 cht sameoldcht;
-int main(){
+int main()
+{
     scanf("%d" , &n);
     for(int i = 1 ; i <= n ; ++i){
         scanf("%d" , a + i);
