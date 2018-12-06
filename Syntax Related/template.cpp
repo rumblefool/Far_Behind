@@ -2,6 +2,7 @@
 #include <ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
 using namespace std;
+typedef tree<pair<ll,ll> ,null_type,less<pair<ll, ll> >,rb_tree_tag,tree_order_statistics_node_update> ordered_set;
 
 template<class T> ostream& operator<<(ostream &os, vector<T> V) {
  os << "[ "; for(auto v : V) os << v << " "; return os << "]";
