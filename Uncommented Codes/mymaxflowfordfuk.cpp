@@ -1,28 +1,33 @@
-    
-vpll v[MAX];vll cap(1,0),capI(1,0);ll vis[MAX];ll cue=0;
+
+vpll v[MAX];
+vll cap(1,0),capI(1,0);
+vll vis[MAX];ll cnt=0;
 ll prev1[MAX];ll psi[MAX];
+
 void dfs(ll x){
-    if(vis[x]==cue)return;
-    vis[x]=cue;if(x==N){return;}
-    ll a,b,c,i,j;
-    for(j=0;j<5;j++){
-        a=rand()%(v[x].size());
-        b=v[x][a].F;if(vis[b]==cue)continue;
-        c=v[x][a].S;
-        if(c<0&&capI[-c]==0)continue;else if(c>0&&cap[c]==0)continue;
-        prev1[b]=x;
-        psi[b]=v[x][a].S;
-        dfs(b);if(vis[N]==cue)return;
+    if(vis[x]==cnt) return;
+    vis[x]=cnt; if(x==N) return;
+    for(ll j=0;j<5;j++){
+        ll a = rand()%(v[x].size());
+        ll b = v[x][a].F; if(vis[b] == cnt)continue;
+        ll c = v[x][a].S;
+        if(c < 0 && capI[-c] == 0) continue;
+        else if(c > 0 && cap[c] == 0) continue;
+        prev1[b] = x;
+        psi[b] = v[x][a].S;
+        dfs(b); if(vis[N]==cnt) return;
     }
     for(auto z:v[x]){
-        b=z.F;if(vis[b]==cue)continue;
-        c=z.S;//trace(b,c);
-        if(c<0&&capI[-c]==0)continue;else if(c>0&&cap[c]==0)continue;
-        prev1[b]=x;
-        psi[b]=z.S;
-        dfs(b);if(vis[N]==cue)return;
+        b = z.F;if(vis[b] == cnt)continue;
+        c = z.S;
+        if(c < 0 && capI[-c] == 0) continue;
+        else if(c>0&&cap[c]==0) continue;
+        prev1[b] = x;
+        psi[b] = z.S;
+        dfs(b);if(vis[N] == cnt)return;
     }
 }
+
 for(i=1;i<=n;i++){
     ++D;v[0].pb({i,D});v[i].pb({0,-D});
     cap.pb(1);capI.pb(0);
@@ -33,8 +38,8 @@ for(j=n+1;j<=n+m;j++){
 }    
 ll maxf=0;
 while(true){
-    cue++;dfs(0);
-    if(vis[N]!=cue)break;
+    cnt++;dfs(0);
+    if(vis[N]!=cnt)break;
     a=N;  maxf++;
     while(a!=0){
         c=psi[a];//trace(a,c);

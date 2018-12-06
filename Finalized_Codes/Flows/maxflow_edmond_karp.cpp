@@ -7,12 +7,12 @@
 // of the network. The value of the flow in each edge will actually no stored, 
 // but it is easy to extent the implementation - by using an additional matrix
 // - to also store the flow and return it.
-
-ll n; // 
-vector<vector<ll>> capacity; // adj matrix for capacity
-vector<vector<ll>> adj; // adj list of the corresponding undirected graph(***imp***)
+const ll N = 3e3;
+ll n; // number of vertices
+ll capacity[N][N]; // adj matrix for capacity
+vll adj[N]; // adj list of the corresponding undirected graph(***imp***)
 // E = {1-2,2->3,3->2}, adj list should be => {1->2,2->1,2->3,3->2}
-// vertices are 0-indexed
+// *** vertices are 0-indexed ***
 ll INF = (1e18);
 ll bfs(ll s, ll t, vector<ll>& parent) {
     fill(parent.begin(), parent.end(), -1);
