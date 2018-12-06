@@ -6,7 +6,7 @@ using namespace std;
 
 // refrence -Author:kutengine https://www.codechef.com/viewsolution/17951916
 namespace FFT {
- 
+
 	const int MAXN = 1<<19;
 	typedef double DB;
 	typedef long long LL;

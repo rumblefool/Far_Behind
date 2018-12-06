@@ -1,6 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
+/*solves system of equations x=rem[i]%mods[i] for any mod (need not be coprime)
+intput:vector of remainders and moduli
+output: pair of answer(x%lcm of modulo) and lcm of all the modulo (returns -1 if it is inconsistent)*/
 ll GCD(ll a, ll b) { return (b == 0) ? a : GCD(b, a % b); }
 inline ll LCM(ll a, ll b) { return a / GCD(a, b) * b; }
 inline ll normalize(ll x, ll mod) { x %= mod; if (x < 0) x += mod; return x; }
@@ -11,9 +14,6 @@ GCD_type ex_GCD(ll a, ll b)
     GCD_type pom = ex_GCD(b, a % b);
     return {pom.y, pom.x - a / b * pom.y, pom.d};
 }
-/*solves system of equations x=rem[i]%mods[i] for any mod (need not be coprime)
-intput:vector of remainders and moduli
-output: pair of answer(x%lcm of modulo) and lcm of all the modulo (returns -1 if it is inconsistent)*/
 pair<ll,ll> CRT(vector<ll> &rem,vector<ll> &mods)
 {
     ll n=rem.size();
