@@ -1,18 +1,17 @@
-// Running time: O(m * n^2) and for any unit capacity network O(m * n^1/2) (so for bipartite matching as well)
+// Time: O(m*n^2) and for any unit capacity network O(m * n^1/2) 
+// TIme: O(min(fm,mn^2)) (f: flow routed)
+// (so for bipartite matching as well)
 // In practice it is pretty fast for any bipartite network
-// INPUT/OUTPUT:
-//     n -> vertice; DinicFlow net(n);
-//     for(z : edges)
-//         net.addEdge(z.F,z.S,cap);
-//     max flow = maxFlow(s,t);
-//     e = (u,v), e.flow represents the effective flow from u to v (i.e f(u->v) - f(v->u))
-//     vertices are 1-indexed
-// code credits - http://e-maxx.ru/algo/dinic
+// I/O:     n -> vertice; DinicFlow net(n);
+//          for(z : edges) net.addEdge(z.F,z.S,cap);
+//          max flow = maxFlow(s,t);
+// e=(u,v), e.flow represents the effective flow from u to v 
+// (i.e f(u->v) - f(v->u)), vertices are 1-indexed 
 struct edge {
-    ll x, y, cap, flow;
-};
+    ll x, y, cap, flow; };
 
 struct DinicFlow {
+    // *** change inf accordingly *****
     const ll inf = (1e18);
     vector <edge> e;
     vector <ll> cur, d;

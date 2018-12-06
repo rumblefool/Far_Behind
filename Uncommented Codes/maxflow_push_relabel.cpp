@@ -1,76 +1,91 @@
-// Running Time => O(mn + (n^2 * m^1/2)) , which in the worst case is O(n^3).
-// code credits -->> https://cp-algorithms.com/graph/push-relabel-faster.html
-// another code -->> https://github.com/jaehyunp/stanfordacm/blob/master/code/PushRelabel.cc
-const int inf = 1000000000;
+// Adjacency list implementation of FIFO push relabel maximum flow
+// with the gap relabeling heuristic.  This implementation is
+// significantly faster than straight Ford-Fulkerson.  It solves
+// random problems with 10000 vertices and 1000000 edges in a few
+// seconds, though it is possible to construct test cases that
+// achieve the worst-case.
+// Time: O(V^3)
+// I/O:- addEdge(),src,snk ** vertices are 0-indexed **
+//     - To obtain the actual flow values, look at all edges with
+//       capacity > 0 (zero capacity edges are residual edges).
+struct edge {
+  ll from, to, cap, flow, index;
+  edge(ll from, ll to, ll cap, ll flow, ll index) :
+    from(from), to(to), cap(cap), flow(flow), index(index) {}
+};
 
-int n;
-vector<vector<int>> capacity, flow;
-vector<int> height, excess;
+struct PushRelabel {
+  ll n;
+  vector<vector<edge> > G;
+  vector<ll> excess;
+  vector<ll> dist, active, count;
+  queue<ll> Q;
 
-void push(int u, int v)
-{
-    int d = min(excess[u], capacity[u][v] - flow[u][v]);
-    flow[u][v] += d;
-    flow[v][u] -= d;
-    excess[u] -= d;
-    excess[v] += d;
-}
+  PushRelabel(ll n) : n(n), G(n), excess(n), dist(n), active(n), count(2*n) {}
 
-void relabel(int u)
-{
-    int d = inf;
-    for (int i = 0; i < n; i++) {
-        if (capacity[u][i] - flow[u][i] > 0)
-            d = min(d, height[i]);
+  void addEdge(ll from, ll to, ll cap) {
+    G[from].push_back(edge(from, to, cap, 0, G[to].size()));
+    if (from == to) G[from].back().index++;
+    G[to].push_back(edge(to, from, 0, 0, (ll)G[from].size() - 1));
+  }
+
+  void enqueue(ll v) { 
+    if (!active[v] && excess[v] > 0) { active[v] = true; Q.push(v); }
+  }
+
+  void push(edge &e) {
+    ll amt = min(excess[e.from], e.cap - e.flow);
+    if (dist[e.from] <= dist[e.to] || amt == 0) return;
+    e.flow += amt;
+    G[e.to][e.index].flow -= amt;
+    excess[e.to] += amt;    
+    excess[e.from] -= amt;
+    enqueue(e.to);
+  }
+  
+  void gap(ll k) {
+    for (ll v = 0; v < n; v++) {
+      if (dist[v] < k) continue;
+      count[dist[v]]--; dist[v] = max(dist[v], n+1);
+      count[dist[v]]++; enqueue(v);
     }
-    if (d < inf)
-        height[u] = d + 1;
-}
+  }
 
-vector<int> find_max_height_vertices(int s, int t) {
-    vector<int> max_height;
-    for (int i = 0; i < n; i++) {
-        if (i != s && i != t && excess[i] > 0) {
-            if (!max_height.empty() && height[i] > height[max_height[0]])
-                max_height.clear();
-            if (max_height.empty() || height[i] == height[max_height[0]])
-                max_height.push_back(i);
-        }
+  void relabel(ll v) {
+    count[dist[v]]--;
+    dist[v] = 2*n;
+    for (ll i = 0; i < G[v].size(); i++) 
+      if (G[v][i].cap - G[v][i].flow > 0)
+    dist[v] = min(dist[v], dist[G[v][i].to] + 1);
+    count[dist[v]]++;
+    enqueue(v);
+  }
+
+  void discharge(ll v) {
+    for (ll i = 0; excess[v] > 0 && i < G[v].size(); i++) push(G[v][i]);
+    if (excess[v] > 0) {
+      if (count[dist[v]] == 1)  gap(dist[v]); 
+      else relabel(v);
     }
-    return max_height;
-}
+  }
 
-int max_flow(int s, int t)
-{
-    height.assign(n, 0);
-    height[s] = n;
-    flow.assign(n, vector<int>(n, 0));
-    excess.assign(n, 0);
-    excess[s] = inf;
-    for (int i = 0; i < n; i++) {
-        if (i != s)
-            push(s, i);
+  ll getMaxFlow(ll s, ll t) {
+    count[0] = n-1;
+    count[n] = 1;
+    dist[s] = n;
+    active[s] = active[t] = true;
+    for (ll i = 0; i < G[s].size(); i++) {
+      excess[s] += G[s][i].cap;
+      push(G[s][i]);
     }
-
-    vector<int> current;
-    while (!(current = find_max_height_vertices(s, t)).empty()) {
-        for (int i : current) {
-            bool pushed = false;
-            for (int j = 0; j < n && excess[i]; j++) {
-                if (capacity[i][j] - flow[i][j] > 0 && height[i] == height[j] + 1) {
-                    push(i, j);
-                    pushed = true;
-                }
-            }
-            if (!pushed) {
-                relabel(i);
-                break;
-            }
-        }
+    
+    while (!Q.empty()) {
+      ll v = Q.front(); Q.pop();
+      active[v] = false; discharge(v);
     }
-
-    int max_flow = 0;
-    for (int i = 0; i < n; i++)
-        max_flow += flow[0][i];
-    return max_flow;
-}
+    
+    ll totflow = 0;
+    for (ll i = 0; i < G[s].size(); i++) totflow += G[s][i].flow;
+    return totflow;
+  }
+};

@@ -1,18 +1,19 @@
-// code credits -->> https://cp-algorithms.com/graph/edmonds_karp.html
 // running time - O(n*m^2)
+// The matrix capacity stores the capacity for every pair of vertices. adj 
+// is the adjacency list of the undirected graph, since we have also to use 
+// the reversed of directed edges when we are looking for augmenting paths.
+// The function maxflow will return the value of the maximal flow. During 
+// the algorithm the matrix capacity will actually store the residual capacity 
+// of the network. The value of the flow in each edge will actually no stored, 
+// but it is easy to extent the implementation - by using an additional matrix
+// - to also store the flow and return it.
 
-// The matrix capacity stores the capacity for every pair of vertices. adj is the adjacency list of 
-// the undirected graph, since we have also to use the reversed of directed edges when we are 
-// looking for augmenting paths.
-// The function maxflow will return the value of the maximal flow. During the algorithm the matrix 
-// capacity will actually store the residual capacity of the network. The value of the flow in each 
-// edge will actually no stored, but it is easy to extent the implementation - by using an 
-// additional matrix - to also store the flow and return it.
-
-ll n;
+ll n; // 
 vector<vector<ll>> capacity; // adj matrix for capacity
-vector<vector<ll>> adj; // adj list of the corresponding undirected graph
-
+vector<vector<ll>> adj; // adj list of the corresponding undirected graph(***imp***)
+// E = {1-2,2->3,3->2}, adj list should be => {1->2,2->1,2->3,3->2}
+// vertices are 0-indexed
+ll INF = (1e18);
 ll bfs(ll s, ll t, vector<ll>& parent) {
     fill(parent.begin(), parent.end(), -1);
     parent[s] = -2;
@@ -23,7 +24,6 @@ ll bfs(ll s, ll t, vector<ll>& parent) {
         ll cur = q.front().first;
         ll flow = q.front().second;
         q.pop();
-
         for (ll next : adj[cur]) {
             if (parent[next] == -1 && capacity[cur][next]) {
                 parent[next] = cur;
@@ -34,15 +34,11 @@ ll bfs(ll s, ll t, vector<ll>& parent) {
             }
         }
     }
-
     return 0;
 }
-
 ll maxflow(ll s, ll t) {
-    ll flow = 0;
-    vector<ll> parent(n);
-    ll new_flow;
-
+    ll flow = 0; ll new_flow;
+    vector<ll> parent(n); 
     while (new_flow = bfs(s, t, parent)) {
         flow += new_flow;
         ll cur = t;
@@ -53,6 +49,5 @@ ll maxflow(ll s, ll t) {
             cur = prev;
         }
     }
-
     return flow;
 }
