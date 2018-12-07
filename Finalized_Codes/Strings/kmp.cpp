@@ -1,7 +1,8 @@
-// Time:O(n)(j increases n times(& j>=0) only so asy. O(n))
-// pi[i] = length of longset prefix of s ending at i
-// applications: search substring, # of different substrings(O(n^2)),
-// 3) String compression(s = t+t+...+t, then find |t|, k=n-pi[n-1],if k|n)
+/*Time:O(n)(j increases n times(& j>=0) only so asy. O(n))
+pi[i] = length of longset prefix of s ending at i
+applications: search substring, # of different substrings(O(n^2)),
+3) String compression(s = t+t+...+t, then find |t|, k=n-pi[n-1],if k|n)
+4) Building Automaton(Gray Code Example)*/
 vector<ll> prefix_function(string s) {
     ll n = (ll)s.length();
     vector<ll> pi(n);
