@@ -55,7 +55,7 @@ struct graph {
             }
           }
         }
-        for(int i=0;i<n;i++) p[i] = dist[i]; // added it, so not confirm about it(but worked for a problem with -ve edges)
+        for(int i=0;i<n;i++) p[i] = dist[i]; // added it
       } else { // use Dijkstra 
         typedef pair<cost_type, int> node;
         priority_queue<node, vector<node>, greater<node>> que;
