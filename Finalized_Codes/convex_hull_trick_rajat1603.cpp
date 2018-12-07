@@ -1,5 +1,8 @@
-#include "bits/stdc++.h"
-using namespace std;
+/*
+maintains upper convex hull of lines ax+b and gives minimum value at a given x
+to add line ax+b: sameoldcht.addline(a,b), to get min value at x: sameoldcht.getbest(x)
+to get maximum value at x add -ax-b as lines instead of ax+b and use -sameoldcht.getbest(x)
+*/
 const int N = 1e5 + 5;
 int n;
 int a[N];

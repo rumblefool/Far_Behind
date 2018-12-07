@@ -1,115 +1,124 @@
 #include<bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-using namespace __gnu_pbds;
 using namespace std;
-#pragma GCC optimize("O3")
-typedef tree<int ,null_type,less_equal<int>,rb_tree_tag,tree_order_statistics_node_update> ordered_set;
 #define ll long long
-#define endl "\n"
-const int qlim=300000;
-ordered_set st[5][2*qlim];
-void update(int i,int idx,int num,int l,int r,int id) 
-{ 
-    idx=idx+1; 
-    while(idx<=r-1) 
-    { 
-	    st[i][idx].insert(num); 
-	    idx+=idx&(-idx);
-    } 
+#define sz(a)	(a.size())
+#define chinese(a1,m1,invm2m1,a2,m2,invm1m2) ((a1 *1ll* invm2m1 % m1 * 1ll*m2 + a2 *1ll* invm1m2 % m2 * 1ll*m1) % (m1 *1ll* m2))
+int mod;
+int realmod=99991;
+int rt5=10104;
+//463470593 = 1768*2^18+1 primitive root = 3
+//469762049 = 1792*2^18+1 primitive root = 3
+int mod1=463470593,root1=202376916,root1inv=412688353,mod2=469762049,root2=422997289,root2inv=44275780,invm2m1=154490124,invm1m2=313174774;
+// int mod1=7340033;  //any modulus of the form c*2^k+1
+// int MOD;
+// int root;       //g^c for any g which is a primitive root of mod ((mod-1)/c should be at least as large as nearest higher power of 2 of 2*n)
+int root_1; //inverse of root
+int root_pw=1<<18;  //value of 2^log2((mod-1)/c)
+inline int mul(int a,int b){return (a*1ll*b)%mod;}
+inline int add(int a,int b){a+=b;if(a>=mod)a-=mod;return a;}
+inline int sub(int a,int b){a-=b;if(a<0)a+=mod;return a;}
+inline int power(int a,int b){int rt=1;while(b>0){if(b&1)rt=mul(rt,a);a=mul(a,a);b>>=1;}return rt;}
+inline int inv(int a){return power(a,mod-2);}
+inline void modadd(int &a,int &b){a+=b;if(a>=mod)a-=mod;}
+
+int base = 1;
+vector<int> roots = {0, 1};
+vector<int> rev = {0, 1};
+int max_base=18;	//2^x
+int root=202376916;		//primitive root
+void ensure_base(int nbase) {
+	if (nbase <= base) {
+	  return;
+	}
+	assert(nbase <= max_base);
+	rev.resize(1 << nbase);
+	for (int i = 0; i < (1 << nbase); i++) {
+	  rev[i] = (rev[i >> 1] >> 1) + ((i & 1) << (nbase - 1));
+	}
+	roots.resize(1 << nbase);
+	while (base < nbase) {
+	  int z = power(root, 1 << (max_base - 1 - base));
+	  for (int i = 1 << (base - 1); i < (1 << base); i++) {
+	    roots[i << 1] = roots[i];
+	    roots[(i << 1) + 1] = mul(roots[i], z);
+	  }
+	  base++;
+	}
 }
-int query1(int i,int idx,int num) 
-{ 
-    int ans=0;
-    idx++; 
-    while(idx>0) 
-    { 
-        ans+=st[i][idx].order_of_key(num+1); 
-        idx-=idx&(-idx);
-    } 
-    return ans; 
+void fft(vector<int> &a) {
+	int n = (int) a.size();
+	assert((n & (n - 1)) == 0);
+	int zeros = __builtin_ctz(n);
+	ensure_base(zeros);
+	int shift = base - zeros;
+	for (int i = 0; i < n; i++) {
+	  if (i < (rev[i] >> shift)) {
+	    swap(a[i], a[rev[i] >> shift]);
+	  }
+	}
+	for (int k = 1; k < n; k <<= 1) {
+	  for (int i = 0; i < n; i += 2 * k) {
+	    for (int j = 0; j < k; j++) {
+	      int x = a[i + j];
+	      int y = mul(a[i + j + k], roots[j + k]);
+	      a[i + j] = x + y - mod;
+	      if (a[i + j] < 0) a[i + j] += mod;
+	      a[i + j + k] = x - y + mod;
+	      if (a[i + j + k] >= mod) a[i + j + k] -= mod;
+	    }
+	  }
+	}
 }
-int query(int i,int p,int q,int num,int l,int r,int id)
+vector<int> multiply(vector<int> a, vector<int> b, int eq = 0) {
+	int need = (int) (a.size() + b.size() - 1);
+	int nbase = 0;
+	while ((1 << nbase) < need) nbase++;
+	ensure_base(nbase);
+	int sz = 1 << nbase;
+	a.resize(sz);
+	b.resize(sz);
+	fft(a);
+	if (eq) b = a; else fft(b);
+	int inv_sz = inv(sz);
+	for (int i = 0; i < sz; i++) {
+	  a[i] = mul(mul(a[i], b[i]), inv_sz);
+	}
+	reverse(a.begin() + 1, a.end());
+	fft(a);
+	a.resize(need);
+	return a;
+}
+vector<int> square(vector<int> a) {
+	return multiply(a, a, 1);
+}
+int coeff[2][1<<18];
+vector<int> resb,resc;
+void divconq(int s,int e,int i,vector<int> &res)
 {
-	return query1(i,q,num)-(p==0?0:query1(i,p-1,num));
+	if(s==e)
+	{
+		res.resize(2);
+		res[0]=coeff[i][s],res[1]=1;
+		return;
+	}
+	int m=s+e>>1;
+	vector<int> resl,resr;
+	divconq(s,m,i,resl);divconq(m+1,e,i,resr);
+	base = 1,roots = {0, 1},rev = {0, 1},mod=mod1;root=root1;
+	vector<int> res1=multiply(resl,resr);
+	base = 1,roots = {0, 1},rev = {0, 1},mod=mod2;root=root2;
+	vector<int> res2=multiply(resl,resr);
+	mod=realmod;
+	for(int i=0;i<res1.size();i++) res.push_back(chinese(res1[i],mod1,invm2m1,res2[i],mod2,invm1m2)%(1ll*mod)),assert(res.back()>=0);
 }
-int xa[qlim],ya[qlim],xb[qlim],yb[qlim],xp[qlim],yp[qlim],types[qlim];
-gp_hash_table<int,int> compress;
-vector<int> allval;
-int invidx[qlim][3];
-int main()
+int main() 
 {
-	ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);cout<<setprecision(25);
-	int q;cin>>q;
-	for(int i=0;i<q;i++)
-	{
-		int x;cin>>x;types[i]=x;
-		if(x==1)
-		{
-			cin>>xp[i]>>yp[i];
-			allval.push_back(xp[i]);allval.push_back(yp[i]);
-		}
-		else
-		{
-			cin>>xa[i]>>ya[i]>>xb[i]>>yb[i];
-			allval.push_back(xa[i]);
-			allval.push_back(xb[i]);
-			allval.push_back(ya[i]);
-			allval.push_back(yb[i]);
-		}
-	}
-	sort(allval.begin(),allval.end());
-	int id=0;
-	for(int i=0;i<allval.size();i++)
-		if(i>0&&allval[i]==allval[i-1])
-			continue;
-		else compress[allval[i]]=id++;
-	vector<int> p1,p2,p3;
-	for(int i=0;i<q;i++)
-	{
-		if(types[i]==1)xp[i]=compress[xp[i]],yp[i]=compress[yp[i]],p1.push_back(xp[i]);
-		else xa[i]=compress[xa[i]],ya[i]=compress[ya[i]],xb[i]=compress[xb[i]],yb[i]=compress[yb[i]],p2.push_back(xa[i]),p3.push_back(xb[i]);
-	}
-	sort(p1.begin(),p1.end());
-	sort(p2.begin(),p2.end());
-	sort(p3.begin(),p3.end());
-	vector<int> p11,p22,p33;
-	id=0;
-	for(int i=0;i<p1.size();i++)if(i==0||(p1[i]!=p1[i-1]))p11.push_back(p1[i]),invidx[p1[i]][0]=id++;id=0;
-	for(int i=0;i<p2.size();i++)if(i==0||(p2[i]!=p2[i-1]))p22.push_back(p2[i]),invidx[p2[i]][1]=id++;id=0;
-	for(int i=0;i<p3.size();i++)if(i==0||(p3[i]!=p3[i-1]))p33.push_back(p3[i]),invidx[p3[i]][2]=id++;id=0;
-	p1=p11;p2=p22;p3=p33;
-	ll ans=0;
-	for(int i=0;i<q;i++)
-	{
-		if(types[i]==1)
-		{
-			int a=xp[i],b=yp[i];
-			update(0,invidx[a][0],b,0,q+1,0);
-			auto p=upper_bound(p2.begin(),p2.end(),a)-p2.begin()-1;
-			if(p<0){cout<<ans<<endl;continue;}
-			int tot=query(1,0,p,1e9,0,q+1,0);
-			int sm=tot-query(1,0,p,b,0,q+1,0),larg=query(2,0,p,b-1,0,q+1,0);
-			tot=tot-sm-larg;
-			ans+=tot;
-			p=upper_bound(p3.begin(),p3.end(),a-1)-p3.begin()-1;
-			if(p<0){cout<<ans<<endl;continue;}
-			int totrev=query(3,0,p,1e9,0,q+1,0);
-			int smrev=totrev-query(3,0,p,b,0,q+1,0),largrev=query(4,0,p,b-1,0,q+1,0);
-			totrev=totrev-smrev-largrev;
-			ans-=totrev;cout<<ans<<endl;
-		}
-		else
-		{
-			int a=xa[i],b=ya[i],c=xb[i],d=yb[i];
-			update(1,invidx[a][1],b,0,q+1,0);
-			update(2,invidx[a][1],d,0,q+1,0);
-			update(3,invidx[c][2],b,0,q+1,0);
-			update(4,invidx[c][2],d,0,q+1,0);
-			auto p=lower_bound(p1.begin(),p1.end(),a)-p1.begin();
-			auto q1=upper_bound(p1.begin(),p1.end(),c)-p1.begin()-1;
-			if(p>q1){cout<<ans<<endl;continue;}
-			ans+=query(0,invidx[p1[p]][0],invidx[p1[q1]][0],d,0,q+1,0)-query(0,invidx[p1[p]][0],invidx[p1[q1]][0],b-1,0,q+1,0);
-			cout<<ans<<endl;
-		}
-	}
+	int n,k;cin>>n>>k;
+	mod=realmod;
+	int a=mul(rt5,inv(5)),b=mul(inv(2),add(1,rt5)),c=mul(inv(2),sub(1,rt5));
+	for(int i=0;i<n;i++){int x;cin>>x;coeff[0][i]=power(b,x);coeff[1][i]=power(c,x);}
+	divconq(0,n-1,0,resb);divconq(0,n-1,1,resc);
+	mod=realmod;
+	int ans=mul(a,sub(resb[n-k],resc[n-k]));
+	cout<<ans<<endl;
 }

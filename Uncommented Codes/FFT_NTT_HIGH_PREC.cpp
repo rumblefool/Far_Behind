@@ -216,7 +216,7 @@ void NTT_mul(vll& a, vll& B) // Works precisely if every coefficient of resultin
     {
         a[i] = (mulmod(mul1,a1[i],md)+mulmod(mul2,a[i],md))%(md);
     }
-}   
+}
 
 #define VI vector <ld>
 typedef complex<double> base;
