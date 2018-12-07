@@ -160,12 +160,4 @@ int main() {
 	}
 	return 0;
 }
-// for(i=1;i<=n;i++){trace(noc[i],hdc[noc[i]],len[noc[i]],posinch[i],sta[i]);}
-	// for(i=1;i<=n;i++){
-	// 	// trace(i,level[i],par[i]);
-	// 	// for(j=0;j<2;j++){
-	// 	// 	cout<<j<<"-"<<dp[j][i]<<" ";
-	// 	// }
-	// 	// cout<<"\n";
-	// } 
- 
+
