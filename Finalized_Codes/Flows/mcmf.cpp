@@ -1,15 +1,23 @@
-// code credits -->> https://www.codechef.com/viewsolution/13525207 (jtnydv25)
+// MCMF Theory:
+// 1.  If a network with negative costs had no negative cycle it is possible to transform it into one with nonnegative 
+//     costs. Using Cij_new(pi) = Cij_old + pi(i) - pi(j), where pi(x) is shortest path from s to x in network with an 
+//     added vertex s. The objective value remains the same (z_new = z + constant). z(x) = sum(cij*xij) 
+//     (x->flow, c->cost, u->cap, r->residual cap).
+// 2.  Residual Network: cji = -cij, rij = uij-xij, rji = xij.
+// 3.  Note: If edge (i,j),(j,i) both are there then residual graph will have four edges b/w i,j (pairs of parellel edges).
+// 4.  let x* be a feasible soln, its optimal iff residual network Gx* contains no negative cost cycle.
+// 5.  Cycle Cancelling algo => Complexity O(n*m^2*U*C) (C->max abs value of cost, U->max cap) (m*U*C iterations).
+// 6.  Succesive shortest path algo => Complexity O(n^3 * B) / O(nmBlogn)(using heap in Dijkstra)(B -> largest supply node).
 
-//Works for negative costs(added a new line for it, but not confirm about that), but does not work for negative cycles
+//Works for negative costs, but does not work for negative cycles
 //Complexity: O(min(E^2 *V log V, E logV * flow)) 
-
 // to use -> graph G(n), G.add_edge(u,v,cap,cost), G.min_cost_max_flow(s,t)
-const long long INF = 99999999; // ********* INF is used in both flow_type and cost_type so change accordingly
-
+// ********* INF is used in both flow_type and cost_type so change accordingly
+const ll INF = 99999999; 
 // vertices are 0-indexed
 struct graph {
-  typedef ll flow_type;
-  typedef ll cost_type;
+  typedef ll flow_type; // **** flow type ****
+  typedef ll cost_type; // **** cost type ****
   struct edge {
     int src, dst;
     flow_type capacity, flow;

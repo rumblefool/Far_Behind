@@ -2,7 +2,8 @@
 MCMF Theory:
 1.  If a network with negative costs had no negative cycle it is possible to transform it into one with nonnegative 
     costs. Using Cij_new(pi) = Cij_old + pi(i) - pi(j), where pi(x) is shortest path from s to x in network with an 
-    added vertex s. The objective value remains the same (z_new = z + constant). z(x) = sum(cij*xij) (x->flow, c->cost, u->cap).
+    added vertex s. The objective value remains the same (z_new = z + constant). z(x) = sum(cij*xij) 
+    (x->flow, c->cost, u->cap, r->residual cap).
 2.  Residual Network: cji = -cij, rij = uij-xij, rji = xij.
 3.  Note: If edge (i,j),(j,i) both are there then residual graph will have four edges b/w i,j (pairs of parellel edges).
 4.  let x* be a feasible soln, its optimal iff residual network Gx* contains no negative cost cycle.
