@@ -4,7 +4,8 @@
 // 2nd. o.w compute z[i] with trivial matching
 // update l,r
 // Time : O(n)(asy. behavior), Proof : each iteration of inner while loop make r pointer advance to right,
-// Applications:    1) Search substring(text t,pattern p) s = p + '$' + t. 3) String compression
+// Applications:    1) Search substring(text t,pattern p) s = p + '$' + t. 
+// 3) String compression(s = t+t+...+t, then find |t|)
 // 2) Number of distinct substrings (in O(n^2)) 
 // (useful when appending or deleting characters online from the end or beginning)
 
