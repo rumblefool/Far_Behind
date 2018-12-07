@@ -56,6 +56,7 @@ struct graph {
           }
         }
         for(int i=0;i<n;i++) p[i] = dist[i]; // added it
+        continue;
       } else { // use Dijkstra 
         typedef pair<cost_type, int> node;
         priority_queue<node, vector<node>, greater<node>> que;
