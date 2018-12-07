@@ -8,8 +8,8 @@ const long long INF = 99999999; // ********* INF is used in both flow_type and c
 
 // vertices are 0-indexed
 struct graph {
-  typedef int flow_type;
-  typedef int cost_type;
+  typedef ll flow_type;
+  typedef ll cost_type;
   struct edge {
     int src, dst;
     flow_type capacity, flow;
