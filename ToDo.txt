@@ -24,3 +24,6 @@
 24. Sparse Table
 25. Run Hungarian on CF Gym Problem
 26. Bipartite Matching in O(m*n), Hungarian, Dilworth's Theorem
+27. Mobius Inversion
+28. Gaussian Elimination
+29. BIT 2D
