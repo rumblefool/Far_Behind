@@ -11,8 +11,8 @@ Applications :-
 Finding the smallest cyclic shift;Finding a substring in a string;
 Comparing two substrings of a string;Longest common prefix of two substrings;
 Number of different substrings.
-
 */
+// return list of indices(permutation of indices which are in sorted order)
 vector<ll> sort_cyclic_shifts(string const& s) {
     ll n = s.size();
     const ll alphabet = 256;
