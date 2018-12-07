@@ -1,11 +1,12 @@
-// code reference - https://cp-algorithms.com/string/z-function.html
-// [l,r] -> indices of the rightmost segment match (the detected segment that ends rightmost(with max r))
-// 2 case -> 1st. i <= r : z[i] is atleast min(r-i+1,z[i-l]), then match trivially
+// [l,r] -> indices of the rightmost segment match 
+// (the detected segment that ends rightmost(with max r))
+// 2 cases -> 1st. i <= r : z[i] is atleast min(r-i+1,z[i-l]), then match trivially
 // 2nd. o.w compute z[i] with trivial matching
 // update l,r
-// Running time : O(n) (asymptotic behavior), Proof : each iteration of inner while loop make r pointer advance to right,
+// Time : O(n)(asy. behavior), Proof : each iteration of inner while loop make r pointer advance to right,
 // Applications:    1) Search substring(text t,pattern p) s = p + '$' + t. 3) String compression
-// 2) Number of distinct substrings (in O(n^2)) (useful when appending or deleting characters online from the end or beginning)
+// 2) Number of distinct substrings (in O(n^2)) 
+// (useful when appending or deleting characters online from the end or beginning)
 
 vector<ll> z_function(string s) {
     ll n = (ll) s.length();

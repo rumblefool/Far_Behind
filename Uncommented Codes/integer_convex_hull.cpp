@@ -1,32 +1,3 @@
-#include <bits/stdc++.h>
-using namespace std;
-
-#define TRACE
-#ifdef TRACE
-#define trace(...) __f(#__VA_ARGS__, __VA_ARGS__)
-template <typename Arg1>
-void __f(const char* name, Arg1&& arg1){
-	cout << name << " : " << arg1 << std::endl;
-}
-template <typename Arg1, typename... Args>
-void __f(const char* names, Arg1&& arg1, Args&&... args){
-	const char* comma = strchr(names + 1, ',');cout.write(names, comma - names) << " : " << arg1<<" | ";__f(comma+1, args...);
-}
-#else
-#define trace(...)
-#endif
-
-
-#define ll long long 
-#define ld double
-#define pb push_back
-#define F first
-#define S second
-#define I insert
-#define pll pair<ll,ll> 
-#define vll vector<ll> 
-#define vpll vector< pll >
-
 pll ref1;map<pll,ll> mp;
 
 ll dis(pll p1,pll p2){
@@ -42,7 +13,6 @@ bool online(pll p1,pll p2){
 	ll cr=cross(v1,v2);
 	if(cr==0)return true;return false;
 }
-
 bool compare(pll p1,pll p2){
 	pll v1,v2;
 	v1.F=p1.F-ref1.F;v2.F=p2.F-ref1.F;
