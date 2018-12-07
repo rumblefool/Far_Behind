@@ -1,6 +1,4 @@
-
-/*
-  To find generator of U(p),we check for all 
+/*To find generator of U(p),we check for all 
   g in [1,p]. But only for powers of the
   form phi(p)/p_j, where p_j is a prime factor of
   phi(p). Note that p is not prime here.
@@ -13,25 +11,11 @@
   Note that a.g^(phi(p)) = 1 (mod p)
             b.there are phi(phi(p)) generators if exists.
 */
-
-
-// credits : https://cp-algorithms.com/algebra/primitive-root.html
-int powmod (int a, int b, int p) {
-    int res = 1;
-    while (b)
-        if (b & 1)
-            res = int (res * 1ll * a % p),  --b;
-        else
-            a = int (a * 1ll * a % p),  b >>= 1;
-    return res;
-}
-
 // Finds "a" generator of U(p), 
 // multiplicative group of integers mod p.
 // here calc_phi returns the toitent function for p
 // Complexity : O(Ans.log(phi(p)).log(p)) + time for factorizing phi(p).
 // By some theorem, Ans = O((log(p))^6). Should be fast generally.
-
 int generator (int p) {
     vector<int> fact;
     int phi = calc_phi(p),  n = phi;
