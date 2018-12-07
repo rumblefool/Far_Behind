@@ -5,11 +5,9 @@ using namespace std;
 typedef tree<pair<ll,ll> ,null_type,less<pair<ll, ll> >,rb_tree_tag,tree_order_statistics_node_update> ordered_set;
 
 template<class T> ostream& operator<<(ostream &os, vector<T> V) {
- os << "[ "; for(auto v : V) os << v << " "; return os << "]";
-}
+ os << "[ "; for(auto v : V) os << v << " "; return os << "]";}
 template<class L, class R> ostream& operator<<(ostream &os, pair<L,R> P) {
-	return os << "(" << P.first << "," << P.second << ")";
-}
+	return os << "(" << P.first << "," << P.second << ")";}
 
 #define TRACE
 #ifdef TRACE
@@ -23,7 +21,7 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 	const char* comma = strchr(names + 1, ',');cout.write(names, comma - names) << " : " << arg1<<" | ";__f(comma+1, args...);
 }
 #else
-#define trace(...)
+#define trace(...) 1
 #endif
 
 
