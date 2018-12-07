@@ -1,6 +1,7 @@
-// Manacher Algo : Same idea as Z_algo
-// Running Time : O(n), [l,r] represents : boundaries of rightmost detected subpalindrom(with max r)
-// takes string s and returns a vector of lengths of odd length palindrom centered around that char(e.g abac for 'b' returns 2(not 3))
+// Same idea as Z_algo, Time : O(n)
+// [l,r] represents : boundaries of rightmost detected subpalindrom(with max r)
+// takes string s and returns a vector of lengths of odd length palindrom 
+// centered around that char(e.g abac for 'b' returns 2(not 3))
 vll manacher_odd(string s){
     ll n = s.length(); vll d1(n);
     for(ll i = 0, l = 0, r = -1;i<n;i++){
@@ -13,8 +14,8 @@ vll manacher_odd(string s){
     }
     return d1;
 }
-// takes string s and returns vector of lengths of even length palindrom centered around that char
-// (it's centered around the right middle charbb is centered around the later 'b')
+// takes string s and returns vector of lengths of even length ... 
+// (it's centered around the right middle char, bb is centered around the later 'b')
 vll manacher_even(string s){
     ll n = s.length(); vll d2(n);
     for(ll i = 0, l = 0, r = -1;i<n;i++){
