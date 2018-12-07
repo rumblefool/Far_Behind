@@ -10,6 +10,7 @@ X.insert(2);
 cout<<*X.find_by_order(0)<<endl; // 1
 cout<<*X.find_by_order(1)<<endl; // 2
 cout<<(end(X)==X.find_by_order(2))<<endl; // true
+//order_of_key(x) returns number of elements strictly less than x in ordered_set
 cout<<X.order_of_key(-5)<<endl;  // 0
 cout<<X.order_of_key(1)<<endl;   // 0
 cout<<X.order_of_key(3)<<endl;   // 2
