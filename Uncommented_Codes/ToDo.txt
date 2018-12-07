@@ -20,4 +20,7 @@
 20. Optimization fundae (CodeResources in Upsolve Sheet)
 21. Integration Formulae
 22. Flows all variants: https://codeforces.com/blog/entry/52192?locale=en
-23. Number of Subsets with xor x
+23. Number of Subsets with xor x - https://codeforces.com/blog/entry/44408 Problem D
+24. Sparse Table
+25. Run Hungarian on CF Gym Problem
+26. Bipartite Matching in O(m*n), Hungarian, Dilworth's Theorem
