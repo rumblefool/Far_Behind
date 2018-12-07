@@ -1,11 +1,11 @@
-// Code Credits :- http://codeforces.com/contest/995/submission/39625327
-
 /* Input :
 Degree of polynomial: k
 Polynomial values at x=0,1,2,3,...,k
 
 Output :
 Polynomial value at x
+Complexity: O(degree of polynomial)
+Works only if the points are equally spaced
 */
 
 ll lagrange(vll& v , int k, ll x,int mod)
