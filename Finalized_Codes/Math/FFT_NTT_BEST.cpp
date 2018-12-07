@@ -1,4 +1,5 @@
 /*
+Kevin's different Code: https://s3.amazonaws.com/codechef_shared/download/Solutions/JUNE15/tester/MOREFB.cpp
 ****There is no problem that FFT can solve while this NTT cannot
 	Case1: If the answer would be small choose a small enough NTT prime modulus
 	Case2: If the answer is large(> ~1e9) FFT would not work anyway due to precision issues
