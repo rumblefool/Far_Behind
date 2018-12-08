@@ -22,6 +22,11 @@ ld dist2(pt p, pt q)   { return dot(p-q,p-q); }
 ld cross(pt p, pt q)   { return p.x*q.y-p.y*q.x; }
 ostream &operator<<(ostream &os, const pt &p) {
   return os << "(" << p.x << "," << p.y << ")";}
+//returns 0 if a,b,c are collinear,1 if a->b->c is cw and -1 if ccw
+int orient(pt a,pt b,pt c)
+{
+  pt p=b-a,q=c-b;double cr=cross(p,q);
+  if(eq(cr,0))return 0;if(lt(cr,0))return 1;return -1;}
 // rotate a point CCW or CW around the origin
 pt RotateCCW90(pt p)   { return pt(-p.y,p.x); }
 pt RotateCW90(pt p)    { return pt(p.y,-p.x); }
@@ -30,85 +35,57 @@ pt RotateCCW(pt p, ld t) {  //rotate by angle t degree ccw
 // project point c onto line (not segment) through a and b assuming a != b
 pt ProjectPointLine(pt a, pt b, pt c) {
   return a + (b-a)*dot(c-a, b-a)/dot(b-a, b-a);}
-// project point c onto line segment through a and b
+// project point c onto line segment through a and b (closest point on line segment)
 pt ProjectPointSegment(pt a, pt b, pt c) {
   ld r = dot(b-a,b-a); if (eq(r,0)) return a;//a and b are same
-  r = dot(c-a, b-a)/r;if (lt(r,0)) return a;
-  if (gt(r,1)) return b; return a + (b-a)*r;
-}
-
+  r = dot(c-a, b-a)/r;if (lt(r,0)) return a;//c on left of a
+  if (gt(r,1)) return b; return a + (b-a)*r;}
 // compute distance from c to segment between a and b
 ld DistancePointSegment(pt a, pt b, pt c) {
-  return sqrt(dist2(c, ProjectPointSegment(a, b, c)));
-}
-
-// compute distance between point (x,y,z) and plane ax+by+cz=d
-ld DistancePointPlane(ld x, ld y, ld z,
-                          ld a, ld b, ld c, ld d)
-{
-  return fabs(a*x+b*y+c*z-d)/sqrt(a*a+b*b+c*c);
-}
-
+  return sqrt(dist2(c, ProjectPointSegment(a, b, c)));}
 // determine if lines from a to b and c to d are parallel or collinear
 bool LinesParallel(pt a, pt b, pt c, pt d) { 
-  return fabs(cross(b-a, c-d)) < EPS; 
-}
-
+  return eq(cross(b-a, c-d),0); }
 bool LinesCollinear(pt a, pt b, pt c, pt d) { 
-  return LinesParallel(a, b, c, d)
-      && fabs(cross(a-b, a-c)) < EPS
-      && fabs(cross(c-d, c-a)) < EPS; 
-}
-
-// determine if line segment from a to b intersects with 
-// line segment from c to d
+  return LinesParallel(a, b, c, d) && eq(cross(a-b, a-c),0) && eq(cross(c-d, c-a),0);}
+// determine if line segment from a to b intersects with line segment from c to d
 bool SegmentsIntersect(pt a, pt b, pt c, pt d) {
   if (LinesCollinear(a, b, c, d)) {
-    if (dist2(a, c) < EPS || dist2(a, d) < EPS ||
-      dist2(b, c) < EPS || dist2(b, d) < EPS) return true;
-    if (dot(c-a, c-b) > 0 && dot(d-a, d-b) > 0 && dot(c-b, d-b) > 0)
-      return false;
-    return true;
-  }
-  if (cross(d-a, b-a) * cross(c-a, b-a) > 0) return false;
-  if (cross(a-c, d-c) * cross(b-c, d-c) > 0) return false;
-  return true;
-}
-
+    //a->b and c->d are collinear and have one point common
+    if(eq(dist2(a,c),0)||eq(dist2(a,d),0)||eq(dist2(b,c),0)||eq(dist2(b,d),0)) return true;
+    if(gt(dot(c-a,c-b),0)&&gt(dot(d-a,d-b),0)&&gt(dot(c-b,d-b),0)) return false;
+    return true;}
+  if(gt(cross(d-a,b-a)*cross(c-a,b-a),0)) return false;//c,d on same side of a,b
+  if(gt(cross(a-c,d-c)*cross(b-c,d-c),0)) return false;//a,b on same side of c,d
+  return true;}
 // compute intersection of line passing through a and b
-// with line passing through c and d, assuming that unique
-// intersection exists; for segment intersection, check if
-// segments intersect first
-pt ComputeLineIntersection(pt a, pt b, pt c, pt d) {
-  b=b-a; d=c-d; c=c-a;
-  assert(dot(b, b) > EPS && dot(d, d) > EPS);
-  return a + b*cross(c, d)/cross(b, d);
-}
-
+// with line passing through c and d,assuming that **unique** intersection exists;
+//*for segment intersection,check if segments intersect first
+pt ComputeLineIntersection(pt a,pt b,pt c,pt d){
+  b=b-a;d=c-d;c=c-a;//lines must not be collinear
+  assert(gt(dot(b, b),0)&&gt(dot(d, d),0));
+  return a + b*cross(c, d)/cross(b, d);}
 // compute center of circle given three points
-pt ComputeCircleCenter(pt a, pt b, pt c) {
-  b=(a+b)/2;
-  c=(a+c)/2;
-  return ComputeLineIntersection(b, b+RotateCW90(a-b), c, c+RotateCW90(a-c));
-}
-
-// determine if point is in a possibly non-convex polygon (by William
-// Randolph Franklin); returns 1 for strictly interior points, 0 for
-// strictly exterior points, and 0 or 1 for the remaining points.
-// Note that it is possible to convert this into an *exact* test using
-// integer arithmetic by taking care of the division appropriately
-// (making sure to deal with signs properly) and then by writing exact
-// tests for checking point on polygon boundary
-bool PointInPolygon(const vector<pt> &p, pt q) {
-  bool c = 0;
-  for (int i = 0; i < p.size(); i++){
-    int j = (i+1)%p.size();
-    if ((p[i].y <= q.y && q.y < p[j].y || 
-      p[j].y <= q.y && q.y < p[i].y) &&
-      q.x < p[i].x + (p[j].x - p[i].x) * (q.y - p[i].y) / (p[j].y - p[i].y))
-      c = !c;
-  }
-  return c;
+pt ComputeCircleCenter(pt a,pt b,pt c){
+  b=(a+b)/2;c=(a+c)/2;
+  return ComputeLineIntersection(b,b+RotateCW90(a-b),c,c+RotateCW90(a-c));}
+//point in polygon using winding number -> returns 0 if point is outside
+//winding number>0 if point is inside and equal to 0 if outside
+//draw a ray to the right and add 1 if side goes from up to down and -1 otherwise
+bool PointInPolygon(const vector<pt> &p,pt q){
+  int n=p.size(),windingNumber=0;
+  for(int i=0;i<n;++i){
+    if(eq(dist2(q,p[i]),0)) return 1;//q is a vertex
+    int j=(i+1)%n;
+    if(eq(p[i].y,q.y)&&eq(p[j].y,q.y)) {//i,i+1 vertex is vertical
+      if(min(p[i].x,p[j].x)<=q.x&&q.x<=max(p[i].x, p[j].x)) return 1;}//q lies on boundary
+    else {
+      bool below=lt(p[i].y,q.y);
+      if(below!=lt(p[j].y,q.y)) {
+        auto orientation=orient(q,p[j],p[i]);
+        if(orientation==0) return 1;//q lies on boundary i->j
+        if(below==(orientation>0)) windingNumber+=below?1:-1;}}}
+  return windingNumber==0?0:1;
 }
 
 // determine if point is on the boundary of a polygon
