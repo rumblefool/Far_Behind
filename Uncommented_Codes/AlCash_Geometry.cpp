@@ -59,7 +59,7 @@ FUNC2(operator ==, Point<F1>& lhs, Point<F2>& rhs, lhs.x == rhs.x && lhs.y == rh
 FUNC2(operator !=, Point<F1>& lhs, Point<F2>& rhs, !(lhs == rhs))
 
 FUNC2(operator <, Point<F1>& lhs, Point<F2>& rhs,
-    lhs.y < rhs.y || (lhs.y == rhs.y && lhs.x < rhs.x))
+    lhs.y < rhs.y || (lhs.y == rhs.y && lhs.x < rhs.x)
 FUNC2(operator >, Point<F1>& lhs, Point<F2>& rhs, rhs < lhs)
 FUNC2(operator <=, Point<F1>& lhs, Point<F2>& rhs, !(lhs > rhs))
 FUNC2(operator >=, Point<F1>& lhs, Point<F2>& rhs, !(lhs < rhs))
