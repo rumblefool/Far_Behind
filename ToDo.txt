@@ -29,3 +29,5 @@
 29. BIT 2D
 30. Bitset optimizations
 31. General ideas: https://codeforces.com/blog/entry/48417
+32. Cookbook Resource: https://codeforces.com/blog/entry/47863
+33. Geometry Contest: https://codeforces.com/gym/100168 , blog: https://codeforces.com/blog/entry/54751
