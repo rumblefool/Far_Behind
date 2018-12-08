@@ -1,0 +1,53 @@
+% \date{\today}
+\date{}
+\title{\vspace{-1cm}Codebook- Team Far\_Behind\\IIT Delhi, India}
+% Compiled and edited by Brian Bi
+\documentclass[125pt]{extarticle}
+\setlength{\parindent}{0.0in}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage[landscape,letterpaper,twoside=false,top=15mm,bottom=5mm,left=10mm,right=5mm]{geometry}
+\pagestyle{myheadings}
+\markright{}
+\usepackage{listings}
+\usepackage{color}
+%\usepackage{sectsty}
+%\sectionfont{\fontsize{12}{4}\selectfont}
+\lstset{
+	tabsize=1,
+	basicstyle=\fontsize{11}{5}\ttfamily,
+	% basicstyle=\ttfamily\scriptsize,
+	%upquote=true,
+	aboveskip={0.00\baselineskip},
+	columns=fixed,
+	showstringspaces=false,
+	extendedchars=true,
+	breaklines=true,
+	prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+	frame=single,
+	rulecolor=\color[rgb]{0.75,0.75,0.75},
+	showtabs=false,
+	showspaces=false,
+	showstringspaces=false,
+	keywordstyle=\color[rgb]{0,0,1},
+	commentstyle=\color[rgb]{0.133,0.545,0.133},
+	stringstyle=\color[rgb]{0.627,0.126,0.941},
+}
+
+\author{
+	Ayush Ranjan, Naman Jain, Manish Tanwar
+}
+
+\begin{document}
+\maketitle
+		\begin{multicols*}{2}
+			
+			\setlength{\parskip}{0.0in}
+			\tableofcontents
+			\setlength{\parskip}{0.0in}
+			
+			\input contents.tex
+			
+		\end{multicols*}
+\end{document}
