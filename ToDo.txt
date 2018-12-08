@@ -29,3 +29,4 @@
 29. BIT 2D
 30. Bitset optimizations
 31. General ideas: https://codeforces.com/blog/entry/48417
+32. Cookbook Resource: https://codeforces.com/blog/entry/47863
