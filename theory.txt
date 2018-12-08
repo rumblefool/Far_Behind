@@ -1,0 +1,12 @@
+1. IS is complement of VC.
+
+For Bi-partite graphs:
+1. Min-edge cover(me) = max independent set(mi) (G has no isolated vertex)
+2. min vertex cover(mv) = max matching(mm)
+3. mi + mv = |V|
+4. min-edge cover subgraph is a combination of star graphs.
+5. Min Vertex cover : In residual graph of max flow pick all the vertices in 
+   L(left bipartite) not reachable from s(whose edges are cut) and lly in R reachable from s.
+6. mi >= |V|/2
+7. Min edge cover(no isolated vertex) : Find max matching, take all those edges, for vertices not covered
+  take any edge.
