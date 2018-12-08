@@ -109,6 +109,9 @@ bool PointOnPolygon(const vector<pt> &p,pt q) {
   for (int i = 0; i < p.size(); i++)
     if (eq((ProjectPointSegment(p[i],p[(i+1)%p.size()],q),q),0)) return true;
   return false;}
+
+
+/*Untested*/
 // compute intersection of line through points a and b with
 // circle centered at c with radius r > 0
 vector<pt> CircleLineIntersection(pt a, pt b, pt c, ld r) {
