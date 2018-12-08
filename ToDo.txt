@@ -28,3 +28,4 @@
 28. Gaussian Elimination
 29. BIT 2D
 30. Bitset optimizations
+31. General ideas: https://codeforces.com/blog/entry/48417

@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long
+#define endl "\n"
 #define sz(a)	(a.size())
 #define chinese(a1,m1,invm2m1,a2,m2,invm1m2) ((a1 *1ll* invm2m1 % m1 * 1ll*m2 + a2 *1ll* invm1m2 % m2 * 1ll*m1) % (m1 *1ll* m2))
 int mod=663224321;
@@ -16,7 +17,8 @@ vector<int> roots = {0, 1};
 vector<int> rev = {0, 1};
 int max_base=19;	//2^x
 int root=298744225;		//primitive root
-void ensure_base(int nbase) {
+int rootpw[25];
+inline void ensure_base(int nbase) {
 	if (nbase <= base) {
 	  return;
 	}
@@ -27,7 +29,7 @@ void ensure_base(int nbase) {
 	}
 	roots.resize(1 << nbase);
 	while (base < nbase) {
-	  int z = power(root, 1 << (max_base - 1 - base));
+	  int z = rootpw[max_base - 1 - base];
 	  for (int i = 1 << (base - 1); i < (1 << base); i++) {
 	    roots[i << 1] = roots[i];
 	    roots[(i << 1) + 1] = mul(roots[i], z);
@@ -35,7 +37,7 @@ void ensure_base(int nbase) {
 	  base++;
 	}
 }
-void fft(vector<int> &a) {
+inline void fft(vector<int> &a) {
 	int n = (int) a.size();
 	assert((n & (n - 1)) == 0);
 	int zeros = __builtin_ctz(n);
@@ -59,7 +61,7 @@ void fft(vector<int> &a) {
 	  }
 	}
 }
-vector<int> multiply(vector<int> a, vector<int> b, int eq = 0) {
+inline vector<int> multiply(vector<int> a, vector<int> b, int eq = 0) {
 	int need = (int) (a.size() + b.size() - 1);
 	int nbase = 0;
 	while ((1 << nbase) < need) nbase++;
@@ -80,36 +82,34 @@ vector<int> multiply(vector<int> a, vector<int> b, int eq = 0) {
 }
 const int nx=131072;
 int f[nx],g[nx];
-void prvec(vector<int> &v)
+inline void onlinefft(int a,int b,int c,int d)
 {
-	for(auto i:v)cout<<i<<' ';cout<<endl;
-}
-void onlinefft(int a,int b,int c,int d)
-{
-	vector<int> v1,v2;for(int i=a;i<=b;i++)v1.push_back(f[i]);for(int i=c;i<=d;i++)v2.push_back(g[i]);
+	vector<int> v1(f+a,f+b+1),v2(g+c,g+d+1);
 	base=1;roots={0,1};rev={0,1};
+	if(a+c>=1e5)return;
 	vector<int> res=multiply(v1,v2);
-	for(int i=0;i<res.size();i++)
-		if(a+c+i+1<nx)
+	for(int i=0;i<res.size()&&i+a+c<1e5;i++)
 			f[a+c+i+1]=add(f[a+c+i+1],res[i]);
 }
 void precal()
 {
+	for(int i=0;i<25;i++)rootpw[i]=power(root,1<<i);
 	g[0]=1;
-	for(int i=1;i<nx;i++)
+	for(int i=1;i<=1e5;i++)
 		g[i]=power(i,i-1);
 	f[1]=1;
-	for(int i=1;i<=100000;i++)
+	for(int i=1;i<1e5;i++)
 	{
 		f[i+1]=add(f[i+1],g[i]);
 		f[i+1]=add(f[i+1],f[i]);
 		f[i+2]=add(f[i+2],mul(f[i],g[1]));f[i+3]=add(f[i+3],mul(f[i],g[2]));
-		for(int j=2;i%j==0&&j<nx;j=j*2)
+		for(int j=2;i%j==0;j=j*2)
 			onlinefft(i-j,i-1,j+1,2*j);
 	}
 }
 int main() 
 {
+	ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);
 	precal();
 	int t;cin>>t;
 	while(t--)
