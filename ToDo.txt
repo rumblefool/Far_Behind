@@ -27,3 +27,4 @@
 27. Mobius Inversion
 28. Gaussian Elimination
 29. BIT 2D
+30. Bitset optimizations
