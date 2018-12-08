@@ -1,0 +1,34 @@
+1. Online FFT
+2. Persistent Segment Tree
+3. Treaps
+4. Geometry
+5. Segment Tree/BIT with updates (range updates and lazy propagation)
+6. Topics from emaxx
+7. Stable Matching
+8. Sweep Line
+9. Mo's Algorithm theory
+10. Cipollas Algorithm
+11. Burnside's Lemma
+12. Pick's Theorem
+13. Formulae for Solution of Triangle (Heron's formula)
+14. Biconnectivity
+15. SCC (2-SAT)
+16. Dominator Tree
+17. Linear Recurrences
+18. Master's Theorem for complexity
+19. DP optimizations
+20. Optimization fundae (CodeResources in Upsolve Sheet)
+21. Integration Formulae
+22. Flows all variants: https://codeforces.com/blog/entry/52192?locale=en
+23. Number of Subsets with xor x - https://codeforces.com/blog/entry/44408 Problem D
+24. Sparse Table
+25. Run Hungarian on CF Gym Problem
+26. Bipartite Matching in O(m*n), Hungarian, Dilworth's Theorem
+27. Mobius Inversion
+28. Gaussian Elimination
+29. BIT 2D
+30. Bitset optimizations
+31. General ideas: https://codeforces.com/blog/entry/48417
+32. Cookbook Resource: https://codeforces.com/blog/entry/47863
+33. Geometry Contest: https://codeforces.com/gym/100168 , blog: https://codeforces.com/blog/entry/54751
+34. Circulation Theory
