@@ -1,6 +1,7 @@
+//small non recursive functions should me made inline
 #define ld double
 #define PI acos(-1)
-//atan2(y,x) slope of line (0,0)->(x,y) in radian
+//atan2(y,x) slope of line (0,0)->(x,y) in radian (-PI,PI]
 // to convert to degree multiply by 180/PI
 ld INF = 1e100;
 ld EPS = 1e-10;
@@ -17,9 +18,12 @@ struct pt {
   pt operator * (ld c)     const { return pt(x*c,   y*c  ); }
   pt operator / (ld c)     const { return pt(x/c,   y/c  ); }
 };
-ld dot(pt p, pt q)     { return p.x*q.x+p.y*q.y; }
-ld dist2(pt p, pt q)   { return dot(p-q,p-q); }
-ld cross(pt p, pt q)   { return p.x*q.y-p.y*q.x; }
+ld dot(pt p,pt q) {return p.x*q.x+p.y*q.y;}
+ld dist2(pt p, pt q) {return dot(p-q,p-q);}
+ld dist(pt p,pt q) {return sqrt(dist2(p,q));}
+ld norm2(pt p) {return dot(p,p);}
+ld norm(pt p) {return sqrt(norm2(p));}
+ld cross(pt p, pt q) { return p.x*q.y-p.y*q.x;}
 ostream &operator<<(ostream &os, const pt &p) {
   return os << "(" << p.x << "," << p.y << ")";}
 //returns 0 if a,b,c are collinear,1 if a->b->c is cw and -1 if ccw
@@ -65,6 +69,19 @@ pt ComputeLineIntersection(pt a,pt b,pt c,pt d){
   b=b-a;d=c-d;c=c-a;//lines must not be collinear
   assert(gt(dot(b, b),0)&&gt(dot(d, d),0));
   return a + b*cross(c, d)/cross(b, d);}
+//returns true if point a,b,c are collinear and b lies between a and c
+bool between(pt a,pt b,pt c){
+  if(!eq(cross(b-a,c-b),0))return 0;//not collinear
+  if(eq(dist2(b,a),0)||eq(dist2(b,c),0))return 1;
+  return lt(dot(b-a,b-c),0);
+}
+//compute intersection of line segment a-b and c-d
+pt ComputeSegmentIntersection(pt a,pt b,pt c,pt d){
+  if(!SegmentsIntersect(a,b,c,d))return {INF,INF};//don't intersect
+  //if collinear then infinite intersection points, this returns any one
+  if(LinesCollinear(a,b,c,d)){if(between(a,c,b))return c;if(between(c,a,d))return a;return b;}
+  return ComputeLineIntersection(a,b,c,d);
+}
 // compute center of circle given three points
 pt ComputeCircleCenter(pt a,pt b,pt c){
   b=(a+b)/2;c=(a+c)/2;
@@ -87,15 +104,11 @@ bool PointInPolygon(const vector<pt> &p,pt q){
         if(below==(orientation>0)) windingNumber+=below?1:-1;}}}
   return windingNumber==0?0:1;
 }
-
 // determine if point is on the boundary of a polygon
-bool PointOnPolygon(const vector<pt> &p, pt q) {
+bool PointOnPolygon(const vector<pt> &p,pt q) {
   for (int i = 0; i < p.size(); i++)
-    if (dist2(ProjectPointSegment(p[i], p[(i+1)%p.size()], q), q) < EPS)
-      return true;
-    return false;
-}
-
+    if (eq((ProjectPointSegment(p[i],p[(i+1)%p.size()],q),q),0)) return true;
+  return false;}
 // compute intersection of line through points a and b with
 // circle centered at c with radius r > 0
 vector<pt> CircleLineIntersection(pt a, pt b, pt c, ld r) {
