@@ -20,3 +20,4 @@
 20. Optimization fundae (CodeResources in Upsolve Sheet)
 21. Integration Formulae
 22. Flows all variants: https://codeforces.com/blog/entry/52192?locale=en
+23. Circulation Theory
