@@ -1,3 +1,5 @@
+#include<bits/stdc++.h>
+using namespace std;
 //small non recursive functions should me made inline
 #define ld double
 #define PI acos(-1)
@@ -107,7 +109,7 @@ bool PointInPolygon(const vector<pt> &p,pt q){
 // determine if point is on the boundary of a polygon
 bool PointOnPolygon(const vector<pt> &p,pt q) {
   for (int i = 0; i < p.size(); i++)
-    if (eq((ProjectPointSegment(p[i],p[(i+1)%p.size()],q),q),0)) return true;
+    if (eq(dist2(ProjectPointSegment(p[i],p[(i+1)%p.size()],q),q),0)) return true;
   return false;}
 // Compute area or centroid of any polygon (coordinates must be listed in cw/ccw
 //fashion.The centroid is often known as center of gravity/mass
@@ -115,26 +117,19 @@ ld ComputeSignedArea(const vector<pt> &p) {
   ld ans=0;
   for(int i = 0; i < p.size(); i++) {
     int j = (i+1) % p.size();
-    area+=cross(p[i],p[j]);
-  } return area / 2.0;}
-
-/*Untested*/
+    ans+=cross(p[i],p[j]);
+  } return ans / 2.0;}
 // compute intersection of line through points a and b with
 // circle centered at c with radius r > 0
 vector<pt> CircleLineIntersection(pt a, pt b, pt c, ld r) {
   vector<pt> ret;
-  b = b-a;
-  a = a-c;
-  ld A = dot(b, b);
-  ld B = dot(a, b);
-  ld C = dot(a, a) - r*r;
-  ld D = B*B - A*C;
-  if (D < -EPS) return ret;
+  b = b-a;a = a-c;
+  ld A = dot(b, b),B = dot(a, b),C = dot(a, a) - r*r,D = B*B - A*C;
+  if (lt(D,0)) return ret;	//don't intersect
   ret.push_back(c+a+b*(-B+sqrt(D+EPS))/A);
-  if (D > EPS)
-    ret.push_back(c+a+b*(-B-sqrt(D))/A);
-  return ret;
-}
+  if (gt(D,0)) ret.push_back(c+a+b*(-B-sqrt(D))/A);
+  return ret;}
+/*Untested*/
 
 // compute intersection of circle centered at a with radius r
 // with circle centered at b with radius R
@@ -182,93 +177,93 @@ bool IsSimple(const vector<pt> &p) {
 int main() {
   
   // expected: (-5,2)
-  cerr << RotateCCW90(pt(2,5)) << endl;
+  // cerr << RotateCCW90(pt(2,5)) << endl;
   
-  // expected: (5,-2)
-  cerr << RotateCW90(pt(2,5)) << endl;
+  // // expected: (5,-2)
+  // cerr << RotateCW90(pt(2,5)) << endl;
   
-  // expected: (-5,2)
-  cerr << RotateCCW(pt(2,5),M_PI/2) << endl;
+  // // expected: (-5,2)
+  // cerr << RotateCCW(pt(2,5),M_PI/2) << endl;
   
-  // expected: (5,2)
-  cerr << ProjectPointLine(pt(-5,-2), pt(10,4), pt(3,7)) << endl;
+  // // expected: (5,2)
+  // cerr << ProjectPointLine(pt(-5,-2), pt(10,4), pt(3,7)) << endl;
   
-  // expected: (5,2) (7.5,3) (2.5,1)
-  cerr << ProjectPointSegment(pt(-5,-2), pt(10,4), pt(3,7)) << " "
-       << ProjectPointSegment(pt(7.5,3), pt(10,4), pt(3,7)) << " "
-       << ProjectPointSegment(pt(-5,-2), pt(2.5,1), pt(3,7)) << endl;
+  // // expected: (5,2) (7.5,3) (2.5,1)
+  // cerr << ProjectPointSegment(pt(-5,-2), pt(10,4), pt(3,7)) << " "
+  //      << ProjectPointSegment(pt(7.5,3), pt(10,4), pt(3,7)) << " "
+  //      << ProjectPointSegment(pt(-5,-2), pt(2.5,1), pt(3,7)) << endl;
   
-  // expected: 6.78903
-  cerr << DistancePointPlane(4,-4,3,2,-2,5,-8) << endl;
+  // // expected: 6.78903
+  // cerr << DistancePointPlane(4,-4,3,2,-2,5,-8) << endl;
   
-  // expected: 1 0 1
-  cerr << LinesParallel(pt(1,1), pt(3,5), pt(2,1), pt(4,5)) << " "
-       << LinesParallel(pt(1,1), pt(3,5), pt(2,0), pt(4,5)) << " "
-       << LinesParallel(pt(1,1), pt(3,5), pt(5,9), pt(7,13)) << endl;
+  // // expected: 1 0 1
+  // cerr << LinesParallel(pt(1,1), pt(3,5), pt(2,1), pt(4,5)) << " "
+  //      << LinesParallel(pt(1,1), pt(3,5), pt(2,0), pt(4,5)) << " "
+  //      << LinesParallel(pt(1,1), pt(3,5), pt(5,9), pt(7,13)) << endl;
   
-  // expected: 0 0 1
-  cerr << LinesCollinear(pt(1,1), pt(3,5), pt(2,1), pt(4,5)) << " "
-       << LinesCollinear(pt(1,1), pt(3,5), pt(2,0), pt(4,5)) << " "
-       << LinesCollinear(pt(1,1), pt(3,5), pt(5,9), pt(7,13)) << endl;
+  // // expected: 0 0 1
+  // cerr << LinesCollinear(pt(1,1), pt(3,5), pt(2,1), pt(4,5)) << " "
+  //      << LinesCollinear(pt(1,1), pt(3,5), pt(2,0), pt(4,5)) << " "
+  //      << LinesCollinear(pt(1,1), pt(3,5), pt(5,9), pt(7,13)) << endl;
   
-  // expected: 1 1 1 0
-  cerr << SegmentsIntersect(pt(0,0), pt(2,4), pt(3,1), pt(-1,3)) << " "
-       << SegmentsIntersect(pt(0,0), pt(2,4), pt(4,3), pt(0,5)) << " "
-       << SegmentsIntersect(pt(0,0), pt(2,4), pt(2,-1), pt(-2,1)) << " "
-       << SegmentsIntersect(pt(0,0), pt(2,4), pt(5,5), pt(1,7)) << endl;
+  // // expected: 1 1 1 0
+  // cerr << SegmentsIntersect(pt(0,0), pt(2,4), pt(3,1), pt(-1,3)) << " "
+  //      << SegmentsIntersect(pt(0,0), pt(2,4), pt(4,3), pt(0,5)) << " "
+  //      << SegmentsIntersect(pt(0,0), pt(2,4), pt(2,-1), pt(-2,1)) << " "
+  //      << SegmentsIntersect(pt(0,0), pt(2,4), pt(5,5), pt(1,7)) << endl;
   
-  // expected: (1,2)
-  cerr << ComputeLineIntersection(pt(0,0), pt(2,4), pt(3,1), pt(-1,3)) << endl;
+  // // expected: (1,2)
+  // cerr << ComputeLineIntersection(pt(0,0), pt(2,4), pt(3,1), pt(-1,3)) << endl;
   
-  // expected: (1,1)
-  cerr << ComputeCircleCenter(pt(-3,4), pt(6,1), pt(4,5)) << endl;
+  // // expected: (1,1)
+  // cerr << ComputeCircleCenter(pt(-3,4), pt(6,1), pt(4,5)) << endl;
   
-  vector<pt> v; 
-  v.push_back(pt(0,0));
-  v.push_back(pt(5,0));
-  v.push_back(pt(5,5));
-  v.push_back(pt(0,5));
+  // vector<pt> v; 
+  // v.push_back(pt(0,0));
+  // v.push_back(pt(5,0));
+  // v.push_back(pt(5,5));
+  // v.push_back(pt(0,5));
   
-  // expected: 1 1 1 0 0
-  cerr << PointInPolygon(v, pt(2,2)) << " "
-       << PointInPolygon(v, pt(2,0)) << " "
-       << PointInPolygon(v, pt(0,2)) << " "
-       << PointInPolygon(v, pt(5,2)) << " "
-       << PointInPolygon(v, pt(2,5)) << endl;
+  // // expected: 1 1 1 0 0
+  // cerr << PointInPolygon(v, pt(2,2)) << " "
+  //      << PointInPolygon(v, pt(2,0)) << " "
+  //      << PointInPolygon(v, pt(0,2)) << " "
+  //      << PointInPolygon(v, pt(5,2)) << " "
+  //      << PointInPolygon(v, pt(2,5)) << endl;
   
-  // expected: 0 1 1 1 1
-  cerr << PointOnPolygon(v, pt(2,2)) << " "
-       << PointOnPolygon(v, pt(2,0)) << " "
-       << PointOnPolygon(v, pt(0,2)) << " "
-       << PointOnPolygon(v, pt(5,2)) << " "
-       << PointOnPolygon(v, pt(2,5)) << endl;
+  // // expected: 0 1 1 1 1
+  // cerr << PointOnPolygon(v, pt(2,2)) << " "
+  //      << PointOnPolygon(v, pt(2,0)) << " "
+  //      << PointOnPolygon(v, pt(0,2)) << " "
+  //      << PointOnPolygon(v, pt(5,2)) << " "
+  //      << PointOnPolygon(v, pt(2,5)) << endl;
   
-  // expected: (1,6)
-  //           (5,4) (4,5)
-  //           blank line
-  //           (4,5) (5,4)
-  //           blank line
-  //           (4,5) (5,4)
-  vector<pt> u = CircleLineIntersection(pt(0,6), pt(2,6), pt(1,1), 5);
-  for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  u = CircleLineIntersection(pt(0,9), pt(9,0), pt(1,1), 5);
-  for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  u = CircleCircleIntersection(pt(1,1), pt(10,10), 5, 5);
-  for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  u = CircleCircleIntersection(pt(1,1), pt(8,8), 5, 5);
-  for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  u = CircleCircleIntersection(pt(1,1), pt(4.5,4.5), 10, sqrt(2.0)/2.0);
-  for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  u = CircleCircleIntersection(pt(1,1), pt(4.5,4.5), 5, sqrt(2.0)/2.0);
-  for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
+  // // expected: (1,6)
+  // //           (5,4) (4,5)
+  // //           blank line
+  // //           (4,5) (5,4)
+  // //           blank line
+  // //           (4,5) (5,4)
+  // vector<pt> u = CircleLineIntersection(pt(0,6), pt(2,6), pt(1,1), 5);
+  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
+  // u = CircleLineIntersection(pt(0,9), pt(9,0), pt(1,1), 5);
+  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
+  // u = CircleCircleIntersection(pt(1,1), pt(10,10), 5, 5);
+  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
+  // u = CircleCircleIntersection(pt(1,1), pt(8,8), 5, 5);
+  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
+  // u = CircleCircleIntersection(pt(1,1), pt(4.5,4.5), 10, sqrt(2.0)/2.0);
+  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
+  // u = CircleCircleIntersection(pt(1,1), pt(4.5,4.5), 5, sqrt(2.0)/2.0);
+  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
   
-  // area should be 5.0
-  // centroid should be (1.1666666, 1.166666)
-  pt pa[] = { pt(0,0), pt(5,0), pt(1,1), pt(0,5) };
-  vector<pt> p(pa, pa+4);
-  pt c = ComputeCentroid(p);
-  cerr << "Area: " << ComputeArea(p) << endl;
-  cerr << "Centroid: " << c << endl;
+  // // area should be 5.0
+  // // centroid should be (1.1666666, 1.166666)
+  // pt pa[] = { pt(0,0), pt(5,0), pt(1,1), pt(0,5) };
+  // vector<pt> p(pa, pa+4);
+  // pt c = ComputeCentroid(p);
+  // cerr << "Area: " << ComputeArea(p) << endl;
+  // cerr << "Centroid: " << c << endl;
   
-  return 0;
+  // return 0;
 }
