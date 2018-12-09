@@ -2,6 +2,7 @@
 using namespace std;
 #define pb push_back
 //small non recursive functions should me made inline
+//do not read input in double format if they are integer points
 #define ld double
 #define PI acos(-1)
 //atan2(y,x) slope of line (0,0)->(x,y) in radian (-PI,PI]
@@ -152,22 +153,17 @@ vector<pt> CircleCircleIntersection(pt a, pt b, ld r, ld R) {
   ret.push_back(a+v*x + RotateCCW90(v)*y);
   if (gt(y,0)) ret.push_back(a+v*x - RotateCCW90(v)*y);
   return ret;}
-
-/*Untested*/
 //compute centroid of simple polygon by dividing it into disjoint triangles
 //and taking weighted mean of their centroids (Jerome)
 pt ComputeCentroid(const vector<pt> &p) {
   pt c(0,0),inf(INF,INF);
   ld scale = 6.0 * ComputeSignedArea(p);
-  if(p.empty())return inf;
-  if(eq(scale,0)){}
+  if(p.empty())return inf;//empty vector
+  if(eq(scale,0))return inf;//all points on straight line
   for (int i = 0; i < p.size(); i++){
     int j = (i+1) % p.size();
-    c = c + (p[i]+p[j])*cross(p[i],p[j]);
-  }
-  return c / scale;
-}
-
+    c = c + (p[i]+p[j])*cross(p[i],p[j]);}
+  return c / scale;}
 // tests whether or not a given polygon (in CW or CCW order) is simple
 bool IsSimple(const vector<pt> &p) {
   for (int i = 0; i < p.size(); i++) {
@@ -176,11 +172,13 @@ bool IsSimple(const vector<pt> &p) {
       int l = (k+1) % p.size();
       if (i == l || j == k) continue;
       if (SegmentsIntersect(p[i], p[j], p[k], p[l])) 
-        return false;
-    }
-  }
-  return true;
-}
+        return false;}}
+  return true;}
+//Line polygon intersection: check if given line intersects any side of polygon
+//if yes then line intersects. If no, then check if its midpoint is inside polygon
+//if midpoint is inside then line is inside else outside
+/*Untested*/
+
 
 int main() {
   
