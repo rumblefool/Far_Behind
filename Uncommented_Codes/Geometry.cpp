@@ -53,7 +53,7 @@ pt ProjectPointSegment(pt a, pt b, pt c) {
 ld DistancePointSegment(pt a, pt b, pt c) {
   return sqrt(dist2(c, ProjectPointSegment(a, b, c)));}
 // compute distance from c to line between a and b
-ld DistancePointSegment(pt a, pt b, pt c) {
+ld DistancePointLine(pt a, pt b, pt c) {
   return sqrt(dist2(c, ProjectPointLine(a, b, c)));}
 // determine if lines from a to b and c to d are parallel or collinear
 bool LinesParallel(pt a, pt b, pt c, pt d) { 
