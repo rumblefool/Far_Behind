@@ -1,12 +1,13 @@
 #include<bits/stdc++.h>
 using namespace std;
+#define pb push_back
 //small non recursive functions should me made inline
 #define ld double
 #define PI acos(-1)
 //atan2(y,x) slope of line (0,0)->(x,y) in radian (-PI,PI]
 // to convert to degree multiply by 180/PI
 ld INF = 1e100;
-ld EPS = 1e-10;
+ld EPS = 1e-9;
 inline bool eq(ld a,ld b) {return fabs(a-b)<EPS;}
 inline bool lt(ld a,ld b) {return a+EPS<b;}
 inline bool gt(ld a,ld b) {return a>b+EPS;}
@@ -28,6 +29,8 @@ ld norm(pt p) {return sqrt(norm2(p));}
 ld cross(pt p, pt q) { return p.x*q.y-p.y*q.x;}
 ostream &operator<<(ostream &os, const pt &p) {
   return os << "(" << p.x << "," << p.y << ")";}
+istream& operator >> (istream &is, pt &p){
+  return is >> p.x >> p.y;}
 //returns 0 if a,b,c are collinear,1 if a->b->c is cw and -1 if ccw
 int orient(pt a,pt b,pt c)
 {
@@ -49,6 +52,9 @@ pt ProjectPointSegment(pt a, pt b, pt c) {
 // compute distance from c to segment between a and b
 ld DistancePointSegment(pt a, pt b, pt c) {
   return sqrt(dist2(c, ProjectPointSegment(a, b, c)));}
+// compute distance from c to line between a and b
+ld DistancePointSegment(pt a, pt b, pt c) {
+  return sqrt(dist2(c, ProjectPointLine(a, b, c)));}
 // determine if lines from a to b and c to d are parallel or collinear
 bool LinesParallel(pt a, pt b, pt c, pt d) { 
   return eq(cross(b-a, c-d),0); }
@@ -133,29 +139,31 @@ vector<pt> CircleLineIntersection(pt a, pt b, pt c, ld r) {
   if (gt(D,0)) ret.push_back(c+a+b*(-B-sqrt(D))/A);
   return ret;}
 
-/*Untested*/
-
 // compute intersection of circle centered at a with radius r
 // with circle centered at b with radius R
 vector<pt> CircleCircleIntersection(pt a, pt b, ld r, ld R) {
   vector<pt> ret;
-  ld d = sqrt(dist2(a, b));
-  if (d > r+R || d+min(r, R) < max(r, R)) return ret;
-  ld x = (d*d-R*R+r*r)/(2*d);
-  ld y = sqrt(r*r-x*x);
+  ld d = sqrt(dist2(a, b)),d1=dist2(a,b);
+  pt inf(INF,INF);
+  if(eq(d1,0)&&eq(r,R)){ret.pb(inf);return ret;}//circles are same return (INF,INF) 
+  if(gt(d,r+R) || lt(d+min(r, R),max(r, R)) ) return ret;  
+  ld x = (d*d-R*R+r*r)/(2*d),y = sqrt(r*r-x*x);
   pt v = (b-a)/d;
   ret.push_back(a+v*x + RotateCCW90(v)*y);
-  if (y > 0)
-    ret.push_back(a+v*x - RotateCCW90(v)*y);
-  return ret;
-}
+  if (gt(y,0)) ret.push_back(a+v*x - RotateCCW90(v)*y);
+  return ret;}
 
+/*Untested*/
+//compute centroid of simple polygon by dividing it into disjoint triangles
+//and taking weighted mean of their centroids (Jerome)
 pt ComputeCentroid(const vector<pt> &p) {
-  pt c(0,0);
+  pt c(0,0),inf(INF,INF);
   ld scale = 6.0 * ComputeSignedArea(p);
+  if(p.empty())return inf;
+  if(eq(scale,0)){}
   for (int i = 0; i < p.size(); i++){
     int j = (i+1) % p.size();
-    c = c + (p[i]+p[j])*(p[i].x*p[j].y - p[j].x*p[i].y);
+    c = c + (p[i]+p[j])*cross(p[i],p[j]);
   }
   return c / scale;
 }
