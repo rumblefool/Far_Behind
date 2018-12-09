@@ -119,6 +119,9 @@ ld ComputeSignedArea(const vector<pt> &p) {
     int j = (i+1) % p.size();
     ans+=cross(p[i],p[j]);
   } return ans / 2.0;}
+ld ComputeArea(const vector<pt> &p) {
+  return fabs(ComputeSignedArea(p));
+}
 // compute intersection of line through points a and b with
 // circle centered at c with radius r > 0
 vector<pt> CircleLineIntersection(pt a, pt b, pt c, ld r) {
@@ -129,6 +132,7 @@ vector<pt> CircleLineIntersection(pt a, pt b, pt c, ld r) {
   ret.push_back(c+a+b*(-B+sqrt(D+EPS))/A);
   if (gt(D,0)) ret.push_back(c+a+b*(-B-sqrt(D))/A);
   return ret;}
+
 /*Untested*/
 
 // compute intersection of circle centered at a with radius r
@@ -144,10 +148,6 @@ vector<pt> CircleCircleIntersection(pt a, pt b, ld r, ld R) {
   if (y > 0)
     ret.push_back(a+v*x - RotateCCW90(v)*y);
   return ret;
-}
-
-ld ComputeArea(const vector<pt> &p) {
-  return fabs(ComputeSignedArea(p));
 }
 
 pt ComputeCentroid(const vector<pt> &p) {
