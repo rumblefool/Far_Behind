@@ -109,7 +109,14 @@ bool PointOnPolygon(const vector<pt> &p,pt q) {
   for (int i = 0; i < p.size(); i++)
     if (eq((ProjectPointSegment(p[i],p[(i+1)%p.size()],q),q),0)) return true;
   return false;}
-
+// Compute area or centroid of any polygon (coordinates must be listed in cw/ccw
+//fashion.The centroid is often known as center of gravity/mass
+ld ComputeSignedArea(const vector<pt> &p) {
+  ld ans=0;
+  for(int i = 0; i < p.size(); i++) {
+    int j = (i+1) % p.size();
+    area+=cross(p[i],p[j]);
+  } return area / 2.0;}
 
 /*Untested*/
 // compute intersection of line through points a and b with
@@ -142,19 +149,6 @@ vector<pt> CircleCircleIntersection(pt a, pt b, ld r, ld R) {
   if (y > 0)
     ret.push_back(a+v*x - RotateCCW90(v)*y);
   return ret;
-}
-
-// This code computes the area or centroid of a (possibly nonconvex)
-// polygon, assuming that the coordinates are listed in a clockwise or
-// counterclockwise fashion.  Note that the centroid is often known as
-// the "center of gravity" or "center of mass".
-ld ComputeSignedArea(const vector<pt> &p) {
-  ld area = 0;
-  for(int i = 0; i < p.size(); i++) {
-    int j = (i+1) % p.size();
-    area += p[i].x*p[j].y - p[j].x*p[i].y;
-  }
-  return area / 2.0;
 }
 
 ld ComputeArea(const vector<pt> &p) {
