@@ -5,11 +5,12 @@ to build segtree for arr[n] build(0,n-1,1)
 to increment all values in [x,y] by val: upd(0,n-1,1,x,y,val)
 call ppgt before every recursive call
 to get sum of range [x,y]: sum(0,n-1,1,x,y)
+for an array of size N use segment tree of size 4*N
 */
 #define ll long long
 const ll N=1e5+10;
 
-ll arr[N],st[1<<18], lazy[1<<18];
+ll arr[N],st[N<<2], lazy[N<<2];
 
 void ppgt(ll l, ll r,ll id)
 {
