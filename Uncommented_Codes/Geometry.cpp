@@ -12,6 +12,8 @@ ld EPS = 1e-9;
 inline bool eq(ld a,ld b) {return fabs(a-b)<EPS;}
 inline bool lt(ld a,ld b) {return a+EPS<b;}
 inline bool gt(ld a,ld b) {return a>b+EPS;}
+inline bool le(ld a,ld b) {return lt(a,b)||eq(a,b);}
+inline bool ge(ld a,ld b) {return gt(a,b)||eq(a,b);}
 struct pt {
   ld x, y; 
   pt() {}
@@ -81,8 +83,7 @@ pt ComputeLineIntersection(pt a,pt b,pt c,pt d){
 //returns true if point a,b,c are collinear and b lies between a and c
 bool between(pt a,pt b,pt c){
   if(!eq(cross(b-a,c-b),0))return 0;//not collinear
-  if(eq(dist2(b,a),0)||eq(dist2(b,c),0))return 1;
-  return lt(dot(b-a,b-c),0);
+  return le(dot(b-a,b-c),0);
 }
 //compute intersection of line segment a-b and c-d
 pt ComputeSegmentIntersection(pt a,pt b,pt c,pt d){
@@ -91,7 +92,7 @@ pt ComputeSegmentIntersection(pt a,pt b,pt c,pt d){
   if(LinesCollinear(a,b,c,d)){if(between(a,c,b))return c;if(between(c,a,d))return a;return b;}
   return ComputeLineIntersection(a,b,c,d);
 }
-// compute center of circle given three points
+// compute center of circle given three points - *a,b,c shouldn't be collinear
 pt ComputeCircleCenter(pt a,pt b,pt c){
   b=(a+b)/2;c=(a+c)/2;
   return ComputeLineIntersection(b,b+RotateCW90(a-b),c,c+RotateCW90(a-c));}
@@ -104,7 +105,7 @@ bool PointInPolygon(const vector<pt> &p,pt q){
     if(eq(dist2(q,p[i]),0)) return 1;//q is a vertex
     int j=(i+1)%n;
     if(eq(p[i].y,q.y)&&eq(p[j].y,q.y)) {//i,i+1 vertex is vertical
-      if(min(p[i].x,p[j].x)<=q.x&&q.x<=max(p[i].x, p[j].x)) return 1;}//q lies on boundary
+      if(le(min(p[i].x,p[j].x),q.x)&&le(q.x,max(p[i].x, p[j].x))) return 1;}//q lies on boundary
     else {
       bool below=lt(p[i].y,q.y);
       if(below!=lt(p[j].y,q.y)) {
