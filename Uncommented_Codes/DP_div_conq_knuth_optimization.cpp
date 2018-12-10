@@ -9,7 +9,7 @@
 
 // For div&conq, we calculate P(g,l) for each g 1 by 1.In each g, we calculate for mid-l and solve recursively using the obtained upper and lower bounds.
 // For knuth, we use P(g,l-1)<=P(g,l)<=P(g+1,l), and fill our table in increasing l and decreasing g.
-
+// In opt. BST type problems, use  bk[i][j-1]<= bk[i][j] <=bk[i+1][j] .
 // Code Credits : - https://www.hackerrank.com/contests/ioi-2014-practice-contest-2/challenges/guardians-lunatics-ioi14/editorial
 // Code for Divide and Conquer Opti O(G.L.log(L)): -
 #include <stdio.h>
