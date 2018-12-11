@@ -1,8 +1,8 @@
-1. Online FFT -
-2. Persistent Segment Tree
-3. Treaps
-4. Geometry .
-5. Segment Tree/BIT with updates (range updates and lazy propagation) - (BIT remaining)
+1. Online FFT --done
+2. Persistent Segment Tree --done
+3. Treaps  x
+4. Geometry **
+5. Segment Tree/BIT with updates (range updates and lazy propagation) -- (BIT remaining)
 6. Topics from emaxx
 7. Stable Matching
 8. Sweep Line
@@ -16,13 +16,13 @@
 16. Dominator Tree
 17. Linear Recurrences
 18. Master's Theorem for complexity
-19. DP optimizations
+19. DP optimizations --done
 20. Optimization fundae (CodeResources in Upsolve Sheet)
 21. Integration Formulae
 22. Flows all variants: https://codeforces.com/blog/entry/52192?locale=en
-23. Number of Subsets with xor x - https://codeforces.com/blog/entry/44408 Problem D
+23. Number of Subsets with xor x - https://codeforces.com/blog/entry/44408 Problem D --done
 24. Sparse Table
-25. Run Hungarian on CF Gym Problem
+25. Run Hungarian on CF Gym Problem --done
 26. Bipartite Matching in O(m*n), Hungarian, Dilworth's Theorem
 27. Mobius Inversion
 28. Gaussian Elimination
@@ -33,11 +33,14 @@
 33. Geometry Contest: https://codeforces.com/gym/100168 , blog: https://codeforces.com/blog/entry/54751
 34. Circulation Theory
 35. Animesh's Geometry: https://github.com/animeshf/Competitive_Programming/tree/master/Algorithms/Geometry/Template
-36. FFT - https://codeforces.com/problemset/problem/438/E
-37. HLD (Al.cash)
+36. FFT - https://codeforces.com/problemset/problem/438/E --done
+37. HLD (Al.cash) --done
 38. XOR shortest path
 
 Important
 ****
 1. Gaussian Elimination Question
 2. Poset video
+3. Linear Recurrences
+4. Yates DP and Zeta function
+5. Mo's Algorithm
