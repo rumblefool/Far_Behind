@@ -19,13 +19,13 @@ void init(int n) {
     bridges = 0;
 }
 
-int find_2ecc(int v) {
+int find_2ecc(int v) {  // 2-edge connected comp.
     if (v == -1)
         return -1;
     return dsu_2ecc[v] == v ? v : dsu_2ecc[v] = find_2ecc(dsu_2ecc[v]);
 }
 
-int find_cc(int v) {
+int find_cc(int v) {  // connected comp.
     v = find_2ecc(v);
     return dsu_cc[v] == v ? v : dsu_cc[v] = find_cc(dsu_cc[v]);
 }
