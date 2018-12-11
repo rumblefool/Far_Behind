@@ -37,7 +37,8 @@ cost_type MinCostMatching(const VVD &cost, VI &Lmate, VI &Rmate) {
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {
       if (Rmate[j] != -1) continue;
-      if (fabs(cost[i][j] - u[i] - v[j]) < 1e-10) {
+      if (fabs(cost[i][j] - u[i] - v[j]) < 1e-10) { 
+      //**** change this comparision if double cost ****
         Lmate[i] = j;
         Rmate[j] = i;
         mated++;
