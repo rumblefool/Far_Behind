@@ -1,3 +1,4 @@
+pt firstpoint;
 //for sorting points in ccw(counter clockwise) direction w.r.t firstpoint (leftmost and bottommost)
 bool compare(pt x,pt y){
 	ll o=orient(firstpoint,x,y);

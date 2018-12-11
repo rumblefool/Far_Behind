@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define pb push_back
 //small non recursive functions should me made inline
 //do not read input in double format if they are integer points
 #define ld double
@@ -23,6 +20,11 @@ struct pt {
   pt operator - (const pt &p)  const { return pt(x-p.x, y-p.y); }
   pt operator * (ld c)     const { return pt(x*c,   y*c  ); }
   pt operator / (ld c)     const { return pt(x/c,   y/c  ); }
+  bool operator < (const pt &p) const{ return lt(y,p.y)||(eq(y,p.y)&&lt(x,p.x));}
+  bool operator > (const pt &p) const{ return p<pt(x,y);}
+  bool operator <= (const pt &p) const{ return !(pt(x,y)>p);}
+  bool operator >= (const pt &p) const{ return !(pt(x,y)<p);}
+  bool operator == (const pt &p) const{ return (pt(x,y)<=p)&&(pt(x,y)>=p);}
 };
 ld dot(pt p,pt q) {return p.x*q.x+p.y*q.y;}
 ld dist2(pt p, pt q) {return dot(p-q,p-q);}
@@ -175,102 +177,37 @@ bool IsSimple(const vector<pt> &p) {
       if (SegmentsIntersect(p[i], p[j], p[k], p[l])) 
         return false;}}
   return true;}
+/*point in convex polygon
+****bottom left point must be at index 0 and top is the index of upper right vertex
+****if not call make_hull once*/
+bool pointinConvexPolygon(vector<pt> poly,pt point, int top) {
+	if (point < poly[0] || point > poly[top]) return 0;//0 for outside and 1 for on/inside
+	auto orientation = orient(point, poly[top], poly[0]);
+	if (orientation == 0) {
+		if (point == poly[0] || point == poly[top]) return 1;
+		return top == 1 || top + 1 == poly.size() ? 1 : 1;//checks if point lies on boundary when
+		//bottom and top points are adjacent
+	} else if (orientation < 0) {
+		auto itRight = lower_bound(poly.begin() + 1, poly.begin() + top, point);
+		return orient(itRight[0], point, itRight[-1])<=0;
+  	} else {
+		auto itLeft = upper_bound(poly.rbegin(), poly.rend() - top-1, point);
+		return (orient(itLeft == poly.rbegin() ? poly[0] : itLeft[-1], point, itLeft[0]))<=0;
+  	}
+}
+/*maximum distance between two points in convexy polygon using rotating calipers
+make sure that polygon is convex. if not call make_hull first
+*/
+ld maxDist2(vector<pt> poly) {
+	int n = poly.size();
+	ld res=0;
+	for (int i = 0, j = n < 2 ? 0 : 1; i < j; ++i)
+		for (;; j = j+1 %n) {
+	  		res = max(res, dist2(poly[i], poly[j]));
+	  	if (gt(cross(poly[j+1 % n] - poly[j],poly[i+1] - poly[i]),0)) break;
+	}
+	return res;
+}
 //Line polygon intersection: check if given line intersects any side of polygon
 //if yes then line intersects. If no, then check if its midpoint is inside polygon
 //if midpoint is inside then line is inside else outside
-/*Untested*/
-
-
-int main() {
-  
-  // expected: (-5,2)
-  // cerr << RotateCCW90(pt(2,5)) << endl;
-  
-  // // expected: (5,-2)
-  // cerr << RotateCW90(pt(2,5)) << endl;
-  
-  // // expected: (-5,2)
-  // cerr << RotateCCW(pt(2,5),M_PI/2) << endl;
-  
-  // // expected: (5,2)
-  // cerr << ProjectPointLine(pt(-5,-2), pt(10,4), pt(3,7)) << endl;
-  
-  // // expected: (5,2) (7.5,3) (2.5,1)
-  // cerr << ProjectPointSegment(pt(-5,-2), pt(10,4), pt(3,7)) << " "
-  //      << ProjectPointSegment(pt(7.5,3), pt(10,4), pt(3,7)) << " "
-  //      << ProjectPointSegment(pt(-5,-2), pt(2.5,1), pt(3,7)) << endl;
-  
-  // // expected: 6.78903
-  // cerr << DistancePointPlane(4,-4,3,2,-2,5,-8) << endl;
-  
-  // // expected: 1 0 1
-  // cerr << LinesParallel(pt(1,1), pt(3,5), pt(2,1), pt(4,5)) << " "
-  //      << LinesParallel(pt(1,1), pt(3,5), pt(2,0), pt(4,5)) << " "
-  //      << LinesParallel(pt(1,1), pt(3,5), pt(5,9), pt(7,13)) << endl;
-  
-  // // expected: 0 0 1
-  // cerr << LinesCollinear(pt(1,1), pt(3,5), pt(2,1), pt(4,5)) << " "
-  //      << LinesCollinear(pt(1,1), pt(3,5), pt(2,0), pt(4,5)) << " "
-  //      << LinesCollinear(pt(1,1), pt(3,5), pt(5,9), pt(7,13)) << endl;
-  
-  // // expected: 1 1 1 0
-  // cerr << SegmentsIntersect(pt(0,0), pt(2,4), pt(3,1), pt(-1,3)) << " "
-  //      << SegmentsIntersect(pt(0,0), pt(2,4), pt(4,3), pt(0,5)) << " "
-  //      << SegmentsIntersect(pt(0,0), pt(2,4), pt(2,-1), pt(-2,1)) << " "
-  //      << SegmentsIntersect(pt(0,0), pt(2,4), pt(5,5), pt(1,7)) << endl;
-  
-  // // expected: (1,2)
-  // cerr << ComputeLineIntersection(pt(0,0), pt(2,4), pt(3,1), pt(-1,3)) << endl;
-  
-  // // expected: (1,1)
-  // cerr << ComputeCircleCenter(pt(-3,4), pt(6,1), pt(4,5)) << endl;
-  
-  // vector<pt> v; 
-  // v.push_back(pt(0,0));
-  // v.push_back(pt(5,0));
-  // v.push_back(pt(5,5));
-  // v.push_back(pt(0,5));
-  
-  // // expected: 1 1 1 0 0
-  // cerr << PointInPolygon(v, pt(2,2)) << " "
-  //      << PointInPolygon(v, pt(2,0)) << " "
-  //      << PointInPolygon(v, pt(0,2)) << " "
-  //      << PointInPolygon(v, pt(5,2)) << " "
-  //      << PointInPolygon(v, pt(2,5)) << endl;
-  
-  // // expected: 0 1 1 1 1
-  // cerr << PointOnPolygon(v, pt(2,2)) << " "
-  //      << PointOnPolygon(v, pt(2,0)) << " "
-  //      << PointOnPolygon(v, pt(0,2)) << " "
-  //      << PointOnPolygon(v, pt(5,2)) << " "
-  //      << PointOnPolygon(v, pt(2,5)) << endl;
-  
-  // // expected: (1,6)
-  // //           (5,4) (4,5)
-  // //           blank line
-  // //           (4,5) (5,4)
-  // //           blank line
-  // //           (4,5) (5,4)
-  // vector<pt> u = CircleLineIntersection(pt(0,6), pt(2,6), pt(1,1), 5);
-  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  // u = CircleLineIntersection(pt(0,9), pt(9,0), pt(1,1), 5);
-  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  // u = CircleCircleIntersection(pt(1,1), pt(10,10), 5, 5);
-  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  // u = CircleCircleIntersection(pt(1,1), pt(8,8), 5, 5);
-  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  // u = CircleCircleIntersection(pt(1,1), pt(4.5,4.5), 10, sqrt(2.0)/2.0);
-  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  // u = CircleCircleIntersection(pt(1,1), pt(4.5,4.5), 5, sqrt(2.0)/2.0);
-  // for (int i = 0; i < u.size(); i++) cerr << u[i] << " "; cerr << endl;
-  
-  // // area should be 5.0
-  // // centroid should be (1.1666666, 1.166666)
-  // pt pa[] = { pt(0,0), pt(5,0), pt(1,1), pt(0,5) };
-  // vector<pt> p(pa, pa+4);
-  // pt c = ComputeCentroid(p);
-  // cerr << "Area: " << ComputeArea(p) << endl;
-  // cerr << "Centroid: " << c << endl;
-  
-  // return 0;
-}
