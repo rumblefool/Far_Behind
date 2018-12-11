@@ -41,7 +41,9 @@ Important
 ****
 1. Gaussian Elimination Question
 2. Poset video
-<<<<<<< HEAD
 3. Linear Recurrences
 4. Yates DP and Zeta function
 5. Mo's Algorithm
+6. suffix tree
+7. suffix automaton
+8. mobius
