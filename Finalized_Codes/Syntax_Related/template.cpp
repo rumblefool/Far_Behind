@@ -33,6 +33,7 @@ void __f(const char* names, Arg1&& arg1, Args&&... args){
 #define pb push_back
 #define F first
 #define S second
+#define all(x) x.begin(),x.end()
 #define endl "\n"
 const ll MAX=1e6+5;
 
