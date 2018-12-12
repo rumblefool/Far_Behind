@@ -9,7 +9,8 @@
 9. Suffix automaton
 10. Euler Tour
 11. AP and Brides code run spoj Naman
-12. Pollard Rho and Rabin Miller
+12. Pollard Rho and Rabin Miller --done
+13. Li Chao Tree
 
 Theories
 1. Stable Matching
@@ -28,6 +29,11 @@ Formulae
 Ideas
 1. Divide and Conquer
 2. Brute force and observe
+
+
+Extras:
+1. Persistent DSU (asjs97 git)
+2.
 3. Monte Carlo
 4. Summation Interchange
 5. Clever optimization of brute force(binary search/ingnore)

@@ -48,7 +48,6 @@ Math/primitive_root_generator.cpp	Primitive Root Generator
 [Strings]
 Strings/hash_theory.cpp	Hashing Theory
 Strings/manacher.cpp	Manacher
-Strings/suffix_array.cpp	Suffix Array
 Strings/Trie.cpp	Trie
 Strings/Z_algo.cpp	Z-algorithm
 Strings/Aho_Corasick.cpp	Aho Corasick
