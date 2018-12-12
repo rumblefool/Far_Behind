@@ -7,9 +7,7 @@ Polynomial value at x
 Complexity: O(degree of polynomial)
 Works only if the points are equally spaced
 */
-
-ll lagrange(vll& v , int k, ll x,int mod)
-{
+ll lagrange(vll& v , int k, ll x,int mod){
     if(x <= k)
         return v[x];
     ll inn = 1;

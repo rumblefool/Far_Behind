@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-#define ll long long
 /*solves system of equations x=rem[i]%mods[i] for any mod (need not be coprime)
 intput:vector of remainders and moduli
 output: pair of answer(x%lcm of modulo) and lcm of all the modulo (returns -1 if it is inconsistent)*/

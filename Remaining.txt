@@ -21,7 +21,7 @@ Theories
 6. Euler Walk
 
 Formulae
-1. SOT
+1. SOT / Trigno
 2. Integration
 3. Master's Theorem for complexity
 4. Polynomial Coefficients
@@ -34,3 +34,6 @@ Ideas
 Extras:
 1. Persistent DSU (asjs97 git)
 2.
+3. Monte Carlo
+4. Summation Interchange
+5. Clever optimization of brute force(binary search/ingnore)

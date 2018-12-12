@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  8 DEC 2018 01:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 00:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 3 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/extsizes/extarticle.cls
 Document Class: extarticle 1996/10/08 v1.0 Non Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
-File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/exscale.sty
 Package: exscale 2014/09/29 v2.1h Standard LaTeX package exscale
@@ -241,26 +241,22 @@ Package color Info: Driver file: pdftex.def on input line 147.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
-
-LaTeX Warning: Unused global option(s):
-    [125pt].
-
 (./notebook.aux)
 \openout1 = `notebook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 43.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -268,27 +264,27 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: letterpaper
+* paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(28.45274pt, 752.29088pt, 14.22636pt)
-* v-part:(T,H,B)=(42.67912pt, 557.38951pt, 14.22636pt)
-* \paperwidth=794.96999pt
-* \paperheight=614.295pt
-* \textwidth=752.29088pt
-* \textheight=557.38951pt
-* \oddsidemargin=-43.81725pt
-* \evensidemargin=-43.81725pt
-* \topmargin=-66.59087pt
+* h-part:(L,W,R)=(11.38109pt, 827.97522pt, 5.69054pt)
+* v-part:(T,H,B)=(5.69054pt, 586.1268pt, 5.69054pt)
+* \paperwidth=845.04684pt
+* \paperheight=597.50787pt
+* \textwidth=827.97522pt
+* \textheight=586.1268pt
+* \oddsidemargin=-60.8889pt
+* \evensidemargin=-60.8889pt
+* \topmargin=-103.57945pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=10.0pt
+* \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
-* \marginparsep=11.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -313,43 +309,43 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks23
 )
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 43
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 44
 .
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 43
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 44
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 43
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 44
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 43
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 44
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 44.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 48.
  (./notebook.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 )
 \tf@toc=\write3
@@ -364,53 +360,64 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(./code/Syntax_Related/file.cpp
-LaTeX Font Info: \kern \lst@width \kern \lst@width \kern \lst@width Calculating
-\kern \lst@width math\kern \lst@width sizes\kern \lst@width for\kern \lst@width
- size\kern \lst@width <11> on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <11> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.14006> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
- [1
+(./code/Syntax_Related/template.cpp [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./code/Syntax_Related/cp
-_sublime_build.cpp)
-(./code/Data_Structures/Fenwick.cpp) (./code/Flows/maxflow_ford_fulkerson.cpp
-[2]) (./code/Flows/maxflow_dinics.cpp [3])
-(./code/Flows/maxflow_edmond_karp.cpp) (./code/Flows/maxflow_push_relabel.cpp
-[4]) (./code/Flows/mcmf.cpp [5]) (./code/Geometry/Convex_Hull.cpp [6])
-(./code/Geometry/convex_hull_trick_rajat1603.cpp [7])
-(./code/Graphs_and_Trees/LCA.cpp [8])
-(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [9]) (./code/Math/CRT.cpp)
-(./code/Math/discrete_log_emaxx.cpp [10]) (./code/Math/FFT_NTT_BEST.cpp
-[11]) (./code/Math/Lagrange_Interpolation.cpp)
-(./code/Math/matrix_struct_jtnydv25.cpp [12])
-(./code/Math/ncr_non_prime_modulo.cpp [13])
-(./code/Math/primitive_root_generator.cpp) (./code/Strings/hash_theory.cpp)
-(./code/Strings/manacher.cpp [14]) (./code/Strings/suffix_array.cpp [15])
-(./code/Strings/Trie.cpp) (./code/Strings/Z_algo.cpp)) [16] (./notebook.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./code/Syntax_Relate
+d/cp_sublime_build.cpp)
+(./code/Data_Structures/Fenwick.cpp) (./code/Data_Structures/2DBIT.cpp)
+(./code/Data_Structures/SegmentTree.cpp [3])
+(./code/Data_Structures/Persistent_Seg_Tree.cpp) (./code/DP_Optimization.cpp
+[4] [5]) (./code/Flows_Matching/general_matching.cpp) [6]
+(./code/Flows_Matching/global_mincut.cpp)
+(./code/Flows_Matching/hopcroft_matching.cpp)
+(./code/Flows_Matching/maxflow_dinics.cpp [7])
+(./code/Flows_Matching/maxflow_ford_fulkerson.cpp [8])
+(./code/Flows_Matching/mcmf.cpp [9]) (./code/Flows_Matching/minCostMatching.cpp
+[10]) (./code/Geometry/Geometry.cpp [11] [12] [13])
+(./code/Geometry/Convex_Hull.cpp)
+(./code/Geometry/convex_hull_trick_rajat1603.cpp [14])
+(./code/Graphs_and_Trees/BlockCutTree.cpp [15])
+(./code/Graphs_and_Trees/Bridges_online.cpp [16])
+(./code/Graphs_and_Trees/HLD.cpp) [17] (./code/Graphs_and_Trees/LCA.cpp)
+(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [18]) (./code/Math/CRT.cpp)
+(./code/Math/discrete_log_emaxx.cpp [19]) (./code/Math/FFT_NTT_BEST.cpp
+[20]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp
+[21]) (./code/Math/matrix_struct_jtnydv25.cpp)
+(./code/Math/ncr_non_prime_modulo.cpp [22])
+(./code/Math/primitive_root_generator.cpp) [23] (./code/Strings/hash_theory.cpp
+) (./code/Strings/manacher.cpp) (./code/Strings/suffix_array.cpp [24])
+(./code/Strings/Trie.cpp [25]) (./code/Strings/Z_algo.cpp)
+(./code/Strings/Aho_Corasick.cpp) (./code/Strings/kmp.cpp [26])
+(./code/Strings/PallindromeTree.cpp
+Overfull \hbox (46.70998pt too wide) in paragraph at lines 6--7
+[][][][][] 
+ []
+
+
+Overfull \hbox (41.5301pt too wide) in paragraph at lines 11--12
+[][][][][] 
+ []
+
+) (./code/Strings/suffix_array.cpp [27] [28]) (./code/Strings/suffix_tree.cpp))
+[29] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 4445 strings out of 494923
- 60676 string characters out of 6180741
- 719912 words of memory out of 5000000
- 7643 multiletter control sequences out of 15000+600000
- 42030 words of font info for 89 fonts, out of 8000000 for 9000
+ 4830 strings out of 494923
+ 65644 string characters out of 6180741
+ 888118 words of memory out of 5000000
+ 7979 multiletter control sequences out of 15000+600000
+ 32614 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,6n,61p,395b,1773s stack positions out of 5000i,500n,10000p,200000b,80000s
-{
-/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb>
-Output written on notebook.pdf (16 pages, 170132 bytes).
+ 35i,6n,61p,395b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/times/utmr8a.pfb>
+Output written on notebook.pdf (29 pages, 204743 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 118 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

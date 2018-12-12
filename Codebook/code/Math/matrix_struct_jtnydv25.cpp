@@ -13,20 +13,9 @@ struct matrix{
         	for(int j = 0; j < n; j++) 
         		B[i][j] = add(B[i][j], M.B[i][j]);
     }
-    void operator -= (matrix M){
-        for(int i = 0; i < n; i++) 
-        	for(int j = 0; j < n; j++) 
-        		B[i][j] = sub(B[i][j], M.B[i][j]);
-    }
-    void operator *= (ld b){
-        for(int i = 0; i < n; i++) 
-        	for(int j = 0; j < n; j++) 
-        		B[i][j] = mul(b, B[i][j]);
-    }
-    matrix operator - (matrix M){
-        matrix ret = (*this); 
-        ret -= M; return ret;
-    }
+    void operator -= (matrix M){}
+    void operator *= (ld b){}
+    matrix operator - (matrix M){}
     matrix operator + (matrix M){
         matrix ret = (*this); 
         ret += M; return ret;
