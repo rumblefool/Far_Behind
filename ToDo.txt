@@ -6,8 +6,8 @@
 6. Topics from emaxx
 7. Stable Matching
 8. Sweep Line
-9. Mo's Algorithm theory
-10. Cipollas Algorithm
+9. Mo's Algorithm theory  --done
+10. Cipollas Algorithm  --done
 11. Burnside's Lemma
 12. Pick's Theorem (A=I+B/2-1)
 13. Formulae for Solution of Triangle (Heron's formula)
