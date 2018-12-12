@@ -35,7 +35,7 @@ struct BiconnectedComponents {
 private:
 	void dfs(int i) {
 		low[i] = ord[i] = dfsCounter ++;
-		for(int j = 0; j < (int)g[i].size(); ++ j) {
+		for(int j=0;j<(int)g[i].size();++j) {
 			int to = g[i][j].to, ei = g[i][j].edge;
 			if(ord[to] == -1) {
 				depth[to] = depth[i] + 1;
@@ -46,7 +46,7 @@ private:
 					if(ord[i] != 0 || j >= 1)
 						isArtic[i] = true;
 					while(!edgeStack.empty()) {
-						int fi = edgeStack.back(); 
+						int fi=edgeStack.back(); 
 						edgeStack.pop_back(); 
 						edgeColor[fi] = colors;
 						if(fi == ei) break;
