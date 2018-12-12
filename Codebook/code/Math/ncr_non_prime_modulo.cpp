@@ -1,4 +1,3 @@
-// sandwich, jtnydv25 video
 // calculates nCr, for small 
 // non-prime modulo, and (very) big n,r.
 ll phimod;
