@@ -10,7 +10,7 @@ int lca(int n, int u, int v){
 		v = base[v]; if (used[v]) return v;
 		v = p[match[v]];}}
 
-void mark_path(vector<bool> &blo, int u, int b, int child){
+void mark_path(vector<bool> &blo,int u,int b,int child){
 	for (; base[u] != b; u = p[match[u]]){
 		blo[base[u]] = true; blo[base[match[u]]] = true;
 		p[u] = child; child = match[u];}}
@@ -26,7 +26,7 @@ int find_path(int n, int root) {
 		for (int j = 0; j < (int)adj[u].size(); j++) {
 			int v = adj[u][j];
 			if(base[u]==base[v] || match[u]==v)continue;
-			if(v==root || (match[v]!= -1 && p[match[v]]!= -1)){
+			if(v==root||(match[v]!=-1 && p[match[v]]!=-1)){
 				int curr_base = lca(n, u, v);
 				vector<bool> blossom(n);
 				mark_path(blossom, u, curr_base, v);
