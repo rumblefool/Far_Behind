@@ -8,12 +8,9 @@ Complexity: O(degree of polynomial)
 Works only if the points are equally spaced
 */
 ll lagrange(vll& v , int k, ll x,int mod){
-    if(x <= k)
-        return v[x];
-    ll inn = 1;
-    ll den = 1;
-    for(int i = 1;i<=k;i++)
-    {   
+    if(x <= k) return v[x];
+    ll inn = 1; ll den = 1;
+    for(int i = 1;i<=k;i++){   
         inn = (inn*(x - i))%mod;
         den = (den*(mod - i))%mod;
     }
@@ -24,7 +21,6 @@ ll lagrange(vll& v , int k, ll x,int mod){
         ll md1 = mod - ((x-i)*(k-i))%mod;
         ll md2 = ((i+1)*(x-i-1))%mod;
         if(i!=k)
-            inn = (((inn*md1)%mod)*inv(md2 % mod))%mod;
-    }
-    return ret;
+        inn = (((inn*md1)%mod)*inv(md2 % mod))%mod;
+    } return ret; 
 }
