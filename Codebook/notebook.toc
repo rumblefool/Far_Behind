@@ -9,41 +9,41 @@
 \contentsline {subsection}{\numberline {2.5}DP Optimization}{5}
 \contentsline {section}{\numberline {3}Flows and Matching}{6}
 \contentsline {subsection}{\numberline {3.1}General Matching}{6}
-\contentsline {subsection}{\numberline {3.2}Global Mincut}{7}
+\contentsline {subsection}{\numberline {3.2}Global Mincut}{6}
 \contentsline {subsection}{\numberline {3.3}Hopcroft Matching}{7}
-\contentsline {subsection}{\numberline {3.4}Dinic}{8}
+\contentsline {subsection}{\numberline {3.4}Dinic}{7}
 \contentsline {subsection}{\numberline {3.5}Edmond Karp}{8}
 \contentsline {subsection}{\numberline {3.6}Ford Fulkerson}{9}
-\contentsline {subsection}{\numberline {3.7}Push Relabel}{10}
+\contentsline {subsection}{\numberline {3.7}Push Relabel}{9}
 \contentsline {subsection}{\numberline {3.8}MCMF}{10}
-\contentsline {subsection}{\numberline {3.9}MinCost Matching}{12}
-\contentsline {section}{\numberline {4}Geometry}{13}
-\contentsline {subsection}{\numberline {4.1}Geometry}{13}
+\contentsline {subsection}{\numberline {3.9}MinCost Matching}{11}
+\contentsline {section}{\numberline {4}Geometry}{12}
+\contentsline {subsection}{\numberline {4.1}Geometry}{12}
 \contentsline {subsection}{\numberline {4.2}Convex Hull}{15}
-\contentsline {subsection}{\numberline {4.3}Convex Hull Trick}{16}
+\contentsline {subsection}{\numberline {4.3}Convex Hull Trick}{15}
 \contentsline {section}{\numberline {5}Trees}{17}
 \contentsline {subsection}{\numberline {5.1}BlockCut Tree}{17}
-\contentsline {subsection}{\numberline {5.2}Bridges Online}{18}
-\contentsline {subsection}{\numberline {5.3}HLD}{19}
+\contentsline {subsection}{\numberline {5.2}Bridges Online}{17}
+\contentsline {subsection}{\numberline {5.3}HLD}{18}
 \contentsline {subsection}{\numberline {5.4}LCA}{19}
-\contentsline {subsection}{\numberline {5.5}Centroid Decompostion}{20}
-\contentsline {section}{\numberline {6}Maths}{21}
-\contentsline {subsection}{\numberline {6.1}Chinese Remainder Theorem}{21}
+\contentsline {subsection}{\numberline {5.5}Centroid Decompostion}{19}
+\contentsline {section}{\numberline {6}Maths}{20}
+\contentsline {subsection}{\numberline {6.1}Chinese Remainder Theorem}{20}
 \contentsline {subsection}{\numberline {6.2}Discrete Log}{21}
-\contentsline {subsection}{\numberline {6.3}NTT}{22}
-\contentsline {subsection}{\numberline {6.4}Online FFT}{23}
+\contentsline {subsection}{\numberline {6.3}NTT}{21}
+\contentsline {subsection}{\numberline {6.4}Online FFT}{22}
 \contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{23}
-\contentsline {subsection}{\numberline {6.6}Matrix Struct}{24}
-\contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{24}
-\contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{25}
+\contentsline {subsection}{\numberline {6.6}Matrix Struct}{23}
+\contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{23}
+\contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{24}
 \contentsline {section}{\numberline {7}Strings}{25}
 \contentsline {subsection}{\numberline {7.1}Hashing Theory}{25}
-\contentsline {subsection}{\numberline {7.2}Manacher}{26}
-\contentsline {subsection}{\numberline {7.3}Suffix Array}{26}
+\contentsline {subsection}{\numberline {7.2}Manacher}{25}
+\contentsline {subsection}{\numberline {7.3}Suffix Array}{25}
 \contentsline {subsection}{\numberline {7.4}Trie}{27}
-\contentsline {subsection}{\numberline {7.5}Z-algorithm}{28}
-\contentsline {subsection}{\numberline {7.6}Aho Corasick}{28}
+\contentsline {subsection}{\numberline {7.5}Z-algorithm}{27}
+\contentsline {subsection}{\numberline {7.6}Aho Corasick}{27}
 \contentsline {subsection}{\numberline {7.7}KMP}{28}
-\contentsline {subsection}{\numberline {7.8}Palindrome Tree}{29}
+\contentsline {subsection}{\numberline {7.8}Palindrome Tree}{28}
 \contentsline {subsection}{\numberline {7.9}Suffix Array}{29}
-\contentsline {subsection}{\numberline {7.10}Suffix Tree}{31}
+\contentsline {subsection}{\numberline {7.10}Suffix Tree}{30}
