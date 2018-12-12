@@ -9,17 +9,31 @@ Syntax_Related/cp_sublime_build.cpp	C++ Sublime Build
 
 [Data Structures]
 Data_Structures/Fenwick.cpp	Fenwick
+Data_Structures/2DBIT.cpp	2D-BIT
+Data_Structures/SegmentTree.cpp	Segment Tree
+Data_Structures/Persistent_Seg_Tree.cpp	Persistent Segment Tree
+DP_Optimization.cpp	DP Optimization
 
 [Flows and Matching]
-Flows_Matching/maxflow_ford_fulkerson.cpp	Ford Fulkerson
+Flows_Matching/general_matching.cpp	General Matching
+Flows_Matching/global_mincut.cpp	Global Mincut
+Flows_Matching/hopcroft_matching.cpp	Hopcroft Matching
 Flows_Matching/maxflow_dinics.cpp	Dinic
+Flows_Matching/maxflow_edmond_karp.cpp	Edmond Karp
+Flows_Matching/maxflow_ford_fulkerson.cpp	Ford Fulkerson
+Flows_Matching/maxflow_push_relabel.cpp	Push Relabel
 Flows_Matching/mcmf.cpp	MCMF
+Flows_Matching/minCostMatching.cpp	MinCost Matching
 
 [Geometry]
+Geometry/Geometry.cpp	Geometry
 Geometry/Convex_Hull.cpp	Convex Hull
 Geometry/convex_hull_trick_rajat1603.cpp	Convex Hull Trick
 
 [Trees]
+Graphs_and_Trees/BlockCutTree.cpp	BlockCut Tree
+Graphs_and_Trees/Bridges_online.cpp	Bridges Online
+Graphs_and_Trees/HLD.cpp	HLD
 Graphs_and_Trees/LCA.cpp	LCA
 Graphs_and_Trees/Centroid_Decomp_Ayush.cpp	Centroid Decompostion
 
@@ -27,6 +41,7 @@ Graphs_and_Trees/Centroid_Decomp_Ayush.cpp	Centroid Decompostion
 Math/CRT.cpp	Chinese Remainder Theorem
 Math/discrete_log_emaxx.cpp	Discrete Log
 Math/FFT_NTT_BEST.cpp	NTT
+Math/OnlineFFT.cpp	Online FFT
 Math/Lagrange_Interpolation.cpp	Langrange Interpolation
 Math/matrix_struct_jtnydv25.cpp	Matrix Struct
 Math/ncr_non_prime_modulo.cpp	nCr(Non Prime Modulo)
@@ -38,3 +53,8 @@ Strings/manacher.cpp	Manacher
 Strings/suffix_array.cpp	Suffix Array
 Strings/Trie.cpp	Trie
 Strings/Z_algo.cpp	Z-algorithm
+Strings/Aho_Corasick.cpp	Aho Corasick
+Strings/kmp.cpp	KMP
+Strings/PallindromeTree.cpp	Palindrome Tree
+Strings/suffix_array.cpp	Suffix Array
+Strings/suffix_tree.cpp	Suffix Tree

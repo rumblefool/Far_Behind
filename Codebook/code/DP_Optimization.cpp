@@ -66,7 +66,7 @@ ll run(int n,int m) {
         ll mn = INF;
         for (int k = 0; k < i; ++k) {
             if (dp[k][maxj - 1] >= 0) {
-                ll tmp = dp[k][maxj - 1] + 
+               ll tmp = dp[k][maxj - 1] + 
                         (sum[i] - sum[k]) * (i - k);  //k + 1..i 
                 if (tmp < mn) {
                     mn = tmp;
@@ -75,7 +75,7 @@ ll run(int n,int m) {
             }
         }
         dp[i][maxj] = mn;
-        s[i][maxj] = mk;
+		s[i][maxj] = mk;
         for (int j = maxj - 1; j >= 1; --j) {
             ll mn = INF;
             int mk;

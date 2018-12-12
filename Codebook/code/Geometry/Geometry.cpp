@@ -211,3 +211,7 @@ ld maxDist2(vector<pt> poly) {
 //Line polygon intersection: check if given line intersects any side of polygon
 //if yes then line intersects. If no, then check if its midpoint is inside polygon
 //if midpoint is inside then line is inside else outside
+
+// compute distance between point (x,y,z) and plane ax+by+cz=d
+ld DistancePointPlane(ld x,ld y,ld z,ld a,ld b,ld c,ld d)
+{ return fabs(a*x+b*y+c*z-d)/sqrt(a*a+b*b+c*c);}
