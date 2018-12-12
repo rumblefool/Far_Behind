@@ -1,0 +1,30 @@
+1. Emaxx maths topics
+2. Sweep Line
+3. Dominator Tree
+4. Sparse Table
+5. Mobius Inversion
+6. Bitset optimizations
+7. Xor shortest path
+8. Xor MST
+9. Suffix automaton
+10. Euler Tour
+11. AP and Brides code run spoj Naman
+12. Pollard Rho and Rabin Miller
+
+Theories
+1. Stable Matching
+2. Burnside's Lemma
+3. Linear Recurrences
+4. Circulation Theory
+5. *****Graph Theory*****
+6. Euler Walk
+
+Formulae
+1. SOT
+2. Integration
+3. Master's Theorem for complexity
+4. Polynomial Coefficients
+
+Ideas
+1. Divide and Conquer
+2. Brute force and observe

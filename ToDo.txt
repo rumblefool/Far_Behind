@@ -1,7 +1,7 @@
 1. Online FFT --done
 2. Persistent Segment Tree --done
-3. Treaps  x
-4. Geometry **
+3. --  Treaps  x
+4. Geometry --done
 5. Segment Tree/BIT with updates (range updates and lazy propagation) -- done
 6. Topics from emaxx
 7. Stable Matching
@@ -11,8 +11,8 @@
 11. Burnside's Lemma
 12. Pick's Theorem (A=I+B/2-1)
 13. Formulae for Solution of Triangle (Heron's formula)
-14. Biconnectivity
-15. SCC (2-SAT)
+14. Biconnectivity --done
+15. SCC (2-SAT) --done
 16. Dominator Tree
 17. Linear Recurrences
 18. Master's Theorem for complexity
@@ -25,8 +25,8 @@
 25. Run Hungarian on CF Gym Problem --done
 26. Bipartite Matching in O(m*n), Hungarian, Dilworth's Theorem
 27. Mobius Inversion
-28. Gaussian Elimination
-29. BIT 2D
+28. Gaussian Elimination --done
+29. BIT 2D --done
 30. Bitset optimizations
 31. General ideas: https://codeforces.com/blog/entry/48417
 32. Cookbook Resource: https://codeforces.com/blog/entry/47863
@@ -44,7 +44,8 @@ Important
 3. Linear Recurrences
 4. Yates DP and Zeta function
 5. Mo's Algorithm
-6. suffix tree
+6. suffix tree --done
 7. suffix automaton
 8. mobius
 9. **graph theory proofs**
+10. Euler Tour
