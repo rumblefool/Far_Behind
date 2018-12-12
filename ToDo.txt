@@ -2,7 +2,7 @@
 2. Persistent Segment Tree --done
 3. Treaps  x
 4. Geometry **
-5. Segment Tree/BIT with updates (range updates and lazy propagation) -- (BIT remaining)
+5. Segment Tree/BIT with updates (range updates and lazy propagation) -- done
 6. Topics from emaxx
 7. Stable Matching
 8. Sweep Line
