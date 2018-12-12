@@ -2,7 +2,6 @@ vector<int> par, dsu_2ecc, dsu_cc, dsu_cc_size;
 int bridges;
 int lca_iteration;
 vector<int> last_visit;
-
 void init(int n) {
     par.resize(n);
     dsu_2ecc.resize(n);
@@ -18,18 +17,15 @@ void init(int n) {
     }
     bridges = 0;
 }
-
 int find_2ecc(int v) {  // 2-edge connected comp.
     if (v == -1)
         return -1;
     return dsu_2ecc[v] == v ? v : dsu_2ecc[v] = find_2ecc(dsu_2ecc[v]);
 }
-
 int find_cc(int v) {  // connected comp.
     v = find_2ecc(v);
     return dsu_cc[v] == v ? v : dsu_cc[v] = find_cc(dsu_cc[v]);
 }
-
 void make_root(int v) {
     v = find_2ecc(v);
     int root = v;
@@ -43,7 +39,6 @@ void make_root(int v) {
     }
     dsu_cc_size[root] = dsu_cc_size[child];
 }
-
 void merge_path (int a, int b) {
     ++lca_iteration;
     vector<int> path_a, path_b;
@@ -67,7 +62,6 @@ void merge_path (int a, int b) {
         }
 
     }
-
     for (int v : path_a) {
         dsu_2ecc[v] = lca;
         if (v == lca)
@@ -81,7 +75,6 @@ void merge_path (int a, int b) {
         --bridges;
     }
 }
-
 void add_edge(int a, int b) {
     a = find_2ecc(a);
     b = find_2ecc(b);
