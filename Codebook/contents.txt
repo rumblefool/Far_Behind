@@ -19,9 +19,7 @@ Flows_Matching/general_matching.cpp	General Matching
 Flows_Matching/global_mincut.cpp	Global Mincut
 Flows_Matching/hopcroft_matching.cpp	Hopcroft Matching
 Flows_Matching/maxflow_dinics.cpp	Dinic
-Flows_Matching/maxflow_edmond_karp.cpp	Edmond Karp
 Flows_Matching/maxflow_ford_fulkerson.cpp	Ford Fulkerson
-Flows_Matching/maxflow_push_relabel.cpp	Push Relabel
 Flows_Matching/mcmf.cpp	MCMF
 Flows_Matching/minCostMatching.cpp	MinCost Matching
 
