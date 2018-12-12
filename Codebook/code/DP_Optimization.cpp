@@ -68,7 +68,7 @@ ll run(int n,int m) {
 			ll mn = INF; int mk;
 			for(ll k=s[i - 1][j]; k<=s[i][j + 1];++k){
 				if (dp[k][j - 1] >= 0) {
-					ll tmp = dp[k][j - 1]+(sum[i]-sum[k])*(i-k);
+					ll tmp =dp[k][j - 1]+(sum[i]-sum[k])*(i-k);
 					if (tmp < mn) {mn = tmp;mk = k;} }
 			}
 			dp[i][j] = mn; s[i][j] = mk;
