@@ -5,7 +5,7 @@ ll cnt[MAX];ll cn=0;
 // convert all strings to vll
 ll newNode() {
 	for(ll i=0;i<AS;i++)
-		go[cn][i]=0;
+		go[cn][i]=-1;
 	return cn++;
 }
 // call newNode once *******

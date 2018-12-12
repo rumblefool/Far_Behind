@@ -6,13 +6,13 @@ And find the sorted order, using values for (k-1)th iteration and
 kind of radix sort. Could be thought as some kind of binary lifting.
 String of len. 2^k -> combination of 2 strings of len. 2^(k-1), whose
 order we know. Just radix sort on pair for next iteration.
-
+Time :- O(nlog(n) + alphabet)
 Applications :-
 Finding the smallest cyclic shift;Finding a substring in a string;
 Comparing two substrings of a string;Longest common prefix of two substrings;
 Number of different substrings.
-
 */
+// return list of indices(permutation of indices which are in sorted order)
 vector<ll> sort_cyclic_shifts(string const& s) {
     ll n = s.size();
     const ll alphabet = 256;

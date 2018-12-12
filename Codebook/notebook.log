@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  8 DEC 2018 01:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 00:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -364,7 +364,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(./code/Syntax_Related/file.cpp
+(./code/Syntax_Related/template.cpp
 LaTeX Font Info: \kern \lst@width \kern \lst@width \kern \lst@width Calculating
 \kern \lst@width math\kern \lst@width sizes\kern \lst@width for\kern \lst@width
  size\kern \lst@width <11> on input line 1.
@@ -378,39 +378,38 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.60007> not available
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./code/Syntax_Related/cp
 _sublime_build.cpp)
-(./code/Data_Structures/Fenwick.cpp) (./code/Flows/maxflow_ford_fulkerson.cpp
-[2]) (./code/Flows/maxflow_dinics.cpp [3])
-(./code/Flows/maxflow_edmond_karp.cpp) (./code/Flows/maxflow_push_relabel.cpp
-[4]) (./code/Flows/mcmf.cpp [5]) (./code/Geometry/Convex_Hull.cpp [6])
-(./code/Geometry/convex_hull_trick_rajat1603.cpp [7])
-(./code/Graphs_and_Trees/LCA.cpp [8])
-(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [9]) (./code/Math/CRT.cpp)
-(./code/Math/discrete_log_emaxx.cpp [10]) (./code/Math/FFT_NTT_BEST.cpp
-[11]) (./code/Math/Lagrange_Interpolation.cpp)
-(./code/Math/matrix_struct_jtnydv25.cpp [12])
-(./code/Math/ncr_non_prime_modulo.cpp [13])
-(./code/Math/primitive_root_generator.cpp) (./code/Strings/hash_theory.cpp)
-(./code/Strings/manacher.cpp [14]) (./code/Strings/suffix_array.cpp [15])
-(./code/Strings/Trie.cpp) (./code/Strings/Z_algo.cpp)) [16] (./notebook.aux) ) 
+(./code/Data_Structures/Fenwick.cpp [2])
+(./code/Flows_Matching/maxflow_ford_fulkerson.cpp)
+(./code/Flows_Matching/maxflow_dinics.cpp [3]) (./code/Flows_Matching/mcmf.cpp
+[4]) (./code/Geometry/Convex_Hull.cpp [5])
+(./code/Geometry/convex_hull_trick_rajat1603.cpp [6])
+(./code/Graphs_and_Trees/LCA.cpp)
+(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [7]) (./code/Math/CRT.cpp
+[8]) (./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp
+[9]) [10] (./code/Math/Lagrange_Interpolation.cpp)
+(./code/Math/matrix_struct_jtnydv25.cpp) (./code/Math/ncr_non_prime_modulo.cpp
+[11]) (./code/Math/primitive_root_generator.cpp [12])
+(./code/Strings/hash_theory.cpp) (./code/Strings/manacher.cpp)
+(./code/Strings/suffix_array.cpp [13]) (./code/Strings/Trie.cpp [14])
+(./code/Strings/Z_algo.cpp)) [15] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 4445 strings out of 494923
- 60676 string characters out of 6180741
- 719912 words of memory out of 5000000
- 7643 multiletter control sequences out of 15000+600000
+ 4404 strings out of 494923
+ 60142 string characters out of 6180741
+ 719064 words of memory out of 5000000
+ 7607 multiletter control sequences out of 15000+600000
  42030 words of font info for 89 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 37i,6n,61p,395b,1773s stack positions out of 5000i,500n,10000p,200000b,80000s
-{
-/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
-tmr8a.pfb>
-Output written on notebook.pdf (16 pages, 170132 bytes).
+ 37i,6n,61p,398b,1773s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-d
+ist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on notebook.pdf (15 pages, 159456 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
+ 74 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

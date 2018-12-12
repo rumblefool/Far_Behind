@@ -4,18 +4,16 @@
 #   [filename within code directory][tab character \t][subsection title]
 
 [Syntax]
-Syntax_Related/file.cpp	Template
+Syntax_Related/template.cpp	Template
 Syntax_Related/cp_sublime_build.cpp	C++ Sublime Build
 
 [Data Structures]
 Data_Structures/Fenwick.cpp	Fenwick
 
-[Flows]
-Flows/maxflow_ford_fulkerson.cpp	Ford Fulkerson
-Flows/maxflow_dinics.cpp	Dinic
-Flows/maxflow_edmond_karp.cpp	Edmond Karp
-Flows/maxflow_push_relabel.cpp	Push Relabel
-Flows/mcmf.cpp	MCMF
+[Flows and Matching]
+Flows_Matching/maxflow_ford_fulkerson.cpp	Ford Fulkerson
+Flows_Matching/maxflow_dinics.cpp	Dinic
+Flows_Matching/mcmf.cpp	MCMF
 
 [Geometry]
 Geometry/Convex_Hull.cpp	Convex Hull
