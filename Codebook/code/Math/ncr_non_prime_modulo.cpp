@@ -11,7 +11,6 @@ ll power(ll a,ll x,ll mod){
 	}
 	return ans;
 }
-
 // prime factorization of x.
 // pr-> prime ; prn -> it's exponent 
 void getprime(ll x){ 
@@ -42,7 +41,6 @@ ll Bigfact(ll n,ll mod){
 	b=n%mod;a=(a*fact[b])%mod;
 	return a;
 }
-
 // Chinese Remainder Thm.
 vll crtval,crtmod;
 ll crt(vll &val,vll &mod){

@@ -2,12 +2,10 @@
   g in [1,p]. But only for powers of the
   form phi(p)/p_j, where p_j is a prime factor of
   phi(p). Note that p is not prime here.
-
   Existence , if one of these :
   1. p = 1,2,4
   2. p = q^k , where q -> odd prime.
   3. p = 2.(q^k) , where q-> odd prime  
-
   Note that a.g^(phi(p)) = 1 (mod p)
             b.there are phi(phi(p)) generators if exists.
 */
