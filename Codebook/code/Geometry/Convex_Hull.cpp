@@ -3,28 +3,21 @@ pt firstpoint;
 bool compare(pt x,pt y){
 	ll o=orient(firstpoint,x,y);
 	if(o==0)return lt(x.x+x.y,y.x+y.y);
-	return o<0;
-}
-/*takes as input a vector of points containing input points and an empty vector for making hull
-the points forming convex hull are pushed in vector hull
-returns hull containing minimum number of points in ccw order
-****remove EPS for making integer hull
-*/
-void make_hull(vector<pt>& poi,vector<pt>& hull)
-{
+	return o<0;}
+/*poi->input points, hull->empty vector
+returns hull in ccw order with min points*/
+void make_hull(vector<pt>& poi,vector<pt>& hull){
 	pair<ld,ld> bl={INF,INF};
 	ll n=poi.size();ll ind;
 	for(ll i=0;i<n;i++){
 		pair<ld,ld> pp={poi[i].y,poi[i].x};
 		if(pp<bl){
-			ind=i;bl={poi[i].y,poi[i].x};
-		}
+			ind=i;bl={poi[i].y,poi[i].x};}
 	}
 	swap(bl.F,bl.S);firstpoint=pt(bl.F,bl.S);
 	vector<pt> cons;
 	for(ll i=0;i<n;i++){
-		if(i==ind)continue;cons.pb(poi[i]);
-	}
+		if(i==ind)continue;cons.pb(poi[i]);}
 	sort(cons.begin(),cons.end(),compare);
 	hull.pb(firstpoint);ll m;
 	for(auto z:cons){
