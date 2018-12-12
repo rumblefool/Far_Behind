@@ -20,7 +20,7 @@ Theories
 6. Euler Walk
 
 Formulae
-1. SOT
+1. SOT / Trigno
 2. Integration
 3. Master's Theorem for complexity
 4. Polynomial Coefficients
@@ -28,3 +28,6 @@ Formulae
 Ideas
 1. Divide and Conquer
 2. Brute force and observe
+3. Monte Carlo
+4. Summation Interchange
+5. Clever optimization of brute force(binary search/ingnore)
