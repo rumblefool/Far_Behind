@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 00:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 02:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -362,62 +362,52 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (./code/Syntax_Related/template.cpp [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./code/Syntax_Relate
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2] (./code/Syntax_Relate
 d/cp_sublime_build.cpp)
 (./code/Data_Structures/Fenwick.cpp) (./code/Data_Structures/2DBIT.cpp)
 (./code/Data_Structures/SegmentTree.cpp [3])
 (./code/Data_Structures/Persistent_Seg_Tree.cpp) (./code/DP_Optimization.cpp
-[4] [5]) (./code/Flows_Matching/general_matching.cpp) [6]
-(./code/Flows_Matching/global_mincut.cpp)
+[4]) [5] (./code/Flows_Matching/general_matching.cpp)
+(./code/Flows_Matching/global_mincut.cpp [6])
 (./code/Flows_Matching/hopcroft_matching.cpp)
 (./code/Flows_Matching/maxflow_dinics.cpp [7])
-(./code/Flows_Matching/maxflow_ford_fulkerson.cpp [8])
-(./code/Flows_Matching/mcmf.cpp [9]) (./code/Flows_Matching/minCostMatching.cpp
-[10]) (./code/Geometry/Geometry.cpp [11] [12] [13])
-(./code/Geometry/Convex_Hull.cpp)
+(./code/Flows_Matching/maxflow_ford_fulkerson.cpp)
+(./code/Flows_Matching/mcmf.cpp [8]) (./code/Flows_Matching/minCostMatching.cpp
+[9]) (./code/Geometry/Geometry.cpp [10] [11] [12])
+(./code/Geometry/Convex_Hull.cpp [13])
 (./code/Geometry/convex_hull_trick_rajat1603.cpp [14])
 (./code/Graphs_and_Trees/BlockCutTree.cpp [15])
-(./code/Graphs_and_Trees/Bridges_online.cpp [16])
-(./code/Graphs_and_Trees/HLD.cpp) [17] (./code/Graphs_and_Trees/LCA.cpp)
-(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [18]) (./code/Math/CRT.cpp)
-(./code/Math/discrete_log_emaxx.cpp [19]) (./code/Math/FFT_NTT_BEST.cpp
-[20]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp
-[21]) (./code/Math/matrix_struct_jtnydv25.cpp)
-(./code/Math/ncr_non_prime_modulo.cpp [22])
-(./code/Math/primitive_root_generator.cpp) [23] (./code/Strings/hash_theory.cpp
-) (./code/Strings/manacher.cpp) (./code/Strings/suffix_array.cpp [24])
-(./code/Strings/Trie.cpp [25]) (./code/Strings/Z_algo.cpp)
-(./code/Strings/Aho_Corasick.cpp) (./code/Strings/kmp.cpp [26])
-(./code/Strings/PallindromeTree.cpp
-Overfull \hbox (46.70998pt too wide) in paragraph at lines 6--7
-[][][][][] 
- []
-
-
-Overfull \hbox (41.5301pt too wide) in paragraph at lines 11--12
-[][][][][] 
- []
-
-) (./code/Strings/suffix_array.cpp [27] [28]) (./code/Strings/suffix_tree.cpp))
-[29] (./notebook.aux) ) 
+(./code/Graphs_and_Trees/Bridges_online.cpp) (./code/Graphs_and_Trees/HLD.cpp
+[16]) (./code/Graphs_and_Trees/LCA.cpp)
+(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [17]) (./code/Math/CRT.cpp
+[18]) (./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp
+[19] [20]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
+(./code/Math/matrix_struct_jtnydv25.cpp [21])
+(./code/Math/ncr_non_prime_modulo.cpp) [22]
+(./code/Math/primitive_root_generator.cpp) (./code/Strings/hash_theory.cpp)
+(./code/Strings/manacher.cpp) (./code/Strings/Trie.cpp [23])
+(./code/Strings/Z_algo.cpp) (./code/Strings/Aho_Corasick.cpp [24])
+(./code/Strings/kmp.cpp) (./code/Strings/PallindromeTree.cpp)
+(./code/Strings/suffix_array.cpp [25]) (./code/Strings/suffix_tree.cpp [26]))
+[27] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 4830 strings out of 494923
- 65644 string characters out of 6180741
- 888118 words of memory out of 5000000
+ 4828 strings out of 494923
+ 65564 string characters out of 6180741
+ 922890 words of memory out of 5000000
  7979 multiletter control sequences out of 15000+600000
  32614 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,6n,61p,395b,1802s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,6n,61p,395b,1772s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmr8a.pfb>
-Output written on notebook.pdf (29 pages, 204743 bytes).
+Output written on notebook.pdf (27 pages, 194338 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
+ 112 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

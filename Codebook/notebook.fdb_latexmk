@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1544642263 "notebook.tex" "notebook.pdf" "notebook" 1544642265
+["pdflatex"] 1544643966 "notebook.tex" "notebook.pdf" "notebook" 1544643967
   "/etc/texmf/web2c/texmf.cnf" 1534328086 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1480098689 1408 5937f58aa508ea2cea4901c07d10f5fe ""
@@ -61,7 +61,7 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1542993433 125883 5a8e8cee8831b673b8567a1d9242290b ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1539416577 724919 2f10d4cd9094030b4ff63f447178cb7c ""
-  "code/DP_Optimization.cpp" 1544534290 3521 cbc86ba97c1720556fd9ab6d4c8296b4 ""
+  "code/DP_Optimization.cpp" 1544642977 3514 9d6f8af17e47178197a786d8578f7362 ""
   "code/Data_Structures/2DBIT.cpp" 1544633976 613 0bc87daa05d206696158c5485fc1b30f ""
   "code/Data_Structures/Fenwick.cpp" 1544634113 634 1408ed288ca7000e7292d4d3130b7d88 ""
   "code/Data_Structures/Persistent_Seg_Tree.cpp" 1544549318 2119 65cab9426cea63fe143425749e27ce1e ""
@@ -101,14 +101,14 @@
   "code/Strings/suffix_array.cpp" 1544208236 4290 4a56b45b90361da3641dee55d11c2c5a ""
   "code/Strings/suffix_tree.cpp" 1544634038 1547 56525abf0e557198c8cbfc8c7633aa41 ""
   "code/Syntax_Related/cp_sublime_build.cpp" 1544639294 320 b85e181d6f257e5be5084c6595253a79 ""
-  "code/Syntax_Related/template.cpp" 1544639218 3266 d4706fd99efb16e3467b205034c55d49 ""
-  "contents.tex" 1544642263 5032 3bda2cf52a5c88afb6a8cba8568f1205 ""
-  "notebook.aux" 1544642265 8360 d21e5b4feb9663ac4122efc5dd0cc380 ""
-  "notebook.tex" 1544642262 1278 0057c83dc9066604ef07a5767ac8e6ed ""
-  "notebook.toc" 1544642265 2983 902b775de1a75ee8710d4e33eed0420f ""
+  "code/Syntax_Related/template.cpp" 1544643028 3266 d4706fd99efb16e3467b205034c55d49 ""
+  "contents.tex" 1544643964 5032 3bda2cf52a5c88afb6a8cba8568f1205 ""
+  "notebook.aux" 1544643967 8360 a8a70f2e0e7ff681c204913efc4e6f64 ""
+  "notebook.tex" 1544643949 1296 b1f0f7152fde6d8eaaa3f08b0c9504af ""
+  "notebook.toc" 1544643967 2983 2b12dc2fb3efa5c1cff435d833b5ad31 ""
   (generated)
-  "notebook.out"
-  "notebook.aux"
-  "notebook.log"
   "notebook.pdf"
+  "notebook.aux"
+  "notebook.out"
   "notebook.toc"
+  "notebook.log"

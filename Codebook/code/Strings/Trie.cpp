@@ -1,6 +1,5 @@
 const ll AS = 26; // alphabet size
-ll go[MAX][AS];
-ll cnt[MAX];ll cn=0;  
+ll go[MAX][AS]; ll cnt[MAX];ll cn=0;  
 // cn -> index of next new node
 // convert all strings to vll
 ll newNode() {
@@ -8,8 +7,7 @@ ll newNode() {
 		go[cn][i]=-1;
 	return cn++;
 }
-// call newNode once *******
-// before adding anything **
+// call newNode once **** before adding anything **
 void addTrie(vll &x) {
 	ll v = 0;
 	cnt[v]++;
