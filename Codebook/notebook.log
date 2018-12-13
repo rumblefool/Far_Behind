@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 17:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -255,19 +255,19 @@ Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
 ) (./notebook.aux)
 \openout1 = `notebook.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 58.
-LaTeX Font Info:    ... okay on input line 58.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 58.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 59.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -320,37 +320,37 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 \makeMPintoPDFobject=\count125
 \everyMPtoPDFconversion=\toks24
 )
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 59
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 60
 .
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 59
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 60
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 59
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 60
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 59
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 60
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 63.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
  (./notebook.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
@@ -373,77 +373,78 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (./code/Syntax_Related/template.cpp [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./code/Syntax_Relate
-d/cp_sublime_build.cpp)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./code/Syntax_Related/cp
+_sublime_build.cpp) [2]
 (./code/Data_Structures/Fenwick.cpp) (./code/Data_Structures/2DBIT.cpp)
 (./code/Data_Structures/SegmentTree.cpp)
 (./code/Data_Structures/Persistent_Seg_Tree.cpp [3])
-(./code/DP_Optimization.cpp [4]) (./code/Flows_Matching/general_matching.cpp)
+(./code/DP_Optimization.cpp) [4] (./code/Flows_Matching/general_matching.cpp)
 (./code/Flows_Matching/global_mincut.cpp [5])
 (./code/Flows_Matching/hopcroft_matching.cpp)
 (./code/Flows_Matching/maxflow_dinics.cpp [6])
 (./code/Flows_Matching/maxflow_ford_fulkerson.cpp)
 (./code/Flows_Matching/mcmf.cpp [7]) (./code/Flows_Matching/minCostMatching.cpp
-[8]) (./code/Geometry/Geometry.cpp [9] [10] [11])
-(./code/Geometry/Convex_Hull.cpp)
-(./code/Geometry/convex_hull_trick_rajat1603.cpp [12])
+[8]) (./code/Geometry/Geometry.cpp [9] [10]) (./code/Geometry/Convex_Hull.cpp
+[11]) (./code/Geometry/convex_hull_trick_rajat1603.cpp [12])
 (./code/Graphs_and_Trees/BlockCutTree.cpp)
 (./code/Graphs_and_Trees/DominatorTree.cpp [13])
-(./code/Graphs_and_Trees/Bridges_online.cpp) [14]
-(./code/Graphs_and_Trees/HLD.cpp) (./code/Graphs_and_Trees/LCA.cpp)
-(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [15]) (./code/Math/CRT.cpp)
-(./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp [16])
-(./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
-(./code/Math/matrix_struct_jtnydv25.cpp [17])
-(./code/Math/ncr_non_prime_modulo.cpp [18])
-(./code/Math/primitive_root_generator.cpp) (./code/Math/Cipolla.cpp)
-(./code/Strings/hash_theory.cpp) (./code/Strings/manacher.cpp [19])
-(./code/Strings/Trie.cpp) (./code/Strings/Z_algo.cpp)
-(./code/Strings/Aho_Corasick.cpp [20]) (./code/Strings/kmp.cpp)
+(./code/Graphs_and_Trees/Bridges_online.cpp) (./code/Graphs_and_Trees/HLD.cpp
+[14]) (./code/Graphs_and_Trees/LCA.cpp)
+(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp) (./code/Math/CRT.cpp
+[15]) (./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp
+[16]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
+(./code/Math/matrix_struct_jtnydv25.cpp) (./code/Math/ncr_non_prime_modulo.cpp
+[17]) (./code/Math/primitive_root_generator.cpp [18]) (./code/Math/Cipolla.cpp)
+(./code/Strings/hash_theory.cpp) (./code/Strings/manacher.cpp)
+(./code/Strings/Trie.cpp [19]) (./code/Strings/Z_algo.cpp)
+(./code/Strings/Aho_Corasick.cpp) (./code/Strings/kmp.cpp [20])
 (./code/Strings/PallindromeTree.cpp
 Overfull \hbox (0.74388pt too wide) in paragraph at lines 12--13
 [][][][][] 
  []
 
-) (./code/Strings/suffix_array.cpp [21]) [22] (./code/Strings/suffix_tree.cpp))
+) (./code/Strings/suffix_array.cpp [21]) (./code/Strings/suffix_tree.cpp
+[22]))
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 129.
 
-[23]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 160.
+(amsmath)                 on input line 157.
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 188.
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 188.
- [24] (./notebook.aux) ) 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
+
+ []
+
+[24] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 5312 strings out of 494923
- 71163 string characters out of 6180741
- 827024 words of memory out of 5000000
- 8432 multiletter control sequences out of 15000+600000
+ 5294 strings out of 494923
+ 70856 string characters out of 6180741
+ 871352 words of memory out of 5000000
+ 8417 multiletter control sequences out of 15000+600000
  44982 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,14n,61p,324b,1876s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.
-enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on notebook.pdf (24 pages, 227554 bytes).
+ 35i,14n,61p,324b,1868s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
+nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
+rw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on notebook.pdf (24 pages, 228273 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
