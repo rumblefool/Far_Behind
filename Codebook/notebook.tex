@@ -184,5 +184,18 @@
 	$$ \int {dx  \over \sqrt{a^2 + x^2}}= \ln \left(x + \sqrt{a^2 + x^2}\right) \quad (a > 0), \int {dx  \over a^2 + x^2}= \frac 1 a \arctan \frac x a \quad (a > 0), $$
 	$$ \int \sqrt{a^2 - x^2} \, dx = \frac x 2 \sqrt{a^2 - x^2} + \frac{a^2}{2} \arcsin \frac x a \quad (a > 0) $$ $$\int {dx  \over \sqrt{a^2 - x^2}} = \arcsin \frac x a \quad (a > 0) $$
 	
+	\begin{itemize}
+		\item IS is complement of VC.
+	\end{itemize}
+	\subsubsection*{For Bipartite Graphs}
+	\begin{enumerate}
+		\item Min-edge cover($me$) = Max-independent set($mi$) (G has no isolated vertex).
+		\item Min-vertex cover($mv$) = Max matching($mm$) \hspace{5mm} $mi + mv = |V|$,\hspace{5mm} $mi \geq \frac{|V|}{2}$
+		\item Min-edge cover subgraph is a combination of star graphs.
+		\item Min Vertex cover : In residual graph of max flow pick all the vertices in 
+		L(left bipartite) not reachable from s(whose edges are cut) and lly in R reachable from s.
+		\item Min-edge cover(no isolated vertex) : Find max matching, take all those edges, for vertices not covered
+		take any edge.
+	\end{enumerate}
 		\end{multicols*}
 \end{document}
