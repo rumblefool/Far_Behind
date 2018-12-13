@@ -1,10 +1,10 @@
 1. Emaxx maths topics
 2. Sweep Line
-3. Dominator Tree
+3. -- Dominator Tree --done
 4. Sparse Table
 5. Mobius Inversion
 6. Bitset optimizations
-7. Xor shortest path
+7. -- Xor shortest path --done
 8. Xor MST
 9. Suffix automaton
 10. Euler Tour
