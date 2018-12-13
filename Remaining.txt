@@ -6,8 +6,8 @@
 6. Bitset optimizations					
 7. -- Xor shortest path 				--done
 8. Xor MST
-9. Suffix automaton
-10. Euler Tour
+9. **Suffix automaton
+10. **Euler Tour
 11. -- AP and Brides code run spoj Naman --done
 12. -- Pollard Rho and Rabin Miller --done
 11. AP and Brides code run spoj Naman	--done
@@ -17,7 +17,7 @@
 Theories
 1. Stable Matching
 2. Burnside's Lemma
-3. Linear Recurrences
+3. **Linear Recurrences
 4. Circulation Theory
 5. *****Graph Theory*****
 6. Euler Walk

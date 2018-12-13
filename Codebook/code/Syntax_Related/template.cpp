@@ -109,3 +109,13 @@ string ele;
 // Tokenizing w.r.t. space ' ' 
 while(getline(check1, ele, ' '))
 tokens.push_back(ele);
+//Ordered Sets
+typedef tree<ll,null_type,less<ll>,rb_tree_tag,
+tree_order_statistics_node_update> ordered_set;
+ordered_set X;X.insert(1);X.insert(2);
+*X.find_by_order(0)-> 1
+*X.find_by_order(1)-> 2
+(end(X)==X.find_by_order(2) -> true
+//order_of_key(x) -># of elements < x
+//For multiset use less_equal operator but 
+//it does support erase operations for multiset
