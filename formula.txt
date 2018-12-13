@@ -10,7 +10,7 @@
 10. mobius inversion			-- 		5 done
 11. planer graph property				  done
 
-12. tanx, cotx integration, 39, 40, 41, 43, 44 (integration) 
+12. tanx, cotx integration, 39, 40, 41, 43, 44 (integration)  -- done
 
 13. generating functions (4,ln(x+1),(1/(1-x)^(n+1)),fibonacci) , solve by partial fration -- done
 14. Dirichlet power series				done

@@ -21,10 +21,10 @@ Theories
 6. Euler Walk
 
 Formulae
-1. SOT / Trigno
-2. Integration
-3. Master's Theorem for complexity
-4. Polynomial Coefficients
+1. SOT / Trigno 						-- done
+2. Integration							-- done
+3. Master's Theorem for complexity		-- done
+4. Polynomial Coefficients				-- done
 
 Ideas
 1. Divide and Conquer

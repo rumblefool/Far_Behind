@@ -21,6 +21,14 @@
 \titlespacing*{\subsubsection}
 {0pt}{0.0ex plus 0ex minus .0ex}{0.0ex plus .0ex}
 
+
+\def\Fm#1\Mf{\hskip 0pt plus 1fil\advance\DisCount by 1\hbox{\hskip\DisSpace\ifnum\DisNumber=1{\bf \number\DisCount. }\fi$\ifnum\DisSmall=0\displaystyle\fi#1$}}
+
+\def\SNDis#1 #2pt{\MyDis{#1}{#2}{1}{20}{1}}
+\def\NDis#1 #2pt{\MyDis{#1}{#2}{0}{29}{1}}
+\def\SDis#1pt{\MyDis{1}{#1}{1}{20}{0}}
+\def\Dis#1pt{\MyDis{1}{#1}{0}{29}{0}}
+
 \lstset{
 	tabsize=2,
 	basicstyle=\fontsize{12}{0}\ttfamily,
@@ -149,7 +157,7 @@
 				Any planar graph has a vertex with degree $\leq 5$.
 				\item Dirichlet power series:
 				$A(x) =\sum_{i=1}^\infty{a_i \over i^x}$
-				
+				\item Coefficient of $x^r$ in $(1-x)^{-n}$ is ${n+r-1}\choose{r}$.
 			\end{enumerate}
 			$$ {x \over (1 - x)^2} = \sum_{i=0}^\infty i x^i, \hspace{5mm}
 			\ln (1 + x) = \sum_{i=1}^\infty (-1)^{i+1} {x^i \over i}, \hspace{5mm} {x \over 1 - x - x^2} = \sum_{i=0}^\infty F_i x^i$$
@@ -170,6 +178,11 @@
 		$ n = F_{k_1} + F_{k_2} + \cdots + F_{k_m},$
 		where $k_i \geq k_{i+1} + 2$ for $1 \leq i < m$ and $k_m \geq 2$.
 		\end{enumerate}
-		
+	
+	$$\int \tanh x \, dx = \ln \vert \cosh x \vert, \hspace{3mm}
+	\int \coth x \, dx = \ln \vert \sinh x \vert, \int {dx  \over a^2 - x^2} = {1 \over 2a} \ln\left\vert{a + x \over a - x}\right\vert, $$
+	$$ \int {dx  \over \sqrt{a^2 + x^2}}= \ln \left(x + \sqrt{a^2 + x^2}\right) \quad (a > 0), \int {dx  \over a^2 + x^2}= \frac 1 a \arctan \frac x a \quad (a > 0), $$
+	$$ \int \sqrt{a^2 - x^2} \, dx = \frac x 2 \sqrt{a^2 - x^2} + \frac{a^2}{2} \arcsin \frac x a \quad (a > 0) $$ $$\int {dx  \over \sqrt{a^2 - x^2}} = \arcsin \frac x a \quad (a > 0) $$
+	
 		\end{multicols*}
 \end{document}
