@@ -8,8 +8,8 @@
 8. Xor MST
 9. Suffix automaton
 10. Euler Tour
-11. AP and Brides code run spoj Naman
-12. Pollard Rho and Rabin Miller --done
+11. -- AP and Brides code run spoj Naman --done
+12. -- Pollard Rho and Rabin Miller --done
 13. Li Chao Tree
 
 Theories
