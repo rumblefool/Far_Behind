@@ -12,6 +12,7 @@
 \markright{}
 \usepackage{listings}
 \usepackage{color}
+\renewcommand{\baselinestretch}{0.7} 
 
 \usepackage{titlesec}
 \titlespacing*{\section}
@@ -20,6 +21,14 @@
 {0pt}{0.0ex plus 0ex minus .0ex}{0.0ex plus .0ex}
 \titlespacing*{\subsubsection}
 {0pt}{0.0ex plus 0ex minus .0ex}{0.0ex plus .0ex}
+
+
+\def\Fm#1\Mf{\hskip 0pt plus 1fil\advance\DisCount by 1\hbox{\hskip\DisSpace\ifnum\DisNumber=1{\bf \number\DisCount. }\fi$\ifnum\DisSmall=0\displaystyle\fi#1$}}
+
+\def\SNDis#1 #2pt{\MyDis{#1}{#2}{1}{20}{1}}
+\def\NDis#1 #2pt{\MyDis{#1}{#2}{0}{29}{1}}
+\def\SDis#1pt{\MyDis{1}{#1}{1}{20}{0}}
+\def\Dis#1pt{\MyDis{1}{#1}{0}{29}{0}}
 
 \lstset{
 	tabsize=2,
@@ -72,7 +81,7 @@
 			If $g(n) = \sum_{d|n} f(d)$ for all $n \ge 1$, then
 			$f(n) = \sum_{d|n} \mu(d)g(n/d)$ for all $n \ge 1$.
 			
-			
+			\par\vskip 7pt
 			\subsubsection*{Burnside's Lemma (Text)} % Wesley May and Brian Bi
 			The number of orbits of a set $X$ under the group action $G$ equals the average
 			number of elements of $X$ fixed by the elements of $G$.
@@ -92,7 +101,7 @@
 			$X^{2n^2-n+2n}=X^{2n^2+n}$ unaffected colorings.  So, the answer is
 			$(X^{4n^2}+3X^{2n^2}+2X^{n^2}+2X^{2n^2+n})/8$.
 			Every tree with $n$ vertices has $n-1$ edges.
-			
+			\par\vskip 2pt
 			\subsubsection*{Trees-Kraft inequality:}
 			If the depths of the leaves of a binary tree are $d_1 \ldots d_n$:
 			$
@@ -102,36 +111,32 @@
 
 			\par\vskip 3pt
 			\textbf{Master method:}
-			$$T(n) = aT(n/b) + f(n), \quad a\geq 1, b > 1$$
-			If $\exists \epsilon > 0$ such that $f(n) = O(n^{\log_b a - \epsilon})$ then
-			$$T(n) = \Theta(n^{\log_b a}).$$
+				$$T(n) = aT(n/b) + f(n), \quad a\geq 1, b > 1$$
+			If $\exists \epsilon > 0$ such that $f(n) = O(n^{\log_b a - \epsilon})$ then $T(n) = \Theta(n^{\log_b a}).$
 			\par
 			If $f(n) = \Theta(n^{\log_b a})$ then
-			$$T(n) = \Theta(n^{\log_b a} \log_2 n).$$
-			If $\exists \epsilon > 0$ such that $f(n) = \Omega(n^{\log_b a + \epsilon})$,
+			$T(n) = \Theta(n^{\log_b a} \log_2 n).$
+			\newline If $\exists \epsilon > 0$ such that $f(n) = \Omega(n^{\log_b a + \epsilon})$,
 			and $\exists c < 1$ such that $a f(n/b) \leq cf(n)$ for large $n$,
-			then
-			$$T(n) = \Theta(f(n)).$$
+			then $T(n) = \Theta(f(n)).$
+			\par\vskip 3pt
 			\subsubsection*{Probability:}
 			Variance, standard deviation:
 			$Var[X] = E[X^2] - E[X]^2$
-			\par\vskip 5pt
-			Poisson distribution:
+			\par\vskip 2pt
+			\hspace{1cm} Poisson distribution: \hspace{2cm} Normal (Gaussian) distribution:
 			$$
-			\Pr[X = k] = {e^{-\lambda} \lambda^k \over k!}, \quad  E[X] = \lambda.
-			$$
-			Normal (Gaussian) distribution:
-			$$
-			p(x) = {1 \over \sqrt{2 \pi} \sigma} e^{-(x-\mu)^2/2\sigma^2}, \quad E[X] = \mu.
+			\Pr[X = k] = {e^{-\lambda} \lambda^k \over k!}, \quad  E[X] = \lambda \quad \bigg| \quad p(x) = {1 \over \sqrt{2 \pi} \sigma} e^{-(x-\mu)^2/2\sigma^2}, \quad E[X] = \mu.
 			$$
 			The ``coupon collector'':
 			We are given a random coupon each day,
 			and there are $n$ different types of coupons.
 			The distribution of coupons is uniform.
 			The expected number of days to pass before we to collect all $n$ types is $n H_n.$
+			\par\vskip 2pt
 			\subsubsection*{Miscellaneous:}
-			
 			\begin{enumerate}
+				\itemsep0em 
 				\item 			Radius of inscribed circle for Right Angle Tringle:
 				$\quad {A B \over A + B + C}$
 				\item Law of cosine: 			$c^2 = a^2 + b^2 - 2ab \cos C$
@@ -149,16 +154,35 @@
 				Any planar graph has a vertex with degree $\leq 5$.
 				\item Dirichlet power series:
 				$A(x) =\sum_{i=1}^\infty{a_i \over i^x}$
-				
+				\item Coefficient of $x^r$ in $(1-x)^{-n}$ is ${n+r-1}\choose{r}$.
 			\end{enumerate}
+		\subsubsection*{For Bipartite Graphs}
+		\begin{enumerate}
+			\itemsep0em 
+			\item Min-edge cover($me$) = Max-independent set($mi$) (G has no isolated vertex).
+			\item Min-vertex cover($mv$) = Max matching($mm$) \hspace{5mm} $mi + mv = |V|$,\hspace{5mm} $mi \geq \frac{|V|}{2}$
+			\item Min-edge cover subgraph is a combination of star graphs.
+			\item Min Vertex cover : In residual graph of max flow pick all the vertices in 
+			L(left bipartite) not reachable from s(whose edges are cut) and lly in R reachable from s.
+			\item Min-edge cover(no isolated vertex) : Find max matching, take all those edges, for vertices not covered
+			take any edge.
+		\end{enumerate}
+		
+		
+			\vfill
 			$$ {x \over (1 - x)^2} = \sum_{i=0}^\infty i x^i, \hspace{5mm}
 			\ln (1 + x) = \sum_{i=1}^\infty (-1)^{i+1} {x^i \over i}, \hspace{5mm} {x \over 1 - x - x^2} = \sum_{i=0}^\infty F_i x^i$$
 			$$(x_1 + x_2 + ... + x_k)^n = \sum_{c_1 + c_2 + ... + c_k = n}
 			\frac{n!}{c_1! c_2! ... c_k!} x_1^{c_1} x_2^{c_2} ... x_k^{c_k}$$
-			
-		
+	
+	$$\int \tanh x \, dx = \ln \vert \cosh x \vert, \hspace{3mm}
+	\int \coth x \, dx = \ln \vert \sinh x \vert, \int {dx  \over a^2 - x^2} = {1 \over 2a} \ln\left\vert{a + x \over a - x}\right\vert, $$
+	$$ \int {dx  \over \sqrt{a^2 + x^2}}= \ln \left(x + \sqrt{a^2 + x^2}\right) \quad (a > 0), \int {dx  \over a^2 + x^2}= \frac 1 a \arctan \frac x a \quad (a > 0), $$
+	$$ \int \sqrt{a^2 - x^2} \, dx = \frac x 2 \sqrt{a^2 - x^2} + \frac{a^2}{2} \arcsin \frac x a \quad (a > 0) $$ $$\int {dx  \over \sqrt{a^2 - x^2}} = \arcsin \frac x a \quad (a > 0) $$
+	
 		\subsubsection*{Fibonacci:}
-		\begin{enumerate}
+	\begin{enumerate}
+		\itemsep0em 
 		\item $F_{-i} = (-1)^{i-1} F_i$,  $ \quad F_i = \frac{1}{\sqrt{5}} \left(\phi^i - \hat{\phi}^i\right)$
 		\item Cassini's identity: $F_{i+1} F_{i-1} - F^2_i = (-1)^i$ \quad \hbox{for $i > 0$,}
 		\item Addictive Rule:
@@ -169,7 +193,16 @@
 		\item Every integer $n$ has a unique representation
 		$ n = F_{k_1} + F_{k_2} + \cdots + F_{k_m},$
 		where $k_i \geq k_{i+1} + 2$ for $1 \leq i < m$ and $k_m \geq 2$.
-		\end{enumerate}
-		
+	\end{enumerate}
+	\subsubsection*{Primes}
+	$\forall (a,b)$, The largest prime smaller than $10^a$ is $p = 10^{a} - b$
+	\newline 
+	\par
+	$(1,3), \hspace{1mm}(2,3), \hspace{1mm}(3,3), \hspace{1mm}(4,27), \hspace{1mm}(5,9), \hspace{1mm}(6,17), \hspace{1mm}(7,9), \hspace{1mm}(8,11), \hspace{1mm}(9,63), \hspace{1mm}(10,33),$
+		\newline 
+	\par
+	$ \hspace{1mm}(11,23), \hspace{1mm}(12,11), \hspace{1mm}(13,29), \hspace{1mm}(14,27), \hspace{1mm}(15,11), \hspace{1mm}(16,63), \hspace{1mm}(17,3), \hspace{1mm}(18,11)$
+	\vfill
+
 		\end{multicols*}
 \end{document}

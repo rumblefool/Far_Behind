@@ -1,20 +1,7 @@
-// MCMF Theory:
-// 1.	If a network with negative costs had no negative cycle it is possible to transform it into one with nonnegative 
-//		 costs. Using Cij_new(pi) = Cij_old + pi(i) - pi(j), where pi(x) is shortest path from s to x in network with an 
-//		 added vertex s. The objective value remains the same (z_new = z + constant). z(x) = sum(cij*xij) 
-//		 (x->flow, c->cost, u->cap, r->residual cap).
-// 2.	Residual Network: cji = -cij, rij = uij-xij, rji = xij.
-// 3.	Note: If edge (i,j),(j,i) both are there then residual graph will have four edges b/w i,j (pairs of parellel edges).
-// 4.	let x* be a feasible soln, its optimal iff residual network Gx* contains no negative cost cycle.
-// 5.	Cycle Cancelling algo => Complexity O(n*m^2*U*C) (C->max abs value of cost, U->max cap) (m*U*C iterations).
-// 6.	Succesive shortest path algo => Complexity O(n^3 * B) / O(nmBlogn)(using heap in Dijkstra)(B -> largest supply node).
-
-//Works for negative costs, but does not work for negative cycles
-//Complexity: O(min(E^2 *V log V, E logV * flow)) 
-// to use -> graph G(n), G.add_edge(u,v,cap,cost), G.min_cost_max_flow(s,t)
-// ********* INF is used in both flow_type and cost_type so change accordingly
-const ll INF = 99999999; 
-// vertices are 0-indexed
+/*Works for -ve costs, doesn't work for -ve cycles
+O(min(E^2 *V log V, E logV * flow))
+**INF is used in both flow_type and cost_type*/
+const ll INF = 1e9;  // vertices are 0-indexed
 struct graph {
 	typedef ll flow_type; // **** flow type ****
 	typedef ll cost_type; // **** cost type ****
@@ -22,15 +9,13 @@ struct graph {
 		int src, dst;
 		flow_type cap, flow;
 		cost_type cost;
-		size_t rev;
-	};
+		size_t rev;};
 	vector<edge> edges;
-	void add_edge(int s, int t, flow_type c, cost_type cost) {
-		adj[s].pb({s,t,c,0,cost,adj[t].size()});
+	void add_edge(int s, int t, flow_type cap, cost_type cost) {
+		adj[s].pb({s,t,cap,0,cost,adj[t].size()});
 		adj[t].pb({t,s,0,0,-cost,adj[s].size()-1});
 	}
-	int n;
-	vector<vector<edge>> adj;
+	int n; vector<vector<edge>> adj;
 	graph(int n) : n(n), adj(n) { }
 
 	pair<flow_type, cost_type> min_cost_max_flow(int s, int t) {
@@ -54,7 +39,7 @@ struct graph {
 					count[u] = -count[u];
 					for (auto &e: adj[u]) {
 						if (e.cap > e.flow && dist[e.dst] > dist[e.src] + rcost(e)) {
-							dist[e.dst] = dist[e.src] + rcost(e);
+							dist[e.dst] = dist[e.src]+rcost(e);
 							prev[e.dst] = e.rev;
 							if (count[e.dst] <= 0) {
 								count[e.dst] = -count[e.dst] + 1;
@@ -63,8 +48,8 @@ struct graph {
 						}
 					}
 				}
-				for(int i=0;i<n;i++) p[i] = dist[i]; // added it
-				continue;
+				for(int i=0;i<n;i++) p[i] = dist[i];
+				continue; // added last 2 lines
 			} else { // use Dijkstra 
 				typedef pair<cost_type, int> node;
 				priority_queue<node, vector<node>, greater<node>> que;
@@ -75,7 +60,7 @@ struct graph {
 					if (dist[a.S] > a.F) continue;
 					for (auto e: adj[a.S]) {
 						if (e.cap > e.flow && dist[e.dst] > a.F + rcost(e)) {
-							dist[e.dst] = dist[e.src] + rcost(e);
+							dist[e.dst] = dist[e.src]+rcost(e);
 							prev[e.dst] = e.rev;
 							que.push({dist[e.dst], e.dst});
 						}
