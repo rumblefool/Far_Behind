@@ -1,15 +1,15 @@
 1. Emaxx maths topics
 2. Sweep Line
-3. -- Dominator Tree --done
+3. -- Dominator Tree 					--done
 4. Sparse Table
 5. Mobius Inversion
 6. Bitset optimizations
-7. -- Xor shortest path --done
+7. -- Xor shortest path 				--done
 8. Xor MST
 9. Suffix automaton
 10. Euler Tour
 11. AP and Brides code run spoj Naman
-12. Pollard Rho and Rabin Miller --done
+12. Pollard Rho and Rabin Miller 		--done
 13. Li Chao Tree
 
 Theories
@@ -32,10 +32,11 @@ Ideas
 3. +1, -1
 4. Dominator Tree for Directed Graphs
 5. use fenwich if possible
+6. Monte Carlo
+7. Summation Interchange
+8. Clever optimization of brute force(binary search/ingnore)
 
 Extras:
 1. Persistent DSU (asjs97 git)
 2.
-3. Monte Carlo
-4. Summation Interchange
-5. Clever optimization of brute force(binary search/ingnore)
+
