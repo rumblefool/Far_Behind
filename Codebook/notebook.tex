@@ -7,13 +7,20 @@
 \usepackage{mathptmx}
 \usepackage{amsmath}
 \usepackage{multicol}
-\usepackage[landscape,a4paper,twoside=false,top=2mm,bottom=2mm,left=4mm,right=2mm]{geometry}
+\usepackage[landscape,a4paper,twoside=false,top=4mm,bottom=4mm,left=15mm,right=4mm]{geometry}
 \pagestyle{myheadings}
 \markright{}
 \usepackage{listings}
 \usepackage{color}
-%\usepackage{sectsty}
-%\sectionfont{\fontsize{12}{4}\selectfont}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{0.0ex plus 0ex minus .0ex}{0.0ex plus .0ex}
+\titlespacing*{\subsection}
+{0pt}{0.0ex plus 0ex minus .0ex}{0.0ex plus .0ex}
+\titlespacing*{\subsubsection}
+{0pt}{0.0ex plus 0ex minus .0ex}{0.0ex plus .0ex}
+
 \lstset{
 	tabsize=2,
 	basicstyle=\fontsize{12}{0}\ttfamily,
@@ -48,7 +55,121 @@
 			\tableofcontents
 			\setlength{\parskip}{0.0in}
 			
-			\input contents.tex
+			\input contents.tex			
+			\subsubsection*{M\"obius Function} % Brian Bi
+			$\mu(n) = \begin{cases}
+			0 & \text{$n$ not squarefree} \\
+			1 & \text{$n$ squarefree w/ even no. of prime factors} \\
+			-1 & \text{$n$ squarefree w/ odd no. of prime factors} \\
+			\end{cases}$
+			\par
+			Note that $\mu(a) \mu(b) = \mu(ab)$ for $a, b$ relatively prime
+			\par
+			Also $\sum_{d \mid n} \mu(d) = \begin{cases} 1 & \text{if $n = 1$} \\
+			0 & \text{otherwise} \end{cases}$
 			
+			\textbf{M\"obius Inversion}
+			If $g(n) = \sum_{d|n} f(d)$ for all $n \ge 1$, then
+			$f(n) = \sum_{d|n} \mu(d)g(n/d)$ for all $n \ge 1$.
+			
+			
+			\subsubsection*{Burnside's Lemma (Text)} % Wesley May and Brian Bi
+			The number of orbits of a set $X$ under the group action $G$ equals the average
+			number of elements of $X$ fixed by the elements of $G$.
+			
+			Here's an example. Consider a square of $2n$ times $2n$ cells. How many ways
+			are there to color it into $X$ colors, up to rotations and/or reflections?
+			Here, the group has only 8 elements (rotations by 0, 90, 180 and 270 degrees,
+			reflections over two diagonals, over a vertical line and over a horizontal
+			line). Every coloring stays itself after rotating by 0 degrees, so that
+			rotation has $X^{4n^2}$ fixed points. Rotation by 180 degrees and reflections
+			over a horizonal/vertical line split all cells in pairs that must be of the
+			same color for a coloring to be unaffected by such rotation/reflection, thus
+			there exist $X^{2n^2}$ such colorings for each of them. Rotations by 90 and 270
+			degrees split cells in groups of four, thus yielding $X^{n^2}$ fixed colorings.
+			Reflections over diagonals split cells into $2n$ groups of 1 (the diagonal
+			itself) and $2n^2-n$ groups of 2 (all remaining cells), thus yielding
+			$X^{2n^2-n+2n}=X^{2n^2+n}$ unaffected colorings.  So, the answer is
+			$(X^{4n^2}+3X^{2n^2}+2X^{n^2}+2X^{2n^2+n})/8$.
+			Every tree with $n$ vertices has $n-1$ edges.
+			
+			\subsubsection*{Trees-Kraft inequality:}
+			If the depths of the leaves of a binary tree are $d_1 \ldots d_n$:
+			$
+			\sum_{i=1}^n 2^{- d_i} \leq 1,
+			$
+			and equality holds only if every internal node has 2 sons.
+
+			\par\vskip 3pt
+			\textbf{Master method:}
+			$$T(n) = aT(n/b) + f(n), \quad a\geq 1, b > 1$$
+			If $\exists \epsilon > 0$ such that $f(n) = O(n^{\log_b a - \epsilon})$ then
+			$$T(n) = \Theta(n^{\log_b a}).$$
+			\par
+			If $f(n) = \Theta(n^{\log_b a})$ then
+			$$T(n) = \Theta(n^{\log_b a} \log_2 n).$$
+			If $\exists \epsilon > 0$ such that $f(n) = \Omega(n^{\log_b a + \epsilon})$,
+			and $\exists c < 1$ such that $a f(n/b) \leq cf(n)$ for large $n$,
+			then
+			$$T(n) = \Theta(f(n)).$$
+			\subsubsection*{Probability:}
+			Variance, standard deviation:
+			$Var[X] = E[X^2] - E[X]^2$
+			\par\vskip 5pt
+			Poisson distribution:
+			$$
+			\Pr[X = k] = {e^{-\lambda} \lambda^k \over k!}, \quad  E[X] = \lambda.
+			$$
+			Normal (Gaussian) distribution:
+			$$
+			p(x) = {1 \over \sqrt{2 \pi} \sigma} e^{-(x-\mu)^2/2\sigma^2}, \quad E[X] = \mu.
+			$$
+			The ``coupon collector'':
+			We are given a random coupon each day,
+			and there are $n$ different types of coupons.
+			The distribution of coupons is uniform.
+			The expected number of days to pass before we to collect all $n$ types is $n H_n.$
+			\subsubsection*{Miscellaneous:}
+			
+			\begin{enumerate}
+				\item 			Radius of inscribed circle for Right Angle Tringle:
+				$\quad {A B \over A + B + C}$
+				\item Law of cosine: 			$c^2 = a^2 + b^2 - 2ab \cos C$
+				\item Area of a triangle: Area:
+				$A = \frac{1}{2} h c
+					= \frac{1}{2} a b \sin C
+					= {c^2 \sin A \sin B \over 2 \sin C}.$
+				\item 			$\det A = \sum_\pi \prod_{i=1}^n \text{sign}(\pi) a_{i,\pi(i)}$, 
+				for Permanents remove sign.
+				\item Perfect Numbers: $x$ is an even perfect number iff $x = 2^{n-1}(2^n - 1)$ and $2^n - 1$ is prime.
+				\item Wilson's theorem: $n$ is a prime iff
+				$(n-1)! \equiv -1 \bmod n.$
+				\item If graph $G$ is planar then $n - m + f = 2$, so
+				$f \leq 2n - 4, \quad m \leq 3 n - 6.$
+				Any planar graph has a vertex with degree $\leq 5$.
+				\item Dirichlet power series:
+				$A(x) =\sum_{i=1}^\infty{a_i \over i^x}$
+				
+			\end{enumerate}
+			$$ {x \over (1 - x)^2} = \sum_{i=0}^\infty i x^i, \hspace{5mm}
+			\ln (1 + x) = \sum_{i=1}^\infty (-1)^{i+1} {x^i \over i}, \hspace{5mm} {x \over 1 - x - x^2} = \sum_{i=0}^\infty F_i x^i$$
+			$$(x_1 + x_2 + ... + x_k)^n = \sum_{c_1 + c_2 + ... + c_k = n}
+			\frac{n!}{c_1! c_2! ... c_k!} x_1^{c_1} x_2^{c_2} ... x_k^{c_k}$$
+			
+		
+		\subsubsection*{Fibonacci:}
+		\begin{enumerate}
+		\item $F_{-i} = (-1)^{i-1} F_i$,  $ \quad F_i = \frac{1}{\sqrt{5}} \left(\phi^i - \hat{\phi}^i\right)$
+		\item Cassini's identity: $F_{i+1} F_{i-1} - F^2_i = (-1)^i$ \quad \hbox{for $i > 0$,}
+		\item Addictive Rule:
+		\hspace{2mm}
+		$F_{n+k} = F_k F_{n+1} + F_{k-1} F_n,$ \hspace{2mm}
+		$F_{2n} = F_n F_{n+1} + F_{n-1} F_n$
+		
+		\item Every integer $n$ has a unique representation
+		$ n = F_{k_1} + F_{k_2} + \cdots + F_{k_m},$
+		where $k_i \geq k_{i+1} + 2$ for $1 \leq i < m$ and $k_m \geq 2$.
+		\end{enumerate}
+		
 		\end{multicols*}
 \end{document}
