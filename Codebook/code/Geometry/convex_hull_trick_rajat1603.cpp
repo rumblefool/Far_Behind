@@ -39,7 +39,7 @@ struct cht{
 		return y > ly;}
 	bool useless(ite node){
 		if(hasleft(node) && hasright(node)){return
-			useless(*prev(node)*node,*next(node));}
+			useless(*prev(node),*node,*next(node));}
 		return 0;}
 	void addline(ll a , ll b){
 		line temp = line(a , b);
