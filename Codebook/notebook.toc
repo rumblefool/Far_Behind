@@ -33,16 +33,16 @@
 \contentsline {subsection}{\numberline {6.4}Online FFT}{18}
 \contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{18}
 \contentsline {subsection}{\numberline {6.6}Matrix Struct}{18}
-\contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{19}
+\contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{18}
 \contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{19}
+\contentsline {subsection}{\numberline {6.9}Group Theory}{20}
 \contentsline {section}{\numberline {7}Strings}{20}
 \contentsline {subsection}{\numberline {7.1}Hashing Theory}{20}
 \contentsline {subsection}{\numberline {7.2}Manacher}{20}
 \contentsline {subsection}{\numberline {7.3}Trie}{20}
 \contentsline {subsection}{\numberline {7.4}Z-algorithm}{21}
 \contentsline {subsection}{\numberline {7.5}Aho Corasick}{21}
-\contentsline {subsection}{\numberline {7.6}KMP}{21}
+\contentsline {subsection}{\numberline {7.6}KMP}{22}
 \contentsline {subsection}{\numberline {7.7}Palindrome Tree}{22}
 \contentsline {subsection}{\numberline {7.8}Suffix Array}{22}
 \contentsline {subsection}{\numberline {7.9}Suffix Tree}{23}
-\contentsline {section}{\numberline {8}Theory}{24}

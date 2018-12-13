@@ -1,15 +1,17 @@
-1. trees 						-- page 2
-2. masters thm 					-- page 2
-3. normal, poisson distr 		-- page 3
-4. coupon collector problem 	--      3
-5. variance formula				-- 		3
-6. trig, radius of inscribed circle --  4
-7. determinant eqn(and permanents)	--	4
-8. law of cosine
-9. perfect numbers, wilson's thm
-10. mobius inversion			-- 		5
-11. planer graph property
-12. tanx, cotx integration, 39, 40, 41, 43, 44 (integration)
-13. generating functions (4,ln(x+1),(1/(1-x)^(n+1)),fibonacci) , solve by partial fration
-14. Dirichlet power series
-15. Fibonacci numbers
+1. trees 						-- page 2 done
+2. masters thm 					-- page 2 done
+3. normal, poisson distr 		-- page 3 done
+4. coupon collector problem 	--      3 done
+5. variance formula				-- 		3 done
+6. trig, radius of inscribed circle --  4 done
+7. determinant eqn(and permanents)	--	4 done
+8. law of cosine						  done
+9. perfect numbers, wilson's thm		  done
+10. mobius inversion			-- 		5 done
+11. planer graph property				  done
+
+12. tanx, cotx integration, 39, 40, 41, 43, 44 (integration) 
+
+13. generating functions (4,ln(x+1),(1/(1-x)^(n+1)),fibonacci) , solve by partial fration -- done
+14. Dirichlet power series				done
+15. Fibonacci numbers					done
