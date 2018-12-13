@@ -32,7 +32,7 @@
 
 \lstset{
 	tabsize=2,
-	basicstyle=\fontsize{12}{0}\ttfamily,
+	basicstyle=\fontsize{12}{5.5}\ttfamily,
 	% basicstyle=\ttfamily\scriptsize,
 	%upquote=true,
 	aboveskip={0.00\baselineskip},
@@ -108,6 +108,19 @@
 			\sum_{i=1}^n 2^{- d_i} \leq 1,
 			$
 			and equality holds only if every internal node has 2 sons.
+			\par\vskip 2pt
+			\subsubsection*{Euler Tour:}
+			\begin{itemize}
+			\itemsep0em
+			\item Undirected graph iff All vertices have even degree, all non-zero degree vertices are in a single connected component.(Can be decomposed into edge-disjoint cycles)
+			\item Directed graph iff For each vertex in-degree=out-degree, all non-zero degree vertices are in a single strongly connected component.(Decomposible into directed-edge disjoint cycles)
+			\end{itemize}
+			\subsubsection*{Euler Trail:}
+			\begin{itemize}
+			\itemsep0em 
+			\item Undirdected graph iff exactly 0 or 2 vertices have odd degree, single connected component(consider zero degree vertices only).
+			\item Directed graph iff at most one vertex has (out-degree)-(in-degree) = 1, at most one vertex has (in-degree)-(out-degree) = 1, every other vertex has equal in-degree and out-degree, and all of its vertices with nonzero degree belong to a single connected component of the underlying undirected graph.
+			\end{itemize}
 
 			\par\vskip 3pt
 			\textbf{Master method:}
@@ -205,6 +218,9 @@
 	\par\vskip 3pt
 	\subsubsection*{Ideas}
 	Div and Conq, Brute force and observe, (+1,-1), Dominator Tree for Directed Graph, use fenwick, Monte Carlo, Summation Interchange, Clever Optimization of brute force(binary search/ignore)
+	
+	\subsubsection*{C++ Sublime Build Extra}
+	\raggedbottom\lstinputlisting[language=c++]{code/Syntax_Related/extra_build.cpp}
 	\vfill
 
 		\end{multicols*}

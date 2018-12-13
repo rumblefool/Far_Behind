@@ -1,6 +1,6 @@
 \contentsline {section}{\numberline {1}Syntax}{1}
 \contentsline {subsection}{\numberline {1.1}Template}{1}
-\contentsline {subsection}{\numberline {1.2}C++ Sublime Build}{2}
+\contentsline {subsection}{\numberline {1.2}C++ Sublime Build}{3}
 \contentsline {section}{\numberline {2}Data Structures}{3}
 \contentsline {subsection}{\numberline {2.1}Fenwick}{3}
 \contentsline {subsection}{\numberline {2.2}2D-BIT}{3}
@@ -22,29 +22,31 @@
 \contentsline {subsection}{\numberline {4.4}Convex Hull Trick}{12}
 \contentsline {section}{\numberline {5}Trees}{13}
 \contentsline {subsection}{\numberline {5.1}BlockCut Tree}{13}
-\contentsline {subsection}{\numberline {5.2}Dominator Tree}{13}
-\contentsline {subsection}{\numberline {5.3}Bridges Online}{14}
-\contentsline {subsection}{\numberline {5.4}HLD}{15}
-\contentsline {subsection}{\numberline {5.5}LCA}{15}
-\contentsline {subsection}{\numberline {5.6}Centroid Decompostion}{15}
+\contentsline {subsection}{\numberline {5.2}Bridge Tree}{14}
+\contentsline {subsection}{\numberline {5.3}Dominator Tree}{14}
+\contentsline {subsection}{\numberline {5.4}Bridges Online}{14}
+\contentsline {subsection}{\numberline {5.5}HLD}{15}
+\contentsline {subsection}{\numberline {5.6}LCA}{15}
+\contentsline {subsection}{\numberline {5.7}Centroid Decompostion}{16}
 \contentsline {section}{\numberline {6}Maths}{16}
 \contentsline {subsection}{\numberline {6.1}Chinese Remainder Theorem}{16}
 \contentsline {subsection}{\numberline {6.2}Discrete Log}{16}
-\contentsline {subsection}{\numberline {6.3}NTT}{16}
+\contentsline {subsection}{\numberline {6.3}NTT}{17}
 \contentsline {subsection}{\numberline {6.4}Online FFT}{17}
-\contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{17}
-\contentsline {subsection}{\numberline {6.6}Matrix Struct}{17}
+\contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{18}
+\contentsline {subsection}{\numberline {6.6}Matrix Struct}{18}
 \contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{18}
 \contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{19}
 \contentsline {subsection}{\numberline {6.9}Math Miscellaneous}{19}
-\contentsline {subsection}{\numberline {6.10}Group Theory}{19}
-\contentsline {section}{\numberline {7}Strings}{19}
-\contentsline {subsection}{\numberline {7.1}Hashing Theory}{19}
-\contentsline {subsection}{\numberline {7.2}Manacher}{19}
+\contentsline {subsection}{\numberline {6.10}Group Theory}{20}
+\contentsline {section}{\numberline {7}Strings}{20}
+\contentsline {subsection}{\numberline {7.1}Hashing Theory}{20}
+\contentsline {subsection}{\numberline {7.2}Manacher}{20}
 \contentsline {subsection}{\numberline {7.3}Trie}{20}
-\contentsline {subsection}{\numberline {7.4}Z-algorithm}{20}
-\contentsline {subsection}{\numberline {7.5}Aho Corasick}{20}
+\contentsline {subsection}{\numberline {7.4}Z-algorithm}{21}
+\contentsline {subsection}{\numberline {7.5}Aho Corasick}{21}
 \contentsline {subsection}{\numberline {7.6}KMP}{21}
-\contentsline {subsection}{\numberline {7.7}Palindrome Tree}{21}
+\contentsline {subsection}{\numberline {7.7}Palindrome Tree}{22}
 \contentsline {subsection}{\numberline {7.8}Suffix Array}{22}
 \contentsline {subsection}{\numberline {7.9}Suffix Tree}{23}
+\contentsline {subsection}{\numberline {7.10}Suffix Automaton}{24}

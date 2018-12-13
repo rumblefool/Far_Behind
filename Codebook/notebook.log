@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 20:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 23:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -373,8 +373,8 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (./code/Syntax_Related/template.cpp [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./code/Syntax_Related/cp
-_sublime_build.cpp [2])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./code/Syntax_Relate
+d/cp_sublime_build.cpp)
 (./code/Data_Structures/Fenwick.cpp) (./code/Data_Structures/2DBIT.cpp)
 (./code/Data_Structures/SegmentTree.cpp)
 (./code/Data_Structures/Persistent_Seg_Tree.cpp [3])
@@ -387,69 +387,79 @@ _sublime_build.cpp [2])
 [8]) (./code/Geometry/Geometry.cpp [9] [10] [11])
 (./code/Geometry/Convex_Hull.cpp) (./code/Geometry/LiChaoTree.cpp)
 (./code/Geometry/convex_hull_trick_rajat1603.cpp [12])
-(./code/Graphs_and_Trees/BlockCutTree.cpp)
-(./code/Graphs_and_Trees/DominatorTree.cpp [13])
+(./code/Graphs_and_Trees/BlockCutTree.cpp [13])
+(./code/Graphs_and_Trees/BridgeTree_and_MarkingBridges.cpp)
+(./code/Graphs_and_Trees/DominatorTree.cpp)
 (./code/Graphs_and_Trees/Bridges_online.cpp [14])
-(./code/Graphs_and_Trees/HLD.cpp) (./code/Graphs_and_Trees/LCA.cpp)
-(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [15]) (./code/Math/CRT.cpp)
-(./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp [16])
-(./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
-(./code/Math/matrix_struct_jtnydv25.cpp [17])
-(./code/Math/ncr_non_prime_modulo.cpp [18])
-(./code/Math/primitive_root_generator.cpp) (./code/Math/Math_Misc.cpp)
-(./code/Math/Cipolla.cpp) (./code/Strings/hash_theory.cpp)
-(./code/Strings/manacher.cpp [19]) (./code/Strings/Trie.cpp)
-(./code/Strings/Z_algo.cpp) (./code/Strings/Aho_Corasick.cpp [20])
-(./code/Strings/kmp.cpp) (./code/Strings/PallindromeTree.cpp
+(./code/Graphs_and_Trees/HLD.cpp) (./code/Graphs_and_Trees/LCA.cpp [15])
+(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp) (./code/Math/CRT.cpp)
+(./code/Math/discrete_log_emaxx.cpp [16]) (./code/Math/FFT_NTT_BEST.cpp)
+(./code/Math/OnlineFFT.cpp [17]) (./code/Math/Lagrange_Interpolation.cpp)
+(./code/Math/matrix_struct_jtnydv25.cpp) (./code/Math/ncr_non_prime_modulo.cpp
+[18]) (./code/Math/primitive_root_generator.cpp) (./code/Math/Math_Misc.cpp
+[19]) (./code/Math/Cipolla.cpp) (./code/Strings/hash_theory.cpp)
+(./code/Strings/manacher.cpp) (./code/Strings/Trie.cpp [20])
+(./code/Strings/Z_algo.cpp) (./code/Strings/Aho_Corasick.cpp)
+(./code/Strings/kmp.cpp [21]) (./code/Strings/PallindromeTree.cpp
 Overfull \hbox (0.74388pt too wide) in paragraph at lines 12--13
 [][][][][] 
  []
 
-[21]) (./code/Strings/suffix_array.cpp [22]) (./code/Strings/suffix_tree.cpp))
+) (./code/Strings/suffix_array.cpp [22]) (./code/Strings/suffix_tree.cpp
+[23]) (./code/Strings/suffix_automaton.cpp))
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 115.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 115.
+ [24]
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 129.
+(amsmath)                 on input line 142.
 
-[23]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 157.
+(amsmath)                 on input line 170.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 201--203
+Underfull \hbox (badness 10000) in paragraph at lines 211--213
 
  []
 
-[24] (./notebook.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--216
+
+ []
+
+(./code/Syntax_Related/extra_build.cpp) [25] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 5326 strings out of 494923
- 71329 string characters out of 6180741
- 822998 words of memory out of 5000000
- 8443 multiletter control sequences out of 15000+600000
+ 5373 strings out of 494923
+ 72172 string characters out of 6180741
+ 843760 words of memory out of 5000000
+ 8478 multiletter control sequences out of 15000+600000
  44982 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,14n,61p,324b,1872s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
-nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
-rw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on notebook.pdf (24 pages, 231114 bytes).
+ 35i,14n,61p,337b,1882s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texl
+ive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/font
+s/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/tim
+es/utmri8a.pfb>
+Output written on notebook.pdf (25 pages, 271488 bytes).
 PDF statistics:
- 122 PDF objects out of 1000 (max. 8388607)
- 85 compressed objects within 1 object stream
+ 126 PDF objects out of 1000 (max. 8388607)
+ 88 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
