@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 14:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 14:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -279,15 +279,15 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: landscape 
-* h-part:(L,W,R)=(11.38109pt, 827.97522pt, 5.69054pt)
-* v-part:(T,H,B)=(5.69054pt, 586.1268pt, 5.69054pt)
+* h-part:(L,W,R)=(17.07164pt, 816.59412pt, 11.38109pt)
+* v-part:(T,H,B)=(17.07164pt, 569.05515pt, 11.38109pt)
 * \paperwidth=845.04684pt
 * \paperheight=597.50787pt
-* \textwidth=827.97522pt
-* \textheight=586.1268pt
-* \oddsidemargin=-60.8889pt
-* \evensidemargin=-60.8889pt
-* \topmargin=-103.57945pt
+* \textwidth=816.59412pt
+* \textheight=569.05515pt
+* \oddsidemargin=-55.19835pt
+* \evensidemargin=-55.19835pt
+* \topmargin=-92.19835pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -373,7 +373,7 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
 (./code/Syntax_Related/template.cpp [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) [2] (./code/Syntax_Relate
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) (./code/Syntax_Relate
 d/cp_sublime_build.cpp)
 (./code/Data_Structures/Fenwick.cpp) (./code/Data_Structures/2DBIT.cpp)
 (./code/Data_Structures/SegmentTree.cpp)
@@ -383,37 +383,38 @@ d/cp_sublime_build.cpp)
 (./code/Flows_Matching/hopcroft_matching.cpp)
 (./code/Flows_Matching/maxflow_dinics.cpp [6])
 (./code/Flows_Matching/maxflow_ford_fulkerson.cpp)
-(./code/Flows_Matching/mcmf.cpp [7]) (./code/Flows_Matching/minCostMatching.cpp
-[8]) (./code/Geometry/Geometry.cpp [9] [10] [11])
-(./code/Geometry/Convex_Hull.cpp)
-(./code/Geometry/convex_hull_trick_rajat1603.cpp [12])
-(./code/Graphs_and_Trees/BlockCutTree.cpp [13])
+(./code/Flows_Matching/mcmf.cpp [7]) [8]
+(./code/Flows_Matching/minCostMatching.cpp [9]) (./code/Geometry/Geometry.cpp
+[10] [11]) (./code/Geometry/Convex_Hull.cpp [12])
+(./code/Geometry/convex_hull_trick_rajat1603.cpp) [13]
+(./code/Graphs_and_Trees/BlockCutTree.cpp)
+(./code/Graphs_and_Trees/DominatorTree.cpp) [14]
 (./code/Graphs_and_Trees/Bridges_online.cpp) (./code/Graphs_and_Trees/HLD.cpp
-[14]) (./code/Graphs_and_Trees/LCA.cpp)
+[15]) (./code/Graphs_and_Trees/LCA.cpp)
 (./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp) (./code/Math/CRT.cpp
-[15]) (./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp
-[16]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
-(./code/Math/matrix_struct_jtnydv25.cpp) (./code/Math/ncr_non_prime_modulo.cpp
-[17]) (./code/Math/primitive_root_generator.cpp [18])
-(./code/Strings/hash_theory.cpp) (./code/Strings/manacher.cpp)
-(./code/Strings/Trie.cpp) (./code/Strings/Z_algo.cpp [19])
-(./code/Strings/Aho_Corasick.cpp) (./code/Strings/kmp.cpp)
-(./code/Strings/PallindromeTree.cpp [20]) (./code/Strings/suffix_array.cpp
-[21]) (./code/Strings/suffix_tree.cpp)) [22]
+[16]) (./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp
+[17]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
+(./code/Math/matrix_struct_jtnydv25.cpp) [18]
+(./code/Math/ncr_non_prime_modulo.cpp)
+(./code/Math/primitive_root_generator.cpp [19]) (./code/Strings/hash_theory.cpp
+) (./code/Strings/manacher.cpp) (./code/Strings/Trie.cpp [20])
+(./code/Strings/Z_algo.cpp) (./code/Strings/Aho_Corasick.cpp)
+(./code/Strings/kmp.cpp [21]) (./code/Strings/PallindromeTree.cpp)
+(./code/Strings/suffix_array.cpp [22]) (./code/Strings/suffix_tree.cpp [23]))
 
 Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 126.
 
-[23] (./notebook.aux) ) 
+[24] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 5126 strings out of 494923
- 69209 string characters out of 6180741
- 916632 words of memory out of 5000000
- 8255 multiletter control sequences out of 15000+600000
+ 5153 strings out of 494923
+ 69524 string characters out of 6180741
+ 857918 words of memory out of 5000000
+ 8279 multiletter control sequences out of 15000+600000
  44982 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,14n,61p,324b,1858s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,14n,61p,324b,1866s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
@@ -424,10 +425,10 @@ st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on notebook.pdf (23 pages, 218465 bytes).
+Output written on notebook.pdf (24 pages, 221503 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 83 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 85 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
