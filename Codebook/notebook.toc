@@ -24,7 +24,7 @@
 \contentsline {subsection}{\numberline {5.1}BlockCut Tree}{13}
 \contentsline {subsection}{\numberline {5.2}Dominator Tree}{13}
 \contentsline {subsection}{\numberline {5.3}Bridges Online}{14}
-\contentsline {subsection}{\numberline {5.4}HLD}{14}
+\contentsline {subsection}{\numberline {5.4}HLD}{15}
 \contentsline {subsection}{\numberline {5.5}LCA}{15}
 \contentsline {subsection}{\numberline {5.6}Centroid Decompostion}{15}
 \contentsline {section}{\numberline {6}Maths}{16}
@@ -46,5 +46,5 @@
 \contentsline {subsection}{\numberline {7.5}Aho Corasick}{20}
 \contentsline {subsection}{\numberline {7.6}KMP}{21}
 \contentsline {subsection}{\numberline {7.7}Palindrome Tree}{21}
-\contentsline {subsection}{\numberline {7.8}Suffix Array}{21}
-\contentsline {subsection}{\numberline {7.9}Suffix Tree}{22}
+\contentsline {subsection}{\numberline {7.8}Suffix Array}{22}
+\contentsline {subsection}{\numberline {7.9}Suffix Tree}{23}
