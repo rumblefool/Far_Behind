@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  13 DEC 2018 19:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -374,31 +374,33 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 (./code/Syntax_Related/template.cpp [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]) (./code/Syntax_Related/cp
-_sublime_build.cpp) [2]
+_sublime_build.cpp [2])
 (./code/Data_Structures/Fenwick.cpp) (./code/Data_Structures/2DBIT.cpp)
 (./code/Data_Structures/SegmentTree.cpp)
 (./code/Data_Structures/Persistent_Seg_Tree.cpp [3])
-(./code/DP_Optimization.cpp) [4] (./code/Flows_Matching/general_matching.cpp)
+(./code/DP_Optimization.cpp [4]) (./code/Flows_Matching/general_matching.cpp)
 (./code/Flows_Matching/global_mincut.cpp [5])
 (./code/Flows_Matching/hopcroft_matching.cpp)
 (./code/Flows_Matching/maxflow_dinics.cpp [6])
 (./code/Flows_Matching/maxflow_ford_fulkerson.cpp)
 (./code/Flows_Matching/mcmf.cpp [7]) (./code/Flows_Matching/minCostMatching.cpp
-[8]) (./code/Geometry/Geometry.cpp [9] [10]) (./code/Geometry/Convex_Hull.cpp
-[11]) (./code/Geometry/convex_hull_trick_rajat1603.cpp [12])
+[8]) (./code/Geometry/Geometry.cpp [9] [10] [11])
+(./code/Geometry/Convex_Hull.cpp) (./code/Geometry/LiChaoTree.cpp)
+(./code/Geometry/convex_hull_trick_rajat1603.cpp [12])
 (./code/Graphs_and_Trees/BlockCutTree.cpp)
 (./code/Graphs_and_Trees/DominatorTree.cpp [13])
 (./code/Graphs_and_Trees/Bridges_online.cpp) (./code/Graphs_and_Trees/HLD.cpp
 [14]) (./code/Graphs_and_Trees/LCA.cpp)
-(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp) (./code/Math/CRT.cpp
-[15]) (./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp
-[16]) (./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
-(./code/Math/matrix_struct_jtnydv25.cpp) (./code/Math/ncr_non_prime_modulo.cpp
-[17]) (./code/Math/primitive_root_generator.cpp [18]) (./code/Math/Cipolla.cpp)
-(./code/Strings/hash_theory.cpp) (./code/Strings/manacher.cpp)
-(./code/Strings/Trie.cpp [19]) (./code/Strings/Z_algo.cpp)
-(./code/Strings/Aho_Corasick.cpp) (./code/Strings/kmp.cpp [20])
-(./code/Strings/PallindromeTree.cpp
+(./code/Graphs_and_Trees/Centroid_Decomp_Ayush.cpp [15]) (./code/Math/CRT.cpp)
+(./code/Math/discrete_log_emaxx.cpp) (./code/Math/FFT_NTT_BEST.cpp [16])
+(./code/Math/OnlineFFT.cpp) (./code/Math/Lagrange_Interpolation.cpp)
+(./code/Math/matrix_struct_jtnydv25.cpp [17])
+(./code/Math/ncr_non_prime_modulo.cpp [18])
+(./code/Math/primitive_root_generator.cpp) (./code/Math/Math_Misc.cpp)
+(./code/Math/Cipolla.cpp) (./code/Strings/hash_theory.cpp)
+(./code/Strings/manacher.cpp [19]) (./code/Strings/Trie.cpp)
+(./code/Strings/Z_algo.cpp) (./code/Strings/Aho_Corasick.cpp [20])
+(./code/Strings/kmp.cpp) (./code/Strings/PallindromeTree.cpp
 Overfull \hbox (0.74388pt too wide) in paragraph at lines 12--13
 [][][][][] 
  []
@@ -410,12 +412,13 @@ Package amsmath Warning: Foreign command \over;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 129.
 
+[23]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 157.
 
-[23]
+
 Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
@@ -427,13 +430,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
 [24] (./notebook.aux) ) 
 Here is how much of TeX's memory you used:
- 5294 strings out of 494923
- 70856 string characters out of 6180741
- 871352 words of memory out of 5000000
- 8417 multiletter control sequences out of 15000+600000
+ 5326 strings out of 494923
+ 71329 string characters out of 6180741
+ 822998 words of memory out of 5000000
+ 8443 multiletter control sequences out of 15000+600000
  44982 words of font info for 96 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 35i,14n,61p,324b,1868s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,14n,61p,324b,1888s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
@@ -444,7 +447,7 @@ st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on notebook.pdf (24 pages, 228273 bytes).
+Output written on notebook.pdf (24 pages, 230749 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  85 compressed objects within 1 object stream
