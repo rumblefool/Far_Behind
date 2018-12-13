@@ -29,7 +29,9 @@ Formulae
 Ideas
 1. Divide and Conquer
 2. Brute force and observe
-
+3. +1, -1
+4. Dominator Tree for Directed Graphs
+5. use fenwich if possible
 
 Extras:
 1. Persistent DSU (asjs97 git)

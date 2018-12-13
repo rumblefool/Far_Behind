@@ -18,29 +18,30 @@
 \contentsline {section}{\numberline {4}Geometry}{9}
 \contentsline {subsection}{\numberline {4.1}Geometry}{9}
 \contentsline {subsection}{\numberline {4.2}Convex Hull}{12}
-\contentsline {subsection}{\numberline {4.3}Convex Hull Trick}{13}
+\contentsline {subsection}{\numberline {4.3}Convex Hull Trick}{12}
 \contentsline {section}{\numberline {5}Trees}{13}
 \contentsline {subsection}{\numberline {5.1}BlockCut Tree}{13}
 \contentsline {subsection}{\numberline {5.2}Bridges Online}{14}
-\contentsline {subsection}{\numberline {5.3}HLD}{15}
+\contentsline {subsection}{\numberline {5.3}HLD}{14}
 \contentsline {subsection}{\numberline {5.4}LCA}{15}
 \contentsline {subsection}{\numberline {5.5}Centroid Decompostion}{15}
-\contentsline {section}{\numberline {6}Maths}{16}
-\contentsline {subsection}{\numberline {6.1}Chinese Remainder Theorem}{16}
+\contentsline {section}{\numberline {6}Maths}{15}
+\contentsline {subsection}{\numberline {6.1}Chinese Remainder Theorem}{15}
 \contentsline {subsection}{\numberline {6.2}Discrete Log}{16}
-\contentsline {subsection}{\numberline {6.3}NTT}{17}
-\contentsline {subsection}{\numberline {6.4}Online FFT}{18}
-\contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{19}
-\contentsline {subsection}{\numberline {6.6}Matrix Struct}{19}
-\contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{19}
-\contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{20}
-\contentsline {section}{\numberline {7}Strings}{20}
-\contentsline {subsection}{\numberline {7.1}Hashing Theory}{20}
-\contentsline {subsection}{\numberline {7.2}Manacher}{21}
-\contentsline {subsection}{\numberline {7.3}Trie}{21}
-\contentsline {subsection}{\numberline {7.4}Z-algorithm}{21}
-\contentsline {subsection}{\numberline {7.5}Aho Corasick}{22}
-\contentsline {subsection}{\numberline {7.6}KMP}{22}
-\contentsline {subsection}{\numberline {7.7}Palindrome Tree}{22}
-\contentsline {subsection}{\numberline {7.8}Suffix Array}{23}
-\contentsline {subsection}{\numberline {7.9}Suffix Tree}{24}
+\contentsline {subsection}{\numberline {6.3}NTT}{16}
+\contentsline {subsection}{\numberline {6.4}Online FFT}{17}
+\contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{17}
+\contentsline {subsection}{\numberline {6.6}Matrix Struct}{17}
+\contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{17}
+\contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{18}
+\contentsline {section}{\numberline {7}Strings}{19}
+\contentsline {subsection}{\numberline {7.1}Hashing Theory}{19}
+\contentsline {subsection}{\numberline {7.2}Manacher}{19}
+\contentsline {subsection}{\numberline {7.3}Trie}{19}
+\contentsline {subsection}{\numberline {7.4}Z-algorithm}{19}
+\contentsline {subsection}{\numberline {7.5}Aho Corasick}{20}
+\contentsline {subsection}{\numberline {7.6}KMP}{20}
+\contentsline {subsection}{\numberline {7.7}Palindrome Tree}{20}
+\contentsline {subsection}{\numberline {7.8}Suffix Array}{21}
+\contentsline {subsection}{\numberline {7.9}Suffix Tree}{22}
+\contentsline {section}{\numberline {8}Theory}{22}

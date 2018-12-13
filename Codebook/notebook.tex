@@ -12,8 +12,13 @@
 \markright{}
 \usepackage{listings}
 \usepackage{color}
-%\usepackage{sectsty}
-%\sectionfont{\fontsize{12}{4}\selectfont}
+
+\usepackage{titlesec}
+\titlespacing*{\section}
+{0pt}{0.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
+\titlespacing*{\subsection}
+{0pt}{0.5ex plus 1ex minus .2ex}{0.3ex plus .2ex}
+
 \lstset{
 	tabsize=2,
 	basicstyle=\fontsize{12}{0}\ttfamily,
@@ -49,6 +54,85 @@
 			\setlength{\parskip}{0.0in}
 			
 			\input contents.tex
+			\section{Theory}
 			
+			\subsubsection*{Polynomial Coefficients} % Brian Bi
+			$(x_1 + x_2 + ... + x_k)^n = \sum_{c_1 + c_2 + ... + c_k = n}
+			\frac{n!}{c_1! c_2! ... c_k!} x_1^{c_1} x_2^{c_2} ... x_k^{c_k}$
+			
+			\subsubsection*{M\"obius Function} % Brian Bi
+			$\mu(n) = \begin{cases}
+			0 & \text{$n$ not squarefree} \\
+			1 & \text{$n$ squarefree w/ even no. of prime factors} \\
+			1 & \text{$n$ squarefree w/ odd no. of prime factors} \\
+			\end{cases}$
+			Note that $\mu(a) \mu(b) = \mu(ab)$ for $a, b$ relatively prime
+			Also $\sum_{d \mid n} \mu(d) = \begin{cases} 1 & \text{if $n = 1$} \\
+			0 & \text{otherwise} \end{cases}$
+			
+			\textbf{M\"obius Inversion}
+			If $g(n) = \sum_{d|n} f(d)$ for all $n \ge 1$, then
+			$f(n) = \sum_{d|n} \mu(d)g(n/d)$ for all $n \ge 1$.
+			
+			
+			\subsubsection*{Burnside's Lemma (Text)} % Wesley May and Brian Bi
+			The number of orbits of a set $X$ under the group action $G$ equals the average
+			number of elements of $X$ fixed by the elements of $G$.
+			
+			Here's an example. Consider a square of $2n$ times $2n$ cells. How many ways
+			are there to color it into $X$ colors, up to rotations and/or reflections?
+			Here, the group has only 8 elements (rotations by 0, 90, 180 and 270 degrees,
+			reflections over two diagonals, over a vertical line and over a horizontal
+			line). Every coloring stays itself after rotating by 0 degrees, so that
+			rotation has $X^{4n^2}$ fixed points. Rotation by 180 degrees and reflections
+			over a horizonal/vertical line split all cells in pairs that must be of the
+			same color for a coloring to be unaffected by such rotation/reflection, thus
+			there exist $X^{2n^2}$ such colorings for each of them. Rotations by 90 and 270
+			degrees split cells in groups of four, thus yielding $X^{n^2}$ fixed colorings.
+			Reflections over diagonals split cells into $2n$ groups of 1 (the diagonal
+			itself) and $2n^2-n$ groups of 2 (all remaining cells), thus yielding
+			$X^{2n^2-n+2n}=X^{2n^2+n}$ unaffected colorings.  So, the answer is
+			$(X^{4n^2}+3X^{2n^2}+2X^{n^2}+2X^{2n^2+n})/8$.
+			Every tree with $n$ vertices has $n-1$ edges.
+			
+			\subsubsection*{Trees-Kraft inequality:}
+			If the depths of the leaves of a binary tree are $d_1 \ldots d_n$:
+			$
+			\sum_{i=1}^n 2^{- d_i} \leq 1,
+			$
+			and equality holds only if every internal node has 2 sons.
+			
+			\par\vskip 5pt
+			
+			\textbf{Master method:}
+			$$T(n) = aT(n/b) + f(n), \quad a\geq 1, b > 1$$
+			If $\exists \epsilon > 0$ such that $f(n) = O(n^{\log_b a - \epsilon})$ then
+			$$T(n) = \Theta(n^{\log_b a}).$$
+			\par
+			If $f(n) = \Theta(n^{\log_b a})$ then
+			$$T(n) = \Theta(n^{\log_b a} \log_2 n).$$
+			If $\exists \epsilon > 0$ such that $f(n) = \Omega(n^{\log_b a + \epsilon})$,
+			and $\exists c < 1$ such that $a f(n/b) \leq cf(n)$ for large $n$,
+			then
+			$$T(n) = \Theta(f(n)).$$
+			\par
+			\subsubsection*{Probability:}
+			\par\vskip 5pt
+			Variance, standard deviation:
+			$Var[X] = E[X^2] - E[X]^2$
+			\par\vskip 5pt
+			Poisson distribution:
+			$$
+			\Pr[X = k] = {e^{-\lambda} \lambda^k \over k!}, \quad  E[X] = \lambda.
+			$$
+			Normal (Gaussian) distribution:
+			$$
+			p(x) = {1 \over \sqrt{2 \pi} \sigma} e^{-(x-\mu)^2/2\sigma^2}, \quad E[X] = \mu.
+			$$
+			The ``coupon collector'':
+			We are given a random coupon each day,
+			and there are $n$ different types of coupons.
+			The distribution of coupons is uniform.
+			The expected number of days to pass before we to collect all $n$ types is $n H_n.$
 		\end{multicols*}
 \end{document}
