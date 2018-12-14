@@ -22,7 +22,7 @@ ld GaussJordan(vvld &a, vvld &b) {
 	a[p][pk]=0;
 	for(int q=0;q<n;q++) a[p][q]-=a[pk][q]*c;
 	for(int q=0;q<m;q++)b[p][q]-=b[pk][q]*c;}}
-	for (int p=n-1;p>=0;p--) if(irow[p]!=icol[p]){
+	for (int p=n-1;p>=0;p--)if(irow[p]!=icol[p]){
 	for(int k=0;k<n;k++)
 		swap(a[k][irow[p]],a[k][icol[p]]);}
 	return det;}
