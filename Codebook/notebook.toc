@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {2.1}Fenwick}{3}
 \contentsline {subsection}{\numberline {2.2}2D-BIT}{3}
 \contentsline {subsection}{\numberline {2.3}Segment Tree}{3}
-\contentsline {subsection}{\numberline {2.4}Persistent Segment Tree}{3}
+\contentsline {subsection}{\numberline {2.4}Persistent Segment Tree}{4}
 \contentsline {subsection}{\numberline {2.5}DP Optimization}{4}
 \contentsline {section}{\numberline {3}Flows and Matching}{5}
 \contentsline {subsection}{\numberline {3.1}General Matching}{5}
-\contentsline {subsection}{\numberline {3.2}Global Mincut}{5}
+\contentsline {subsection}{\numberline {3.2}Global Mincut}{6}
 \contentsline {subsection}{\numberline {3.3}Hopcroft Matching}{6}
 \contentsline {subsection}{\numberline {3.4}Dinic}{6}
 \contentsline {subsection}{\numberline {3.5}Ford Fulkerson}{7}
@@ -24,20 +24,20 @@
 \contentsline {subsection}{\numberline {5.1}BlockCut Tree}{13}
 \contentsline {subsection}{\numberline {5.2}Bridge Tree}{14}
 \contentsline {subsection}{\numberline {5.3}Dominator Tree}{14}
-\contentsline {subsection}{\numberline {5.4}Bridges Online}{14}
+\contentsline {subsection}{\numberline {5.4}Bridges Online}{15}
 \contentsline {subsection}{\numberline {5.5}HLD}{15}
-\contentsline {subsection}{\numberline {5.6}LCA}{15}
+\contentsline {subsection}{\numberline {5.6}LCA}{16}
 \contentsline {subsection}{\numberline {5.7}Centroid Decompostion}{16}
 \contentsline {section}{\numberline {6}Maths}{16}
 \contentsline {subsection}{\numberline {6.1}Chinese Remainder Theorem}{16}
-\contentsline {subsection}{\numberline {6.2}Discrete Log}{16}
+\contentsline {subsection}{\numberline {6.2}Discrete Log}{17}
 \contentsline {subsection}{\numberline {6.3}NTT}{17}
-\contentsline {subsection}{\numberline {6.4}Online FFT}{17}
+\contentsline {subsection}{\numberline {6.4}Online FFT}{18}
 \contentsline {subsection}{\numberline {6.5}Langrange Interpolation}{18}
 \contentsline {subsection}{\numberline {6.6}Matrix Struct}{18}
 \contentsline {subsection}{\numberline {6.7}nCr(Non Prime Modulo)}{18}
 \contentsline {subsection}{\numberline {6.8}Primitive Root Generator}{19}
-\contentsline {subsection}{\numberline {6.9}Math Miscellaneous}{19}
+\contentsline {subsection}{\numberline {6.9}Math Miscellaneous}{20}
 \contentsline {subsection}{\numberline {6.10}Group Theory}{20}
 \contentsline {section}{\numberline {7}Strings}{20}
 \contentsline {subsection}{\numberline {7.1}Hashing Theory}{20}
