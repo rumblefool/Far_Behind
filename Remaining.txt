@@ -20,7 +20,7 @@ Theories
 3. **Linear Recurrences
 4. Circulation Theory
 5. *****Graph Theory*****
-6. Euler Walk
+6. -- Euler Walk --done
 
 Formulae
 1. SOT / Trigno 						-- done
@@ -33,7 +33,7 @@ Ideas
 2. Brute force and observe
 3. +1, -1
 4. Dominator Tree for Directed Graphs
-5. use fenwich if possible
+5. use fenwick if possible
 6. Monte Carlo
 7. Summation Interchange
 8. Clever optimization of brute force(binary search/ingnore)
