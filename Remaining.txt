@@ -5,13 +5,11 @@
 5. Mobius Inversion						
 6. Bitset optimizations					
 7. -- Xor shortest path 				--done
-8. Xor MST
-9. **Suffix automaton
-10. **Euler Tour
+8. -- Xor MST 							--done
+9. -- Suffix automaton					--done
+10. -- Euler Tour						--done
 11. -- AP and Brides code run spoj Naman --done
-12. -- Pollard Rho and Rabin Miller --done
-11. AP and Brides code run spoj Naman	--done
-12. Pollard Rho and Rabin Miller 		--done
+12. -- Pollard Rho and Rabin Miller 	--done
 13. -- Li Chao Tree --done
 
 Theories
