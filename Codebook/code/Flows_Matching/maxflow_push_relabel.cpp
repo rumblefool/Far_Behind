@@ -1,9 +1,3 @@
-// Adjacency list implementation of FIFO push relabel maximum flow
-// with the gap relabeling heuristic.  This implementation is
-// significantly faster than straight Ford-Fulkerson.  It solves
-// random problems with 10000 vertices and 1000000 edges in a few
-// seconds, though it is possible to construct test cases that
-// achieve the worst-case.
 // Time: O(V^3)
 // I/O:- addEdge(),src,snk ** vertices are 0-indexed **
 //     - To obtain the actual flow values, look at all edges with
@@ -13,7 +7,6 @@ struct edge {
   edge(ll from, ll to, ll cap, ll flow, ll index) :
     from(from), to(to), cap(cap), flow(flow), index(index) {}
 };
-
 struct PushRelabel {
   ll n;
   vector<vector<edge> > G;
@@ -24,9 +17,9 @@ struct PushRelabel {
   PushRelabel(ll n) : n(n), G(n), excess(n), dist(n), active(n), count(2*n) {}
 
   void addEdge(ll from, ll to, ll cap) {
-    G[from].push_back(edge(from, to, cap, 0, G[to].size()));
+    G[from].pb(edge(from, to, cap, 0, G[to].size()));
     if (from == to) G[from].back().index++;
-    G[to].push_back(edge(to, from, 0, 0, (ll)G[from].size() - 1));
+    G[to].pb(edge(to, from, 0, 0, (ll)G[from].size() - 1));
   }
 
   void enqueue(ll v) { 

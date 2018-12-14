@@ -3,8 +3,12 @@ O(m*sqrt(n)), in practice it is pretty fast for any
 bipartite network, **vertices are 1-indexed**
 e=(u,v), e.flow represent effective flow from u to v 
 (i.e f(u->v) - f(v->u))
-*use int if possible(ll could be slow in dinic)*/
-
+*use int if possible(ll could be slow in dinic)
+To put lower bound on edge capacities form a new 
+graph G' with source s' and t' for each edge u->v
+ in G with cap (low, high), replace it with
+s'->v with low, v->t' with low
+u->v with high - low*/
 struct edge {ll x, y, cap, flow;};
 struct DinicFlow {
 	// *** change inf accordingly *****
