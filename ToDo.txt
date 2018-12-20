@@ -53,5 +53,5 @@ Important
 //--------------------------------------- After KGP---------------------------------------------------
 
 1. SWERC 2015 I Suffix Tree
-
+2. Improve Gauss Jordan(VVT, nXm)
 
