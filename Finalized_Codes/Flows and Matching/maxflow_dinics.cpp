@@ -14,6 +14,9 @@ e=(u,v), e.flow represents the effective flow from u to v
 //  in G with cap (low, high), replace it with
 // s'->v with low, v->t' with low
 // u->v with high - low*/
+
+// imp -> https://codeforces.com/blog/entry/10956
+
 struct edge {ll x, y, cap, flow;};
 struct DinicFlow {
     // *** change inf accordingly *****
