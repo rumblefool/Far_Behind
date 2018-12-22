@@ -62,6 +62,12 @@ inline int power(int a,int b){int rt=1;while(b>0){if(b&1)rt=mul(rt,a);a=mul(a,a)
 inline int inv(int a){return power(a,mod-2);}
 inline void modadd(int &a,int b){a+=b;if(a>=mod)a-=mod;}
 
+struct compare{
+	bool operator() (const int &a,const int &b) const{
+		return a>b;
+	}
+};
+
 int main()
 {
 	ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);cout<<setprecision(25);
