@@ -55,6 +55,7 @@ void __f(const char* names,Arg1&& arg1,Args&&... args){
 #define all(x)	x.begin(),x.end()
 
 // const int mod=1e9+7;
+// 128 bit: __int128
 inline int add(int a,int b){a+=b;if(a>=mod)a-=mod;return a;}
 inline int sub(int a,int b){a-=b;if(a<0)a+=mod;return a;}
 inline int mul(int a,int b){return (a*1ll*b)%mod;}
