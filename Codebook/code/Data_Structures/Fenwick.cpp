@@ -1,6 +1,6 @@
 /*All indices are 1 indexed
 *Range update and point query: maintain BIT of prefix sum of updates
--add val in [a,b] -> add val at a,-val at b
+-add val in [a,b] -> add val at a,-val at b+1
 -value[a]=BITsum(a)+arr[a]
 *Range update ,range query: maintain 2 BITs B1,B2
 -add val in [a,b] -> B1:add val at a,-val at b+1 and in B2 -> Add val*(a-1) at a, -val*b at b+1
