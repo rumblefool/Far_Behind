@@ -156,6 +156,14 @@ vector<pt> CircleCircleIntersection(pt a, pt b, ld r, ld R) {
   ret.push_back(a+v*x + RotateCCW90(v)*y);
   if (gt(y,0)) ret.push_back(a+v*x - RotateCCW90(v)*y);
   return ret;}
+ld CircleCircleIntersectionArea(pt c1,ld r1,pt c2,ld r2){
+	if(lt(r1,r2))swap(c1,c2),swap(r1,r2);
+	ld d=dist2(c1,c2),d1=dist(c1,c2);
+	if(le(r1+r2,d1))return 0;
+	if(ge(r1-r2,d1))return PI*r2*r2;
+	ld alfa=acos((d+r1*r1-r2*r2)/(2*d1*r1));
+	ld beta=acos((d+r2*r2-r1*r1)/(2*d1*r2));
+	return alfa*r1*r1+beta*r2*r2-sin(2*alfa)*r1*r1/2-sin(2*beta)*r2*r2/2;}
 //compute centroid of simple polygon by dividing it into disjoint triangles
 //and taking weighted mean of their centroids (Jerome)
 pt ComputeCentroid(const vector<pt> &p) {
