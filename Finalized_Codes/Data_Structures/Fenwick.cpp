@@ -1,11 +1,11 @@
-/*All indices are 1 indexed*/
-/*Range update and point query: maintain BIT of prefix sum of updates
-	to add val in range [a,b] add val at a and -val at b
-	value[a]=BITsum(a)+arr[a] where arr is constant*/
-/***Range update and range query: maintain 2 BITs B1 and B2
-**to add val in [a,b] add val at a and -val at b+1 in B1. Add val*(a-1) at a and -val*b at b+1
-**sum[1,b]=B1sum(1,b)*b-B2sum(1,b)
-**sum[a,b]=sum[1,b]-sum[1,a-1]*/
+/*All indices are 1 indexed
+*Range update and point query: maintain BIT of prefix sum of updates
+-add val in [a,b] -> add val at a,-val at b+1
+-value[a]=BITsum(a)+arr[a]
+*Range update ,range query: maintain 2 BITs B1,B2
+-add val in [a,b] -> B1:add val at a,-val at b+1 and in B2 -> Add val*(a-1) at a, -val*b at b+1
+-sum[1,b]=B1sum(1,b)*b-B2sum(1,b)
+-sum[a,b]=sum[1,b]-sum[1,a-1]*/
 ll n;
 ll fen[MAX_N];
 void update(ll p,ll val){
