@@ -18,7 +18,7 @@
     d. HLD
     e. Euler Tour (dfs order/bfs order/any other ordering)
     f. Pass some structure(set/array/..) in dfs (segment/fenwick)
-    g. Reachability Tree
+    g. Reachability Tree (construction using dsu)
     h. Dominator Tree (directed graphs)
     i. Biconnectivity
     j. DFS tree
