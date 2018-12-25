@@ -11,6 +11,19 @@
 11. Cheat Sheet Formula Stirling
 12. https://codeforces.com/contest/226
 13. **Gaussian Elimination
-14. **Mention all topics in index
+14. **Mention all topics in index 
+    a. LCA
+    b. DSU on trees (possibly make greater depth as heavy child)
+    c. Centroid Decomposition
+    d. HLD
+    e. Euler Tour (dfs order/bfs order/any other ordering)
+    f. Pass some structure(set/array/..) in dfs (segment/fenwick)
+    g. Reachability Tree
+    h. Dominator Tree (directed graphs)
+    i. Biconnectivity
+    j. DFS tree
+15. **Add inclusion exclusion
+16. **Add flows theory
+17. DFS tree for CLS
 
 https://codeforces.com/gym/100570 - Hello 2015(Div 1) - Only Query Problems
