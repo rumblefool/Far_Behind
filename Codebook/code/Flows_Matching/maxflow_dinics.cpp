@@ -4,11 +4,15 @@ bipartite network, **vertices are 1-indexed**
 e=(u,v), e.flow represent effective flow from u to v 
 (i.e f(u->v) - f(v->u))
 *use int if possible(ll could be slow in dinic)
-To put lower bound on edge capacities form a new 
+1). To put lower bound on edge capacities form a new 
 graph G' with source s' and t' for each edge u->v
  in G with cap (low, high), replace it with
 s'->v with low, v->t' with low
-u->v with high - low*/
+u->v with high - low
+2). To convert circulation with edge lower bounds
+to circulation without edge lower bounds
+old=> e=u->v,l(e)<=f(e)<=c(e), d(u), d(v).
+new=> d'(u)=d(u)+l(e), d'(v)=d(v)-l(e), c'(e)=c(e)-l(e))*/
 struct edge {ll x, y, cap, flow;};
 struct DinicFlow {
 	// *** change inf accordingly *****
