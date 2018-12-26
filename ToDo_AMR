@@ -11,6 +11,39 @@
 11. Cheat Sheet Formula Stirling
 12. https://codeforces.com/contest/226
 13. **Gaussian Elimination
-14. **Mention all topics in index
+14. **Mention all topics in index 
+    a. LCA
+    b. DSU on trees (possibly make greater depth as heavy child)
+    c. Centroid Decomposition
+    d. HLD
+    e. Euler Tour (dfs order/bfs order/any other ordering)
+    f. Pass some structure(set/array/..) in dfs (segment/fenwick)
+    g. Reachability Tree (construction using dsu)
+    h. Dominator Tree (directed graphs)
+    i. Biconnectivity
+    j. DFS tree
+15. **Add inclusion exclusion
+16. **Add flows theory
+17. **Add ideas on first page
+18. DFS tree from CLRS
+19. Expression parsing (e-maxx)
+
+**Changes for Codebook
+1. Catalan number recurrence and properties, Stirling numbers and solution using fft
+2. Generating functions and common generating funtions
+3. Mention all topics in index 
+    a. LCA
+    b. DSU on trees (possibly make greater depth as heavy child)
+    c. Centroid Decomposition
+    d. HLD
+    e. Euler Tour (dfs order/bfs order/any other ordering)
+    f. Pass some structure(set/array/..) in dfs (segment/fenwick)
+    g. Reachability Tree (construction using dsu)
+    h. Dominator Tree (directed graphs)
+    i. Biconnectivity
+    j. DFS tree
+4. Inclusion exclusion
+5. Flows theory
+6. Add all ideas on first page
 
 https://codeforces.com/gym/100570 - Hello 2015(Div 1) - Only Query Problems

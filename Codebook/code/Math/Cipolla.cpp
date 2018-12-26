@@ -15,7 +15,7 @@ Soln. -> Compute it modulo prime powers and take CRT.
 For prime powers :
 We have a solution x0 mod p. We use it to find a solution (mod p^2),
 then (p^3) and so on. For p^2 : x^2 = n (mod p^2); We want x to 
-reduce to x0 mod p. So x=x0+p*x1. Square it. x0^2+2*x0*x1=n mod (p^2). 
+reduce to x0 mod p. So x=x0+p*x1. Square it. x0^2+2*x0*x1*p = n mod (p^2). 
 Calculate x1.This can be extended to find for greater powers of p.
 But the inverse may not exist always which may give a problem.
 But then no solution or all solutions. This is called Hensel's Lifting. 
