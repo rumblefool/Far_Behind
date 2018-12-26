@@ -36,7 +36,7 @@ void build() {
 	// initialize data for the root of the tree
 	sfli[0]=1; lef[0]=-1; rig[0]=-1;
 	lef[1]=-1; rig[1]=-1; for(ll i=0;i<ss;i++)
-	fill (chi[i], chi[i]+27,-1);
+	fill (chi[i], chi[i]+26,-1);
 	fill(chi[1],chi[1]+26,0);
 	// add the text to the tree, letter by letter
 	for (la=0; la<(int)str.size(); ++la)
