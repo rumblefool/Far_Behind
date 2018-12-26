@@ -1,15 +1,15 @@
-const ll MAX=1e5+15;
 ll par[MAX];  // stores index of parent node 
 ll suli[MAX]; // stores index of suffix link
 ll len[MAX];  // stores length of largest pallindrome ending at that node
 ll child[MAX][30];  // stores the children of the node
+ll nodeno[MAX];
 /*---------------------------------------------------------
 index 0 - root "-1"
 index 1 - root  "0"
 therefore node of s[i] is i+2
 initialize all child[i][j] to -1
 -----------------------------------------------------------*/
-void eer_tree(string s){
+void eer_tree(string &s){
 	ll a,b,c,d,i,j,k,e,f;
 	suli[1]=0;suli[0]=0;len[1]=0;len[0]=-1;
 	ll n=s.length();
@@ -36,6 +36,7 @@ void eer_tree(string s){
 			if(cur==0)break;
 			cur=suli[cur];
 		}
+		nodeno[d] = cur;
 		if(cur!=d)continue;
 		if(len[d]==1)suli[d]=1;
 		else{
