@@ -2,20 +2,20 @@
 the cost (G<=L).The cost func. C[i,j] satisfies: 
 C[a,b]+C[c,d]<=C[a,d]+C[c,b] for a<=c<=b<=d.(Q.E) 
 & intuitively you can think that the c.f increases
-at a rate which is more than linear at all intervals.
-So, if the c.f. satisfies Q.E., the following holds: 
+at a rate more than linear at all intervals.So,if 
+the c.f. satisfies Q.E., the following holds: 
 F(g,l):min cost of spliting first l into g ivals.
 F(g,l): min(F(g-1,k)+C(k+1,l)) over all valid k.
-P(g,l): lowest position k s.t. it minimizes F(g,l).
-P(g,0)<=P(g,1)<=.....<=P(g,l); DivConq, O(G.L.log(L))
+P(g,l):lowest position k s.t. it minimizes F(g,l)
+P(g,0)<=P(g,1)<=...<=P(g,l);DivConq,O(G.L.log(L))
 P(0,l)<=P(1,l)<=P(2,l)....<=P(G-1,l)<=P(G,l). 
 Knuth Opti, complexity O(L.L).
-For div&conq, we calculate P(g,l) for each g 1 by 1.
-In each g, we calculate for mid-l and do recursively 
-using the obtained upper and lower bounds.For knuth, 
-we use P(g,l-1)<=P(g,l)<=P(g+1,l), and fill our table 
-in increasing l and decreasing g. In opt. BST type 
-problems, use  bk[i][j-1]<= bk[i][j] <=bk[i+1][j] */
+In div&conq,we calculate P(g,l) for each g 1 by 1
+In each g,we calc for mid-l and do recursively 
+using the upper and lower bounds.For knuth, 
+we use P(g,l-1)<=P(g,l)<=P(g+1,l),and fill our 
+table in increasing l and dec. g.In opt. BST type 
+problems,use bk[i][j-1]<= bk[i][j] <=bk[i+1][j]*/
 
 // Code for Divide and Conquer Opti O(G.L.log(L)): -
 ll C[8111]; ll sums[8111];
@@ -25,8 +25,8 @@ int P[811][8111];  // optimal position.
 ll cost(int i, int j) { // cost function
 	return i > j ? 0 :(sums[j]-sums[i-1])*(j-i+1);
 }
-/*fill(g,l1,l2,p1,p2) calcs. P[g][l] and F[g][l] for
-l1<=l<= l2,with the knowledge that p1<=P[g][l]<=p2*/
+/*fill(g,l1,l2,p1,p2) calcs. P[g][l] and F[g][l]
+for l1<=l<= l2,with using that p1<=P[g][l]<=p2*/
 void fill(int g, int l1, int l2, int p1, int p2) {
 	if (l1 > l2) return; int lm = (l1 + l2) >> 1;
 	ll nv=INF,nv1=-1;
