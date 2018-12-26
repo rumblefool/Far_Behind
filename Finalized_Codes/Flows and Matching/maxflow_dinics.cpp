@@ -19,6 +19,7 @@ to circulation without edge lower bounds
 old=> e=u->v,l(e)<=f(e)<=c(e), d(u), d(v).
 new=> d'(u)=d(u)+l(e), d'(v)=d(v)-l(e), c'(e)=c(e)-l(e))*/
 // imp -> https://codeforces.com/blog/entry/10956
+// max flow with edge demands :  http://jeffe.cs.illinois.edu/teaching/algorithms/2009/notes/18-maxflowext.pdf
 
 struct edge {ll x, y, cap, flow;};
 struct DinicFlow {
