@@ -1,6 +1,6 @@
 /*Given any directed graph, finds maximal matching
 	Vertices-0-indexed, O(n^3) per call to edmonds*/
-vll adj[MAXN]; int p[MAXN], base[MAXN], match[MAXN];
+vll adj[N]; int p[N], base[N], match[N];
 int lca(int n, int u, int v){
 	vector<bool> used(n);
 	for (;;) {
@@ -9,12 +9,11 @@ int lca(int n, int u, int v){
 	for (;;) {
 		v = base[v]; if (used[v]) return v;
 		v = p[match[v]];}}
-
 void mark_path(vector<bool> &blo,int u,int b,int child){
-	for (; base[u] != b; u = p[match[u]]){
-		blo[base[u]] = true; blo[base[match[u]]] = true;
-		p[u] = child; child = match[u];}}
-
+for (; base[u] != b; u = p[match[u]]){
+	blo[base[u]] = true; blo[base[match[u]]] = true;
+	p[u] = child; child = match[u];}}
+	
 int find_path(int n, int root) {
 	vector<bool> used(n);
 	for (int i = 0; i < n; ++i)
@@ -34,7 +33,7 @@ int find_path(int n, int root) {
 				for(int i = 0; i < n; i++){
 					if(blossom[base[i]]){
 						base[i] = curr_base;
-						if(!used[i]) used[i] = true, q.push(i);
+						if(!used[i]) used[i]=true, q.push(i);
 					}
 				}
 			}else if (p[v] == -1){
@@ -45,16 +44,14 @@ int find_path(int n, int root) {
 		}
 	}
 	return -1;}
-
 int edmonds(int n){
 	for(int i=0;i<n;i++) match[i] = -1;
 	for(int i = 0; i < n; i++){
 		if (match[i] == -1) {
 			int u, pu, ppu;
-			for (u = find_path(n, i); u != -1; u = ppu) {
+			for (u = find_path(n, i); u != -1; u = ppu){
 				pu = p[u]; ppu = match[pu];
-				match[u] = pu; match[pu] = u;
-			}
+				match[u] = pu; match[pu] = u;}
 		}
 	}
 	int matches = 0;
@@ -64,8 +61,6 @@ int edmonds(int n){
 }
 u--; v--; adj[u].pb(v); adj[v].pb(u);
 cout << edmonds(n) * 2 << endl;
-for (int i = 0; i < n; i++) {
-		if (match[i] != -1 && i < match[i]) {
-				cout << i + 1 << " " << match[i] + 1 << endl;
-		}
-}
+for (int i = 0; i < n; i++)
+	if (match[i] != -1 && i < match[i])
+		cout<<i+1<<" "<<match[i]+1<<endl;
