@@ -7,7 +7,7 @@ e=(u,v), e.flow represent effective flow from u to v
 1). To put lower bound on edge capacities form a new 
 graph G' with source s' and t' for each edge u->v
  in G with cap (low, high), replace it with
-s'->v with low, v->t' with low
+s'->v with low, u->t' with low
 u->v with high - low
 2). To convert circulation with edge lower bounds
 to circulation without edge lower bounds
