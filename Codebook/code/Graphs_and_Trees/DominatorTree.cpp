@@ -21,9 +21,7 @@ void dfs0(int u){
 	for(int i=0;i<g[u].size();i++){
 		int w = g[u][i];
 		if(!arr[w])dfs0(w),par[arr[w]]=arr[u];
-		rg[arr[w]].pb(arr[u]);
-	}
-}
+		rg[arr[w]].pb(arr[u]);}}
 void dominator(){
 	dfs0(1);int n=T;
 	for(int i=n;i>=1;i--){
@@ -35,11 +33,9 @@ void dominator(){
 			int v = Find(w);
 			if(sdom[v]==sdom[w])dom[w]=sdom[w];
 			else dom[w] = v;}
-		if(i>1)Union(par[i],i);
-	}
+		if(i>1)Union(par[i],i);}
 	for(int i=2;i<=n;i++){
 		if(dom[i]!=sdom[i]) dom[i]=dom[dom[i]];
 		tree[rev[i]].pb(rev[dom[i]]);
-		tree[rev[dom[i]]].pb(rev[i]);
-	}
+		tree[rev[dom[i]]].pb(rev[i]);}
 }
