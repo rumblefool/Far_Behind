@@ -2,16 +2,9 @@
 #include<ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
 using namespace std;
-#define ll long long
-//increase stack size
+
 #pragma comment(linker, "/STACK:16777216")
 
-ll mxm() {return LLONG_MIN;}
-template<typename... Args>
-ll mxm(ll a, Args... args) { return max(a,mxm(args...)); }
-ll mnm() {return LLONG_MAX;}
-template<typename... Args>
-ll mnm(ll a, Args... args) { return min(a,mnm(args...)); }
 template<class T> ostream& operator<<(ostream& os,vector<T> V){
 	os<<"[ ";for(auto v:V)os<<v<<" ";return os<<"]";}
 template<class L,class R> ostream& operator<<(ostream& os,pair<L,R> P){
@@ -29,12 +22,12 @@ void __f(const char* names,Arg1&& arg1,Args&&... args){
 #define trace(...) 1
 #endif
 
+#define ll long long
 #define ld long double
 #define pll pair<ll,ll>
 #define pii pair<int,int>
 #define vll vector<ll>
 #define vi vector<int>
-#define vpll vector<pll>
 #define I insert
 #define F first
 #define S second
@@ -50,8 +43,7 @@ inline int mul(int a,int b){return (a*1ll*b)%mod;}
 inline int power(int a,int b){int rt=1;while(b>0){if(b&1)rt=mul(rt,a);a=mul(a,a);b>>=1;}return rt;}
 inline int inv(int a){return power(a,mod-2);}
 
-int main()
-{
+int main(){
 	ios_base::sync_with_stdio(false);cin.tie(0);cout.tie(0);cout<<setprecision(25);
 			
 }
