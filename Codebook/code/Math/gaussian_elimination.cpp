@@ -1,21 +1,12 @@
-
-//   (1) solving systems of linear equations (AX=B)
-//   (2) inverting matrices (AX=I)
-//   (3) computing determinants of square matrices
-//
-// O(n^3)
-//
-// INPUT:    a[][] = an nxn matrix
-//           b[][] = an nxm matrix
-//           A MUST BE INVERTIBLE!
-//
-// OUTPUT:X      = an nxm matrix (stored in b[][])
-//        A^{-1} = an nxn matrix (stored in a[][])
-//        returns determinant of a[][]
-const double EPS = 1e-10;
-#define vld vector<ld>
-#define vvld vector<vld>
-
+/*O(n^3)
+(1) solving systems of linear equations (AX=B)
+(2) inverting matrices (AX=I)
+(3) computing determinants of square matrices
+INPUT: a[][] = an nxn mat, b[][] = an nxm mat
+ A MUST BE INVERTIBLE!
+OUTPUT: X = an nxm matrix (stored in b[][])
+       A^{-1} = an nxn matrix (stored in a[][])
+       returns determinant of a[][]*/
 ll GaussJordan(vvll &a, vvll &b) {
 	const int n = a.size(), m = b[0].size();
 	int n1 = a[0].size();

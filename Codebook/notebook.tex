@@ -83,13 +83,29 @@
 			
 			\textbf{6. Maths : }
 			\newline
-			6.1 -  Chinese Remainder Theorem, \quad6.2 - Discrete Log, \quad6.3 - NTT, \quad6.4 - Online FFT , \quad6.5 - Langrange Interpolation, \quad6.6 - Matrix Struct, \quad6.7 - nCr(Non Prime Modulo), \quad6.8 - Primitive Root Generator, \quad6.9 - Math Miscellaneous, \quad6.10 -  Group Theory
+			6.1 -  Chinese Remainder Theorem, \quad6.2 - Discrete Log, \quad6.3 - NTT, \quad6.4 - Online FFT , \quad6.5 - Langrange Interpolation, \quad6.6 - Matrix Struct, \quad6.7 - nCr(Non Prime Modulo), \quad6.8 - Primitive Root Generator, \quad6.9 - Math Miscellaneous, \quad6.10 -  Group Theory \quad6.11 -  Gaussian Elimination \quad6.12 - Inclusion-Exclusion
 			
 			\textbf{7. Strings}
 			\newline
 			7.1 - Hashing Theory, \quad7.2 - Manacher, \quad7.3 - Trie, \quad7.4 - Z -algorithm, \quad7.5 - Aho Corasick, \quad7.6 - KMP, \quad7.7 - Palindrome Tree, \quad7.8 - Suffix Array, \quad7.9 - Suffix Tree, \quad7.10 - Suffix Automaton
 			\newline
+			
+			\subsubsection*{Ideas} 
+			\textbf{Analysis Complexity Carefully,\quad Relate To Theory},\quad First Find Solution for small sub-problems, \quad
+			Div and Conq\quad, Brute force and observe,\quad (+1,-1),\quad Dominator Tree for Directed Graph,\quad use fenwick,\quad Monte Carlo,\quad Summation Interchange,\quad Clever Optimization of brute force(binary search/ignore),\quad Try solving problem backwards
 			\newline
+			
+			\subsubsection*{Tree Ideas}
+			a. LCA \hspace{0.5cm}
+			b. DSU on trees (possibly make greater depth as heavy child)\hspace{0.5cm}
+			c. Centroid Decomposition\hspace{0.5cm}
+			d. HLD\hspace{0.5cm}
+			e. Euler Tour (dfs order/bfs order/any other ordering)\hspace{0.5cm}
+			f. Pass some structure(set/array/..) in dfs (segment/fenwick)\hspace{0.5cm}
+			g. Reachability Tree (construction using dsu) \hspace{0.5cm}
+			h. Dominator Tree (directed graphs) \hspace{0.5cm}
+			i. Biconnectivity \hspace{0.5cm}
+			j. DFS tree \hspace{0.5cm}
 			
 			\input contents.tex			
 			\subsubsection*{M\"obius Function} % Brian Bi
@@ -195,6 +211,12 @@
 				\item Dirichlet power series:
 				$A(x) =\sum_{i=1}^\infty{a_i \over i^x}$
 				\item Coefficient of $x^r$ in $(1-x)^{-n}$ is ${n+r-1}\choose{r}$.
+				\item Stirling numbers (1st kind): 
+				\newline $s(n,2) = (n-1)!H_{n-1}$, \quad
+				$s(n,k) = (n-1) s({n-1},k) + s({n-1},{k-1})$
+				\item Stirling numbers (2nd kind): \quad $ S(n,k) = k S(n-1,k) + S(n-1,k-1)$
+	\newline $ S(n,k) = \frac{1}{k!}\sum\limits_{j=0}^{k}(-1)^{k-j}\binom{k}{j}j^n $, \quad $S(n,m) = \sum_k {n \choose k} S({k+1},{m+1})(-1)^{n-k}$
+				\item Catalan Numbers: Binary trees with $n+1$ vertices \quad $C_n = {1\over n+1}{2n \choose n}$
 			\end{enumerate}
 		\subsubsection*{For Bipartite Graphs}
 		\begin{enumerate}
@@ -208,24 +230,31 @@
 			take any edge.
 		\end{enumerate}
 		
+			$$(1) \quad \sum_{i=1}^n i^m = {1 \over m+1} \bigg[ (n+1)^{m+1} - 1 - \sum_{i=1}^n \big((i+1)^{m+1} - i^{m+1} - (m+1)i^m\big) \bigg]$$
 		
-			\vfill
-			$$ {x \over (1 - x)^2} = \sum_{i=0}^\infty i x^i, \hspace{5mm}
-			\ln (1 + x) = \sum_{i=1}^\infty (-1)^{i+1} {x^i \over i}, \hspace{5mm} {x \over 1 - x - x^2} = \sum_{i=0}^\infty F_i x^i$$
-			$$(x_1 + x_2 + ... + x_k)^n = \sum_{c_1 + c_2 + ... + c_k = n}
-			\frac{n!}{c_1! c_2! ... c_k!} x_1^{c_1} x_2^{c_2} ... x_k^{c_k}$$
+			$$ (2) \quad {x \over (1 - x)^2} = \sum_{i=0}^\infty i x^i, \hspace{5mm}
+			(3) \quad \ln (1 + x) = \sum_{i=1}^\infty (-1)^{i+1} {x^i \over i}, \hspace{5mm} (4) \quad {x \over 1 - x - x^2} = \sum_{i=0}^\infty F_i x^i$$
+			
+			$$ (5) \quad (x_1 + x_2 + ... + x_k)^n = \sum_{c_1 + c_2 + ... + c_k = n}
+			\frac{n!}{c_1!...c_k!} x_1^{c_1} x_2^{c_2} ... x_k^{c_k},
+			(6) \quad {1 \over (1-x)^{n+1}}
+				= \sum_{i=0}^\infty {i+ n \choose i} x^i$$
+%			$$ (6) \quad {1 \over (1-x)^{n+1}}
+%			= \sum_{i=0}^\infty {i+ n \choose i} x^i $$
+		
 	
-	$$\int \tanh x \, dx = \ln \vert \cosh x \vert, \hspace{3mm}
-	\int \coth x \, dx = \ln \vert \sinh x \vert, \int {dx  \over a^2 - x^2} = {1 \over 2a} \ln\left\vert{a + x \over a - x}\right\vert, $$
-	$$ \int {dx  \over \sqrt{a^2 + x^2}}= \ln \left(x + \sqrt{a^2 + x^2}\right) \quad (a > 0), \int {dx  \over a^2 + x^2}= \frac 1 a \arctan \frac x a \quad (a > 0), $$
-	$$ \int \sqrt{a^2 - x^2} \, dx = \frac x 2 \sqrt{a^2 - x^2} + \frac{a^2}{2} \arcsin \frac x a \quad (a > 0) $$ $$\int {dx  \over \sqrt{a^2 - x^2}} = \arcsin \frac x a \quad (a > 0) $$
+	$$(1) \quad \int \tanh x \, dx = \ln \vert \cosh x \vert, \hspace{3mm}
+	(2) \quad \int \coth x \, dx = \ln \vert \sinh x \vert,
+	(3) \quad \int {dx  \over a^2 - x^2} = {1 \over 2a} \ln\left\vert{a + x \over a - x}\right\vert, $$
+	$$ (4) \quad \int {dx  \over \sqrt{a^2 + x^2}}= \ln \left(x + \sqrt{a^2 + x^2}\right) \hspace{0.2cm} (a > 0),(5) \quad \int {dx  \over a^2 + x^2}= \frac 1 a \arctan \frac x a \quad (a > 0), $$
+	$$(6) \quad \int \sqrt{a^2 - x^2} \, dx = \frac x 2 \sqrt{a^2 - x^2} + \frac{a^2}{2} \arcsin \frac x a \quad (a > 0) \quad (7) \quad \int {dx  \over \sqrt{a^2 - x^2}} = \arcsin \frac x a \quad (a > 0) $$
 	
 		\subsubsection*{Fibonacci:}
 	\begin{enumerate}
 		\itemsep0em 
 		\item $F_{-i} = (-1)^{i-1} F_i$,  $ \quad F_i = \frac{1}{\sqrt{5}} \left(\phi^i - \hat{\phi}^i\right)$
 		\item Cassini's identity: $F_{i+1} F_{i-1} - F^2_i = (-1)^i$ \quad \hbox{for $i > 0$,}
-		\item Addictive Rule:
+		\item Additive Rule:
 		\hspace{2mm}
 		$F_{n+k} = F_k F_{n+1} + F_{k-1} F_n,$ \hspace{2mm}
 		$F_{2n} = F_n F_{n+1} + F_{n-1} F_n$
@@ -243,11 +272,10 @@
 	\par
 	$ \hspace{1mm}(11,23), \hspace{1mm}(12,11), \hspace{1mm}(13,29), \hspace{1mm}(14,27), \hspace{1mm}(15,11), \hspace{1mm}(16,63), \hspace{1mm}(17,3), \hspace{1mm}(18,11)$
 	\par\vskip 3pt
-	\subsubsection*{Ideas}
-	Div and Conq, Brute force and observe, (+1,-1), Dominator Tree for Directed Graph, use fenwick, Monte Carlo, Summation Interchange, Clever Optimization of brute force(binary search/ignore), Try solving problem backwards, ***Analysis Complexity Carefully, Relate To Theory***, First Find Solution for small sub-problems
 	
-	\subsubsection*{C++ Sublime Build Extra}
-	\raggedbottom\lstinputlisting[language=c++]{code/Syntax_Related/extra_build.cpp}
+	
+	%\subsubsection*{C++ Sublime Build Extra}
+	%\raggedbottom\lstinputlisting[language=c++]{code/Syntax_Related/%extra_build.cpp}
 	\vfill
 
 		\end{multicols*}
