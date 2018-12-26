@@ -3,6 +3,8 @@
 using namespace __gnu_pbds;
 using namespace std;
 #define ll long long
+//increase stack size
+#pragma comment(linker, "/STACK:16777216")
 
 ll mxm() {return LLONG_MIN;}
 template<typename... Args>
