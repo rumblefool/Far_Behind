@@ -1,5 +1,5 @@
 /*works only when sizes of a and b are same (if not push extra zeros in b)
-return a*b
+returns a*b
 a=a[0]+a[1]*x+...
 b=b[0]+b[1]*x+...
 */
