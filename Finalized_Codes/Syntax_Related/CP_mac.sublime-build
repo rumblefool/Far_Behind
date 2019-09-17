@@ -1,5 +1,5 @@
 {
-  "shell_cmd": "/usr/local/Cellar/gcc/9.1.0/bin/g++-9 -std=c++11 -O3 ${file_base_name}.cpp -o a.out \n ./a.out < input.txt > output.txt",
+  "shell_cmd": "/usr/local/Cellar/gcc/9.1.0/bin/g++-9 -std=c++11 -O3 ${file_base_name}.cpp -o a.out \n gtimeout 8s ./a.out < input.txt > output.txt",
   "file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
   "working_dir": "${file_path}",
   "selector": "source.c++, source.cpp",
