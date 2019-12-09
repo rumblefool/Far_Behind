@@ -72,9 +72,9 @@ struct graph {
         while (!que.empty()) {
           node a = que.top(); que.pop();
           if (a.S == t) break;
-          if (dist[a.S] > a.F) continue;
+          if (dist[a.S] < a.F) continue;
           for (auto e: adj[a.S]) {
-            if (e.capacity > e.flow && dist[e.dst] > a.F + rcost(e)) {
+            if (e.capacity > e.flow && dist[e.dst] > dist[e.src] + rcost(e)) {
               dist[e.dst] = dist[e.src] + rcost(e);
               prev[e.dst] = e.rev;
               que.push({dist[e.dst], e.dst});
