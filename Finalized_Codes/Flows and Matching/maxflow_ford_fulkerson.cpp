@@ -1,3 +1,5 @@
+//Ayush's Implementation: https://www.hackerearth.com/challenges/competitive/october-circuits-18/algorithm/decaying-roadsnov-easy-8e930584/
+
 // running time - O(f*m) (f -> flow routed)
 const ll N = 3e3;
 ll n; // number of vertices
