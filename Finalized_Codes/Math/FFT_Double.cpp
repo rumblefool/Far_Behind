@@ -82,6 +82,6 @@ void Multiply(vector<ll>& a, vector<ll>& b,vector<ll>& res) {
 	res.resize(a.size() + b.size());
 	for(ll i=0; i<res.size(); i++) {
 		if(fabs(f1[i].re) < eps) res[i]=0;
-		else res[i] = f1[i].re / fabs(f1[i].re) * ll (abs(f1[i].re / n) + 0.5);
+		else res[i] = f1[i].re / fabs(f1[i].re) * (ll) (abs(f1[i].re / n) + 0.5);
 	}
 }
