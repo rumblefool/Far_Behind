@@ -1,4 +1,6 @@
 const ll MAXN = 1 << 20;
+const double eps = 1e-8;
+//const double M_PI = acos(-1);
 
 struct base {
 	typedef double T;
