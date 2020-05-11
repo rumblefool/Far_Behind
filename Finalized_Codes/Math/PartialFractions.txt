@@ -1,0 +1,3 @@
+Decomposing into partial fraction and finding first m coefficients of 1 / f(x):
+
+https://discuss.codechef.com/t/rnbwroad-editorial/63267
